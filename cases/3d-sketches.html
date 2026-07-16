@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>3D-маскот · Кристина Трифонова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+<style>
+  /* descriptions sit under the headings, full readable width */
+  .sk-case .sect-head{display:block}
+  .sk-case .sect-head p{margin-top:20px; max-width:760px}
+  /* two sketch sheets at one shared size */
+  .sk-case .g-2.even .card-image{aspect-ratio:4/3; margin:0}
+  /* block 03 reference sheet — smaller, centered */
+  .sk-case .feature-img.narrow{max-width:760px; margin:0 auto}
+  /* final gallery — full body big, half body small */
+  .sk-case .gal{margin:0}
+  .sk-case .gal + .gal{margin-top:18px}
+  .sk-case .gal-body{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
+  .sk-case .gal-body .card-image{aspect-ratio:3/4; margin:0}
+  .sk-case .gal-body .card-image img{object-position:center top}
+  .sk-case .pose-strip{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:18px}
+  .sk-case .pose-strip .card-image{flex:0 1 160px; max-width:176px; aspect-ratio:3/4; margin:0}
+  .sk-case .pose-strip .card-image img{object-position:center 12%}
+  @media (max-width:760px){.sk-case .gal-body{grid-template-columns:1fr 1fr} .sk-case .pose-strip .card-image{flex-basis:120px}}
+  /* AI prototype scene */
+  .sk-case .proto-img{aspect-ratio:1402/1122; max-width:1040px; margin:0 auto; border-radius:18px; overflow:hidden; position:relative; background:var(--paper)}
+  .sk-case .proto-img img{width:100%; height:100%; object-fit:cover; object-position:center 45%}
+  .sk-case .proto-badge{position:absolute; left:16px; top:16px; display:inline-flex; align-items:center; gap:8px; padding:8px 14px; background:rgba(26,26,26,.82); color:var(--paper); border-radius:999px; font-family:var(--font-display); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; backdrop-filter:blur(6px); z-index:2}
+  .sk-case .proto-badge .dotx{width:7px; height:7px; border-radius:50%; background:var(--pink-hot)}
+</style>
+</head>
+<body class="sk-case" data-screen-label="01 · 3D + скетчи">
+
+<header class="case-nav">
+  <a href="../index.html" class="brand">kri<b>·</b>studio</a>
+  <a href="../portfolio.html" class="back"><span class="arrow">←</span> Назад к работам</a>
+</header>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="crumbs"><span>Кейс 01</span><span class="dot"></span><span>3D · Sketches · Character</span></div>
+    <h1 style="font-size:clamp(44px, 8.5vw, 120px)"><span style="white-space:nowrap"><em>от</em> карандаша</span><br><span style="white-space:nowrap"><em>до</em> рендера</span></h1>
+    <p class="lede">Маскот для кофейни «Coffee &amp; Good Mood» — гепард-бариста. Начала с быстрых зарисовок характера и поз, собрала референс-лист, затем перевела всё в 3D: модель, мех, материалы, свет, кадры в интерьере кофейни.</p>
+
+    <div class="factsheet">
+      <div><div class="label">Тип</div><div class="val">Маскот-персонаж бренда</div></div>
+      <div><div class="label">Инструменты</div><div class="val">Procreate · Blender · Photoshop</div></div>
+      <div><div class="label">Этапы</div><div class="val">Скетчи → референс → 3D → рендеры</div></div>
+      <div><div class="label">Год</div><div class="val">2025</div></div>
+    </div>
+
+    <div class="hero-media contain paper" style="aspect-ratio:1402/1122">
+      <img src="../assets/3d/final-2.png" alt="Гепард на бегу забирает кофе — 3D-рендер">
+    </div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker">01 · Задача</div>
+        <h2>придумать<br><span style="white-space:nowrap"><em>лицо</em> бренда</span></h2>
+      </div>
+      <p>Кофейне нужен был узнаваемый персонаж: дерзкий, городской, «свой». Гепард в карго и кроп-топе с подписью «more espresso less depresso» — характер, который хочется встретить у стойки.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sect cream">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker">02 · Скетчи и характер</div>
+        <h2>сначала <em>бумага</em></h2>
+      </div>
+      <p>Десятки зарисовок: эмоции, позы, ракурсы, реквизит. На этом этапе ищу не геометрию, а характер — как гепард двигается, как держит стакан, как улыбается.</p>
+    </div>
+
+    <div class="g-2 even">
+      <div class="card-image contain paper"><img src="../assets/3d/05.jpg" alt="Лист скетчей — гепард-бариста"><span class="caption">скетчи · эмоции</span></div>
+      <div class="card-image contain paper"><img src="../assets/3d/sketch-sheet.jpg" alt="Лист скетчей — позы и образ"><span class="caption">скетчи · позы</span></div>
+    </div>
+    <div style="margin-top:18px"><span class="note">Из 40+ зарисовок отобрала ключевые позы и мимику</span></div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker">03 · Референс-лист</div>
+        <h2>палитра <em>и</em> мимика</h2>
+      </div>
+      <p>Финальный character sheet: костюм, цветовая палитра меха и одежды, набор выражений. Это карта, по которой собирается 3D-модель.</p>
+    </div>
+
+    <div class="feature-img r-16x9 contain paper narrow" style="margin:0 auto">
+      <img src="../assets/3d/01.png" alt="Референс-лист персонажа с палитрой и эмоциями">
+    </div>
+  </div>
+</section>
+
+<section class="sect cream" data-screen-label="04 · Прототип">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker">04 · Прототип</div>
+        <h2>сцена <em>через ИИ</em></h2>
+      </div>
+      <p>Прежде чем рендерить финал, я собрала концепт-сцену через нейросеть — гепард на бегу хватает стакан «grab &amp; go». Быстрый способ проверить характер в реальном контексте: витрина, стойка, фирменный стакан.</p>
+    </div>
+
+    <div class="proto-img">
+      <span class="proto-badge"><span class="dotx"></span>AI-концепт · grab &amp; go</span>
+      <img src="../assets/3d/hero-coffee.png" alt="Гепард на бегу забирает кофе у стойки кофейни — AI-концепт сцены">
+    </div>
+    <div style="margin-top:18px"><span class="note">проба через нейросеть — концепт для наружки и сторис</span></div>
+  </div>
+</section>
+
+<section class="sect dark" data-screen-label="05 · Финал">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker" style="color:var(--pink-hot)">05 · Финал</div>
+        <h2 style="color:var(--paper)">готовый <em>персонаж</em></h2>
+      </div>
+      <p style="color:rgba(255,255,255,.7)">Серия 3D-рендеров для соцсетей, упаковки стаканов и оформления точки. Один характер — много ситуаций.</p>
+    </div>
+
+    <div class="gal gal-body">
+      <div class="card-image"><img src="../assets/3d/final-5.webp" alt="Гепард-бариста у барной стойки"><span class="caption">у стойки</span></div>
+      <div class="card-image"><img src="../assets/3d/final-1.webp" alt="Гепард-бариста в фартуке поднимает стакан кофе"><span class="caption">бариста</span></div>
+      <div class="card-image"><img src="../assets/3d/final-4.webp" alt="Вид сзади — принт more espresso less depresso"><span class="caption">more espresso</span></div>
+      <div class="card-image"><img src="../assets/3d/final-3.webp" alt="Гепард с подносом кофе"><span class="caption">поднос</span></div>
+    </div>
+
+    <div class="gal pose-strip">
+      <div class="card-image"><img src="../assets/3d/pose-cup.png" alt="Гепард протягивает стакан кофе"><span class="caption">привет</span></div>
+      <div class="card-image"><img src="../assets/3d/pose-sip.png" alt="Гепард пьёт кофе с закрытыми глазами"><span class="caption">first sip</span></div>
+      <div class="card-image"><img src="../assets/3d/pose-wink.png" alt="Гепард подмигивает и показывает пальцем"><span class="caption">тот самый</span></div>
+      <div class="card-image"><img src="../assets/3d/pose-chill.png" alt="Гепард облокотился на стол с кофе"><span class="caption">chill</span></div>
+      <div class="card-image"><img src="../assets/3d/pose-iced.png" alt="Гепард держит айс-кофе с трубочкой"><span class="caption">iced</span></div>
+    </div>
+
+    <div class="stat-row" style="margin-top:60px">
+      <div class="stat"><div class="v">1</div><div class="l" style="color:rgba(255,255,255,.7)">маскот, узнаваемый с одного взгляда</div></div>
+      <div class="stat"><div class="v">40<em>+</em></div><div class="l" style="color:rgba(255,255,255,.7)">скетчей на старте</div></div>
+      <div class="stat"><div class="v">∞</div><div class="l" style="color:rgba(255,255,255,.7)">поз для соцсетей и упаковки</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="case-foot">
+  <div class="wrap">
+    <a class="next-case" href="identity.html" data-cursor="open" data-cursor-label="дальше">
+      <div>
+        <div class="nxt-kicker">Следующий кейс · 02</div>
+        <div class="nxt-title">фирменный <em>стиль</em></div>
+      </div>
+      <div class="nxt-arrow">→</div>
+    </a>
+    <div class="copy">
+      <span>© 2026 Кристина Трифонова · <b>kri·studio</b></span>
+      <a href="../index.html#contact">Написать мне →</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../image-slot.js"></script>
+<script src="case-cursor.js"></script>
+</body>
+</html>

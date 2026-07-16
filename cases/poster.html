@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Спорт Мосметро · Кристина Трифонова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+<style>
+  .video-hero{position:relative; background:var(--ink)}
+  .video-hero .hero-video{width:100%; height:100%; object-fit:cover; display:block; border:0}
+  .video-hero .hero-tag{
+    position:absolute; left:16px; top:16px; z-index:2;
+    display:inline-flex; align-items:center; gap:9px;
+    padding:11px 18px; border-radius:999px;
+    background:rgba(26,26,26,.74); color:var(--paper);
+    -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+    font-family:var(--font-display); font-size:12px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase;
+  }
+  .video-hero .hero-tag::before{content:""; width:9px; height:9px; border-radius:50%; background:var(--pink-hot); flex:none}
+  /* portrait clip: don't crop — letterbox on ink, centered */
+  .video-hero.portrait{aspect-ratio:auto; max-height:78vh}
+  .video-hero.portrait .hero-video{object-fit:contain; max-height:78vh}
+
+  /* 01 · heading kept to one line for «один язык» */
+  .sh-tight h2{font-size:clamp(36px,5vw,62px)}
+  .nb{white-space:nowrap}
+  /* equal-height image rows (02 «Тройка», 04 форум) */
+  .tro-grid{align-items:stretch}
+  .tro-grid .card-image{aspect-ratio:auto; height:clamp(280px,32vw,440px)}
+  .foru-grid{align-items:stretch}
+  .foru-grid .card-image{aspect-ratio:auto; height:clamp(320px,38vw,520px)}
+  @media (max-width:780px){
+    .tro-grid .card-image,.foru-grid .card-image{height:auto; aspect-ratio:4/3}
+  }
+</style>
+</head>
+<body data-screen-label="04 · Спорт Мосметро">
+
+<header class="case-nav">
+  <a href="../index.html" class="brand">kri<b>·</b>studio</a>
+  <a href="../portfolio.html" class="back"><span class="arrow">←</span> Назад к работам</a>
+</header>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="crumbs"><span>Кейс 04</span><span class="dot"></span><span>Событийная айдентика · Print · Banners</span></div>
+    <h1>спорт <em>мосметро</em></h1>
+    <p class="lede">Событийная айдентика спортивной программы Московского метрополитена. Баннеры, пресс-волы, оформление турниров и форумов, дизайн карты «Тройка». Единый язык «Время спорта» — на десятках площадок и носителей.</p>
+
+    <div class="factsheet">
+      <div><div class="label">Клиент</div><div class="val">Московский метрополитен</div></div>
+      <div><div class="label">Состав</div><div class="val">Баннеры · пресс-волы · «Тройка»</div></div>
+      <div><div class="label">События</div><div class="val">Турниры · форумы · награждения</div></div>
+      <div><div class="label">Год</div><div class="val">2023 — н.в.</div></div>
+    </div>
+
+    <div class="hero-media video-hero">
+      <iframe class="hero-video" src="https://vk.com/video_ext.php?oid=-212016970&id=456239179&hash=a60819f3a0b25354&hd=4" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+      <span class="hero-tag">забег «Метро бежит 2.0»</span>
+    </div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-head sh-tight">
+      <div>
+        <div class="kicker">01 · Задача</div>
+        <h2><span class="nb">один язык</span> <em>на всё</em></h2>
+      </div>
+      <p>Спортивная программа метро — это турниры, форумы, награждения, мерч и транспортные карты. Нужна система, которую узнают на пресс-воле, на баннере в парке и на пластиковой карте «Тройка».</p>
+    </div>
+
+    <div class="pull" style="max-width:100%; font-size:clamp(26px,3.6vw,42px)">«хорошая событийная айдентика <em>работает</em> и на трёхметровом баннере, и на карте размером с ладонь.»</div>
+  </div>
+</section>
+
+<section class="sect cream">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker">02 · Карта «Тройка»</div>
+        <h2>спорт <em style="white-space:nowrap">в кармане</em></h2>
+      </div>
+      <p>Лимитированная «Тройка» «Спорт Мосметро»: паттерн из спортивных пиктограмм, фирменный красный, мотив «тройки» — три коня. Дизайн, который носят с собой каждый день.</p>
+    </div>
+
+    <div class="g-asym tro-grid">
+      <div class="card-image contain paper"><img src="../assets/metro/troika-cards.png" alt="Прототипы карт «Тройка» Спорт Мосметро — три варианта дизайна"><span class="caption">прототипы</span></div>
+      <div class="card-image"><img src="../assets/metro/troika1.jpg" alt="Карта Тройка Спорт Мосметро"><span class="caption">«Тройка»</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker">03 · Событие</div>
+        <h2>футбольный <em>турнир АРВТР</em></h2>
+      </div>
+      <p>Товарищеский турнир внеуличного транспорта по мини-футболу. Единый фирменный стиль — на всех носителях события: пресс-вол и баннеры, наградная группа, дипломы и мерч, полиграфия и айдентика жеребьёвки.</p>
+    </div>
+
+    <div class="card-image wide" style="margin-bottom:24px"><img src="../assets/metro/avtr-team.jpg" alt="Команда «Колледж Московского транспорта» у пресс-вола турнира по мини-футболу"><span class="caption">команда</span></div>
+
+    <div class="g-3">
+      <div class="card-image"><img src="../assets/metro/avtr-presswall.jpg" alt="Ведущий у пресс-вола турнира на поле"><span class="caption">пресс-вол</span></div>
+      <div class="card-image"><img src="../assets/metro/avtr-ref.jpg" alt="Судья показывает жёлтую карточку, фирменный флаг на фоне"><span class="caption">судейство</span></div>
+      <div class="card-image"><img src="../assets/metro/avtr-draw.jpg" alt="Участница достаёт жетон жеребьёвки «Б2»"><span class="caption">жеребьёвка</span></div>
+    </div>
+
+    <div class="g-3" style="margin-top:24px">
+      <div class="card-image"><img src="../assets/metro/avtr-poly.jpg" alt="Буклеты турнира и шары жеребьёвки на стойке регистрации"><span class="caption">полиграфия</span></div>
+      <div class="card-image"><img src="../assets/metro/avtr-meet.jpg" alt="Гости и болельщики турнира за столами с программками"><span class="caption">болельщики</span></div>
+      <div class="card-image"><img src="../assets/metro/avtr-nagrady.jpg" alt="Наградной стол: кубки, медали, дипломы и вымпелы турнира"><span class="caption">награды</span></div>
+    </div>
+
+    <div class="g-2" style="margin-top:24px">
+      <div class="card-image wide"><img src="../assets/metro/avtr-cups.jpg" alt="Хрустальные кубки и медали на фоне фирменного баннера"><span class="caption">кубки</span></div>
+      <div class="card-image wide"><img src="../assets/metro/avtr-mvp.jpg" alt="Приз «Лучший игрок» товарищеского турнира по мини-футболу 2024"><span class="caption">лучший игрок</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sect dark">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker" style="color:var(--pink-hot)">04 · Событие</div>
+        <h2 style="color:var(--paper)">молодёжный <em>форум</em></h2>
+      </div>
+      <p style="color:rgba(255,255,255,.7)">Молодёжный форум городского пассажирского транспорта. Фирменное оформление события: сцена и пресс-волы, наградная полиграфия, удостоверения и сертификаты, интерактивная «доска пожеланий».</p>
+    </div>
+
+    <div class="g-asym foru-grid" style="margin-bottom:24px">
+      <div class="card-image"><img src="../assets/metro/forum-stage.jpg" alt="Спикер на сцене у баннера молодёжного форума городского пассажирского транспорта"><span class="caption">сцена</span></div>
+      <div class="card-image"><img src="../assets/metro/forum-cert.jpg" alt="Участница с удостоверением у пресс-вола форума"><span class="caption">участники</span></div>
+    </div>
+
+    <div class="g-2">
+      <div class="card-image wide"><img src="../assets/metro/forum-sertif.jpg" alt="Вручение крафтовых конвертов и сертификатов участникам форума"><span class="caption">сертификаты</span></div>
+      <div class="card-image wide"><img src="../assets/metro/forum-wishboard.jpg" alt="Интерактивная «Доска пожеланий» с рисунками и стикерами на баннере форума"><span class="caption">доска пожеланий</span></div>
+    </div>
+
+    <div style="height:60px"></div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="v">10<em>+</em></div><div class="l" style="color:rgba(255,255,255,.7)">событий с единой айдентикой</div></div>
+      <div class="stat"><div class="v">∞</div><div class="l" style="color:rgba(255,255,255,.7)">носителей: от карты до пресс-вола</div></div>
+      <div class="stat"><div class="v">1</div><div class="l" style="color:rgba(255,255,255,.7)">система «Время спорта»</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sect cream">
+  <div class="wrap">
+    <div class="sect-head">
+      <div>
+        <div class="kicker">05 · Доска почёта</div>
+        <h2>доска <em>почёта</em></h2>
+      </div>
+      <p>Оформление доски почёта и церемонии награждения сотрудников метрополитена: портретная сетка лучших работников, наградная полиграфия — свидетельства, фирменные папки и цветы, оформление площадки «Метро Экспресс».</p>
+    </div>
+
+    <div class="card-image wide" style="margin-bottom:24px"><img src="../assets/metro/dp-nagrazhdenie.jpg" alt="Награждение сотрудников метрополитена у доски почёта — вручение свидетельств"><span class="caption">награждение</span></div>
+
+    <div class="g-2">
+      <div class="card-image"><img src="../assets/metro/dp-board.jpg" alt="Доска почёта с портретами лучших сотрудников метрополитена"><span class="caption">доска почёта</span></div>
+      <div class="card-image"><img src="../assets/metro/dp-ceremony.jpg" alt="Площадка награждения «Метро Экспресс» — наградные папки и цветы"><span class="caption">церемония</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="case-foot">
+  <div class="wrap">
+    <a class="next-case" href="packaging-animals.html" data-cursor="open" data-cursor-label="дальше">
+      <div>
+        <div class="nxt-kicker">Следующий кейс · 05</div>
+        <div class="nxt-title">карточки <em>WB + Ozon</em></div>
+      </div>
+      <div class="nxt-arrow">→</div>
+    </a>
+    <div class="copy">
+      <span>© 2026 Кристина Трифонова · <b>kri·studio</b></span>
+      <a href="../index.html#contact">Написать мне →</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../image-slot.js"></script>
+<script src="case-cursor.js"></script>
+</body>
+</html>
