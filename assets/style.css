@@ -497,3 +497,20 @@ details.acc .acc-body{padding:0 22px 22px;color:var(--muted);font-size:14.5px;li
 .case-fig figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
 .pj-gal.free img{aspect-ratio:auto}
 @media(max-width:760px){.pal-grid{grid-template-columns:repeat(2,1fr)}.case-stats{grid-template-columns:1fr}}
+
+/* ===== v6 ===== */
+.svc .meta .price{font-size:14.5px;white-space:nowrap}
+.case-grid.four{grid-template-columns:repeat(4,1fr)}
+.case-grid.four .cap h3{font-size:16px}
+.case-grid.four .cap span{font-size:12.5px}
+@media(max-width:1100px){.case-grid.four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.case-grid.four{grid-template-columns:1fr}}
+.pj-grid{align-items:start}
+.pj-extras{margin:38px 0 6px}
+.pj-extras .pj-kit{margin-top:12px}
+.cs-wide{max-width:none;counter-reset:csec}
+.cs-wide>h2{counter-increment:csec;font-size:clamp(28px,3.2vw,42px);margin:72px 0 22px;padding-top:30px;border-top:1px solid var(--line)}
+.cs-wide>h2::before{content:counter(csec,decimal-leading-zero);display:block;font-family:var(--dis);font-weight:700;font-size:13px;letter-spacing:.24em;color:var(--acc);margin-bottom:12px}
+.cs-wide>h2:first-child{border-top:none;padding-top:0;margin-top:10px}
+.cs-wide p{max-width:900px}
+.cs-wide .lede{max-width:940px}
