@@ -1,164 +1,81 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="ru" data-theme="sun">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pawly · Логотип и фирменный стиль · Кристина Трифонова</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pawly — кейс kri·studio</title>
+<meta name="description" content="04 · Зоо-бренд">
+<script>try{var t=localStorage.getItem('kri-theme');if(['sun','rose','bold','mint'].indexOf(t)<0)t='sun';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="case.css">
-<style>
-  /* hero title — «логотипы» dominant, «и фирменный стиль» smaller line under it */
-  .case-hero h1{font-size:clamp(52px,10.5vw,138px); line-height:.92}
-  /* «и фирменный стиль» sized so its ink width equals «логотипы» (both flush left & right) */
-  .case-hero h1 em{display:block; white-space:nowrap; font-size:.737em; line-height:1}
-
-  /* hero preview strip */
-  .logo-strip{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:14px;
-    margin-top:48px;
-  }
-  .logo-strip a{
-    position:relative;
-    aspect-ratio:3/4; border-radius:14px; overflow:hidden;
-    background:var(--pink-soft);
-    box-shadow:0 18px 36px -22px rgba(0,0,0,.3);
-    transition:.25s;
-  }
-  .logo-strip a:hover{transform:translateY(-6px)}
-  .logo-strip img{width:100%; height:100%; object-fit:cover; object-position:center top}
-  .logo-strip a .lbl{
-    position:absolute; left:10px; bottom:10px;
-    padding:5px 10px; border-radius:999px;
-    background:rgba(255,248,251,.92); color:var(--ink);
-    font-family:var(--font-display); font-size:9px; font-weight:700;
-    letter-spacing:.08em; text-transform:uppercase; z-index:2;
-  }
-  @media (max-width:780px){.logo-strip{grid-template-columns:repeat(2,1fr)}}
-
-  /* per-brand block (scoped to sections so it never hits the nav logo `.brand`) */
-  section.brand{padding:84px 0; border-top:1px solid rgba(26,26,26,.1)}
-  section.brand.cream{background:var(--paper)}
-  .brand-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:56px;
-    align-items:start; margin-top:40px;
-  }
-  .brand-grid.rev .board{order:2}
-  .brand-grid.rev .binfo{order:1}
-  @media (max-width:880px){
-    .brand-grid,.brand-grid.rev{grid-template-columns:1fr; gap:32px}
-    .brand-grid.rev .board{order:0}
-  }
-
-  .board{
-    border-radius:18px; overflow:hidden; background:#fff;
-    box-shadow:0 44px 90px -44px rgba(0,0,0,.42);
-    border:1px solid rgba(0,0,0,.06);
-  }
-  .board img{width:100%; display:block}
-
-  .binfo{position:sticky; top:96px; display:flex; flex-direction:column; gap:22px}
-  @media (max-width:880px){.binfo{position:static}}
-  .binfo .kicker{
-    font-family:var(--font-display); font-size:11px; font-weight:700;
-    letter-spacing:.14em; text-transform:uppercase; margin:0;
-  }
-  .binfo h2{
-    font-family:var(--font-display); font-weight:800;
-    font-size:clamp(40px,5.4vw,76px); line-height:.9; letter-spacing:-.02em;
-    text-transform:uppercase; margin:0;
-  }
-  .binfo h2 em{font-family:var(--font-italic); font-style:italic; font-weight:900; color:var(--pink-hot); text-transform:none}
-  .binfo .tagline{font-family:var(--font-italic); font-style:italic; font-size:20px; color:rgba(0,0,0,.6)}
-  .binfo p{margin:0; font-size:17px; line-height:1.55; max-width:520px}
-
-  .meta-label{
-    font-family:var(--font-display); font-size:10px; font-weight:700;
-    letter-spacing:.14em; text-transform:uppercase; color:rgba(0,0,0,.45);
-    margin-bottom:-8px;
-  }
-
-  .palette{display:flex; gap:12px; flex-wrap:wrap}
-  .sw{display:flex; flex-direction:column; gap:7px; align-items:center}
-  .sw i{width:40px; height:40px; border-radius:50%; display:block; border:1px solid rgba(0,0,0,.1)}
-  .sw span{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:10px; color:rgba(0,0,0,.5); letter-spacing:.02em}
-
-  .kit{display:flex; flex-wrap:wrap; gap:9px}
-  .kit b{
-    font-family:var(--font-body); font-weight:500; font-size:13px;
-    padding:8px 15px; border:1px solid var(--ink); border-radius:999px;
-  }
-  .typeline{font-size:15px; color:rgba(0,0,0,.7)}
-  .typeline b{font-weight:600}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
 </head>
-<body data-screen-label="01 · Логотипы и фирменный стиль">
-
-<header class="case-nav">
-  <a href="../index.html" class="brand">kri<b>·</b>studio</a>
-  <a href="../index.html#cases" class="back"><span class="arrow">←</span> Назад к работам</a>
+<body>
+<header class="topnav">
+<div class="wrap">
+<a class="brand" href="../index.html">kri<b>·</b>studio</a>
+<nav class="nav-links" id="navLinks">
+<a href="../index.html">Главная</a>
+<a href="../portfolio.html" class="active">Работы</a>
+<a href="../services.html">Услуги и цены</a>
+<a href="../about.html">О студии</a>
+<a href="../contacts.html">Контакты</a>
+</nav>
+<div style="display:flex;align-items:center;gap:10px">
+<a href="../contacts.html" class="btn btn-primary nav-cta">Обсудить проект</a>
+<button class="burger" id="burger" aria-label="Меню">≡</button>
+</div>
+</div>
 </header>
+<div class="mood-panel" aria-label="Настроение сайта">
+<button data-theme-set="sun" data-label="Тёплое" aria-label="Тёплая тема"></button>
+<button data-theme-set="bold" data-label="Смелое" aria-label="Тёмная тема"></button>
+<button data-theme-set="rose" data-label="Розовое" aria-label="Розовая тема"></button>
+<button data-theme-set="mint" data-label="Свежее" aria-label="Мятная тема"></button>
+<span class="mp-label">настроение</span>
+</div>
+<div id="cur">смотреть</div>
 
-<section class="case-hero">
-  <div class="wrap">
-    <div class="crumbs"><span>Кейс 01</span><span class="dot"></span><span>Айдентика · Логотипы · Брендинг</span><span class="dot"></span><span>Проект 04</span></div>
-    <h1>pawly</h1>
-    <p class="lede">Бренд «под ключ»: от логотипа и фирменного персонажа до палитры, типографики, упаковки и носителей — законченная система, узнаваемая на любом носителе.</p>
-
-    <div class="factsheet">
-      <div><div class="label">Направление</div><div class="val">Айдентика и брендинг</div></div>
-      <div><div class="label">Проект</div><div class="val">04 из 05 · Pawly</div></div>
-      <div><div class="label">Состав</div><div class="val">Логотип · палитра · носители</div></div>
-      <div><div class="label">Инструменты</div><div class="val">Illustrator · Photoshop</div></div>
-    </div>
-
-    </div>
+<section class="pj-hero">
+<div class="wrap">
+<div class="eyebrow">Кейс · Логотип и фирменный стиль</div>
+<div class="pj-grid">
+<div class="pj-board reveal"><img src="../assets/logos/pawly.png" alt="Бренд-борд Pawly: логотип-собачка, иконки, упаковка, тоут, адресник, транспорт"></div>
+<div class="pj-info">
+<div class="pj-kicker">04 · Зоо-бренд</div>
+<h1 class="pj-title">pawly</h1>
+<div class="pj-tagline">happy tails, every day</div>
+<p class="pj-desc">Дружелюбный бренд товаров для питомцев. Логотип, где буква «P» превращается в мордочку собаки, гибкий набор иконок-маскотов и носители: упаковка, тоут, адресник, фирменный транспорт и соцсети.</p>
+<div class="pj-label">Палитра</div>
+<div class="pj-palette"><div class="sw"><i style="background:#5C6FE0"></i><span>5C6FE0</span></div><div class="sw"><i style="background:#2E3A6E"></i><span>2E3A6E</span></div><div class="sw"><i style="background:#C9D0F2"></i><span>C9D0F2</span></div><div class="sw"><i style="background:#F0F2FA"></i><span>F0F2FA</span></div><div class="sw"><i style="background:#FFFFFF"></i><span>FFFFFF</span></div></div>
+<div class="pj-label">В работе</div>
+<div class="pj-kit"><b>Логотип</b><b>Иконки</b><b>Упаковка</b><b>Тоут</b><b>Адресник</b><b>Транспорт</b></div>
+<div style="margin-top:12px"><a class="btn btn-primary" href="../contacts.html">Хочу так же ↗</a></div>
+</div>
+</div>
+<div class="pj-nav">
+<a class="btn btn-ghost" href="../portfolio.html">← Все работы</a>
+<a class="btn btn-ghost" href="brand-wild-brew.html">Следующий проект →</a>
+</div>
+</div>
 </section>
 
-<!-- 04 · PAWLY -->
-<section class="brand cream" id="pawly">
-  <div class="wrap">
-    <div class="brand-grid rev">
-      <div class="board"><img src="../assets/logos/pawly.png" alt="Бренд-борд Pawly: логотип-собачка, иконки, упаковка, тоут, адресник, транспорт" loading="lazy"></div>
-      <div class="binfo">
-        <p class="kicker" style="color:#5C6FE0">04 · Зоо-бренд</p>
-        <h2>pawly</h2>
-        <div class="tagline">happy tails, every day</div>
-        <p>Дружелюбный бренд товаров для питомцев. Логотип, где буква «P» превращается в мордочку собаки, гибкий набор иконок-маскотов и носители: упаковка, тоут, адресник, фирменный транспорт и соцсети.</p>
-        <div class="meta-label">Палитра</div>
-        <div class="palette">
-          <div class="sw"><i style="background:#5C6FE0"></i><span>5C6FE0</span></div>
-          <div class="sw"><i style="background:#2E3A6E"></i><span>2E3A6E</span></div>
-          <div class="sw"><i style="background:#C9D0F2"></i><span>C9D0F2</span></div>
-          <div class="sw"><i style="background:#F0F2FA"></i><span>F0F2FA</span></div>
-          <div class="sw"><i style="background:#FFFFFF"></i><span>FFFFFF</span></div>
-        </div>
-        <div class="typeline"><b>Характер:</b> мягкий, дружелюбный, игривый</div>
-        <div class="meta-label">В работе</div>
-        <div class="kit"><b>Логотип</b><b>Иконки</b><b>Упаковка</b><b>Тоут</b><b>Адресник</b><b>Транспорт</b></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="case-foot">
-  <div class="wrap">
-    <a class="next-case" href="brand-wild-brew.html" data-cursor="open" data-cursor-label="дальше">
-      <div>
-        <div class="nxt-kicker">Следующий проект · 05</div>
-        <div class="nxt-title">wild <em>brew</em></div>
-      </div>
-      <div class="nxt-arrow">→</div>
-    </a>
-    <div class="copy">
-      <span>© 2026 Кристина Трифонова · <b>kri·studio</b></span>
-      <a href="../index.html#contact">Написать мне →</a>
-    </div>
-  </div>
+<footer>
+<div class="wrap">
+<div class="big">thank you<i style="color:var(--acc);font-style:normal">*</i></div>
+<div class="foot-grid">
+<div class="req">kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.<br>Работаем по договору, оплата с чеком.</div>
+<div class="foot-links">
+<a href="../privacy.html">Политика обработки ПД</a>
+<a href="mailto:kri_tri06@mail.ru">Почта</a>
+<a href="https://t.me/kri_tri06" target="_blank" rel="noopener">Telegram</a>
+<a href="https://wa.me/79014645301" target="_blank" rel="noopener">WhatsApp</a>
+<a href="https://vk.com" target="_blank" rel="noopener">VK</a>
+</div>
+</div>
+</div>
 </footer>
-
-<script src="../image-slot.js"></script>
-<script src="case-cursor.js"></script>
+<script src="../assets/app.js"></script>
 </body>
 </html>
