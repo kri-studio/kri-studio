@@ -82,15 +82,15 @@ a.case-card{cursor:none}
 .badge.acc{background:var(--acc);color:#fff}
 
 /* УСЛУГИ */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:transform .3s,box-shadow .3s}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .3s,box-shadow .3s}
 .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .svc .ic{width:54px;height:54px;border-radius:16px;background:var(--tint);color:var(--acc);display:grid;place-items:center;margin-bottom:20px}
 .svc .ic svg{width:26px;height:26px}
 .svc h3{font-size:19px;margin-bottom:8px}
 .svc p{color:var(--muted);font-size:15px;min-height:48px}
 .svc .meta{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
-.svc .price{font-family:var(--dis);font-weight:700;font-size:17px}
+.svc .price{font-family:var(--dis);font-weight:700;font-size:17px;color:var(--acc)}
 .svc .price small{display:block;font-family:var(--txt);font-weight:400;font-size:12px;color:var(--muted)}
 .svc .term{font-size:12.5px;color:var(--muted)}
 
@@ -318,7 +318,7 @@ footer .big{font-family:var(--dis);font-weight:900;font-size:clamp(40px,8vw,104p
 /* подписи на карточках работ: белое жирное + серое пояснение под ним */
 .case-card .cap h3{color:#fff;margin-bottom:7px}
 .case-card .cap span{display:block;color:rgba(255,255,255,.75);font-size:12.5px;letter-spacing:.04em;text-transform:none;line-height:1.45}
-/* аккордеон «Стоимость по направлениям» — плюсик и категории */
+/* аккордеон ��Стоимость по направлениям» — плюсик и категории */
 .acc-cat{margin-bottom:36px}
 .acc-cat-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
 .acc-cat-head .ci{width:46px;height:46px;border-radius:14px;background:var(--tint);color:var(--acc);display:grid;place-items:center;flex:none}
@@ -441,3 +441,12 @@ details.acc .acc-body{padding:0 22px 22px;color:var(--muted);font-size:14.5px;li
 .mini b{font-family:var(--dis);font-weight:800;color:var(--acc);font-size:18px;letter-spacing:.02em}
 @media(max-width:1080px){.hero8 .hero-grid{grid-template-columns:1fr;gap:10px}.hero8 .hero-visual{order:-1;min-height:460px;margin-bottom:10px}.hero8 .hero-stats{gap:18px}.wgrid{grid-template-columns:repeat(2,1fr)}.mini-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.wgrid{grid-template-columns:1fr}.mini-grid{grid-template-columns:repeat(2,1fr)}.hero8 .portrait{width:280px;height:410px}.hero8 .blob8{width:340px;height:340px}.hero8 .blob-soft{width:420px;height:420px}}
+
+/* ==== O studii v2: krupnee blok s foto + rasseyannyi svet v share ==== */
+.about-hero{align-items:stretch}
+.about-visual{height:100%;min-height:560px}
+.circle-photo{width:min(540px,96%)}
+.about-visual .ringd{width:620px;height:620px}
+.photo-glow{position:absolute;left:50%;top:56%;width:86%;height:86%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 50% 36%,rgba(255,255,255,.85) 0%,var(--acc2) 42%,transparent 72%);filter:blur(28px);opacity:.9;z-index:1;pointer-events:none}
+.circle-photo img{z-index:2}
+@media(max-width:760px){.about-visual{min-height:440px}.circle-photo{width:min(360px,94%)}.about-visual .ringd{width:440px;height:440px}}
