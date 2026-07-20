@@ -542,7 +542,15 @@ details.acc .acc-body{padding:0 22px 22px;color:var(--muted);font-size:14.5px;li
 @media(max-width:900px){.menu-showcase,.menu-brief{grid-template-columns:1fr}}
 
 .case-stats-fixed .stat-card{position:static!important;animation:none!important;min-width:0}.case-stats-fixed{align-items:stretch}.case-stats-fixed .stat-card span{white-space:normal}
-/* Safety: контент остаётся видимым, даже если браузер не успел проиграть анимацию */
-.reveal{opacity:1;transform:none}
-.hero-v5 .v5-hero-left>*{opacity:1;transform:none;animation:none}
-.hero-v5 .v5-hero-visual{opacity:1;transform:none;animation:none}
+/* Лента и блобы могут выходить за экран — прячем горизонтальный скролл */
+html,body{overflow-x:clip}
+
+
+
+/* QA-ONLY-START */
+*{animation-duration:0s!important;animation-delay:0s!important;transition-duration:0s!important}
+/* QA-ONLY-END */
+
+/* QA-ONLY-START */
+*{animation-duration:0s!important;animation-delay:0s!important;transition-duration:0s!important}
+/* QA-ONLY-END */
