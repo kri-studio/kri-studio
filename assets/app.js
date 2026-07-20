@@ -62,7 +62,7 @@
       if(pd&&!pd.checked){pd.focus();return;}
       var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value:'';};
       var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
-      // TODO: замените на почту на своём домене
+      // Форма открывает готовое письмо на почту студии.
       location.href='mailto:kri_tri06@mail.ru?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
     });
   });
