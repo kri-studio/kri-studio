@@ -54,16 +54,36 @@
     });
   }
 
-  // Форма заявки → письмо (без бэкенда)
+  // Форма заявки → Telegram (бот kri·studio)
+  var TG_TOKEN='8876827624:AAEg6wqxzYLEYlqEk2KwzpJYRGh1hBqYyjY';
+  var TG_CHAT='2136903894';
   document.querySelectorAll('form.form').forEach(function(f){
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
       var pd=f.querySelector('input[type=checkbox]');
       if(pd&&!pd.checked){pd.focus();return;}
       var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value:'';};
-      var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
-      // Форма открывает готовое письмо на почту студии.
-      location.href='mailto:kri_tri06@mail.ru?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
+      var text='\u{1F4E9} Заявка с сайта kri·studio\n\nИмя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+(g('budget')||'не указан')+'\n\nО задаче:\n'+(g('task')||'—');
+      var btn=f.querySelector('button[type=submit]');
+      var btnText=btn?btn.textContent:'';
+      if(btn){btn.disabled=true;btn.textContent='Отправляем…';}
+      fetch('https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({chat_id:TG_CHAT,text:text})
+      }).then(function(r){return r.json();}).then(function(res){
+        if(!res.ok)throw new Error('tg');
+        f.reset();
+        if(btn){btn.textContent='Заявка отправлена ✓';btn.classList.add('sent');}
+        var fine=f.querySelector('.fine');
+        if(fine)fine.textContent='Спасибо! Ответим в течение дня.';
+        setTimeout(function(){if(btn){btn.disabled=false;btn.textContent=btnText;btn.classList.remove('sent');}},6000);
+      }).catch(function(){
+        // Запасной путь — письмо на почту студии.
+        if(btn){btn.disabled=false;btn.textContent=btnText;}
+        var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
+        location.href='mailto:kri_tri06@mail.ru?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
+      });
     });
   });
 })();
