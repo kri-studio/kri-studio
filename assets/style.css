@@ -548,3 +548,17 @@ html,body{overflow-x:clip}
 .pack .p-price{white-space:nowrap}
 .menu-stack{display:grid;gap:22px;margin:22px 0 30px}.menu-stack figure{margin:0}
 .pj-brief{margin:14px 0 0;display:grid;gap:6px}.pj-brief p{margin:0;font-size:13.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pj-brief p b{color:var(--ink)}
+
+/* ==== v11 2026-07-21 ==== */
+.ci svg{width:15px;height:15px;display:block}
+.pack ul li.gift{color:var(--acc);font-weight:600}
+.pack.featured ul li.gift{color:#fff}
+.case-grid.six{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.usp-grid{grid-template-columns:repeat(3,1fr)}
+.gift-line{margin-top:12px;font-weight:600;color:var(--acc);font-size:14.5px}
+.faq-strip{margin-top:30px;text-align:center;color:var(--muted)}
+.faq-strip a{font-weight:700}
+.pack-tabs{margin-bottom:26px}
+.case-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+@media(max-width:900px){.case-grid.six{grid-template-columns:1fr 1fr}.usp-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.case-grid.six{grid-template-columns:1fr}}
