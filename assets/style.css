@@ -601,3 +601,11 @@ html,body{overflow-x:clip}
 .rev-arrow.next{right:0}
 .rev-arrow:hover{background:var(--ink)}
 @media(max-width:600px){.rev-wrap{padding:0 6px}.rev-arrow{width:38px;height:38px;font-size:16px;background:rgba(255,248,241,.92)}}
+
+/* ==== v16 2026-07-21 ==== */
+.cs-wide p{max-width:none}
+.cs-wide .lede{max-width:none}
+.pj-desc{max-width:none}
+.pj-brief p{max-width:none}
+.sub{max-width:none}
+.plist{max-width:none}
