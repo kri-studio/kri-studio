@@ -582,3 +582,13 @@ html,body{overflow-x:clip}
 .case-3d-top img{aspect-ratio:4/3;height:100%;object-fit:cover;object-position:50% 35%;background:#fff3ea}
 .case-3d-bottom img{aspect-ratio:3/4;height:100%;object-fit:cover;object-position:50% 12%;background:#fff3ea}
 @media(max-width:900px){.case-3d-bottom{display:grid;grid-template-columns:repeat(2,1fr)}.case-3d-bottom figure{width:auto}}
+
+/* ==== v14 2026-07-21 ==== */
+.case-body{max-width:none}
+.pj-brief p{max-width:none}
+.rev-carousel{-webkit-mask-image:none;mask-image:none;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:6px}
+.rev-carousel::-webkit-scrollbar{display:none}
+.rev-track{animation:none}
+.rev-nav{display:flex;gap:12px;justify-content:center;margin-top:24px}
+.rev-arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.rev-arrow:hover{background:var(--ink);color:var(--canvas)}
