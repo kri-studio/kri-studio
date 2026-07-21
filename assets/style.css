@@ -592,3 +592,12 @@ html,body{overflow-x:clip}
 .rev-nav{display:flex;gap:12px;justify-content:center;margin-top:24px}
 .rev-arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
 .rev-arrow:hover{background:var(--ink);color:var(--canvas)}
+
+/* ==== v15 2026-07-21 ==== */
+.case-body{max-width:var(--maxw)}
+.rev-wrap{position:relative;padding:0 62px}
+.rev-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:var(--canvas)}
+.rev-arrow.prev{left:0}
+.rev-arrow.next{right:0}
+.rev-arrow:hover{background:var(--ink)}
+@media(max-width:600px){.rev-wrap{padding:0 6px}.rev-arrow{width:38px;height:38px;font-size:16px;background:rgba(255,248,241,.92)}}
