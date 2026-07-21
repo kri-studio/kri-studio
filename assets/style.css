@@ -573,3 +573,12 @@ html,body{overflow-x:clip}
 @keyframes revscroll{to{transform:translateX(-50%)}}
 @media (max-width:900px){.pack-grid.cols-3{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.pack-grid.cols-3{grid-template-columns:1fr}.rev-track .rev{width:300px}}
+
+/* ==== v13 2026-07-21 ==== */
+@media(min-width:900px){.pf-oneline{white-space:nowrap;font-size:clamp(30px,3.6vw,46px)}}
+.pj-brief p{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.55;max-width:60ch}
+.case-3d-final figcaption{display:none}
+.case-3d-top,.case-3d-bottom{align-items:stretch}
+.case-3d-top img{aspect-ratio:4/3;height:100%;object-fit:cover;object-position:50% 35%;background:#fff3ea}
+.case-3d-bottom img{aspect-ratio:3/4;height:100%;object-fit:cover;object-position:50% 12%;background:#fff3ea}
+@media(max-width:900px){.case-3d-bottom{display:grid;grid-template-columns:repeat(2,1fr)}.case-3d-bottom figure{width:auto}}
