@@ -19,7 +19,7 @@
 
   // Бургер
   var burger=document.querySelector('.burger'),links=document.querySelector('.nav-links');
-  if(burger&&links){burger.addEventListener('click',function(){links.classList.toggle('open');});}
+  if(burger&&links){burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.classList.toggle('open',o);document.body.classList.toggle('menu-open',o);burger.textContent=o?'✕':'≡';});links.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){links.classList.remove('open');burger.classList.remove('open');document.body.classList.remove('menu-open');burger.textContent='≡';});});}
 
   // Появление секций при скролле
   var io=new IntersectionObserver(function(es){

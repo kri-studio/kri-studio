@@ -125,3 +125,12 @@ html[data-theme="bold"] .hero-v5 .v5-blob{background:radial-gradient(circle at 3
 @media(max-width:1080px){.hero-v5 .v5-portrait{width:460px}.hero-v5 .v5-hero-visual{min-height:600px}}
 @media(max-width:960px){.hero-v5 .v5-hero-left{padding-bottom:24px}.hero-v5 .v5-hero-visual{min-height:470px;align-items:flex-end}.hero-v5 .v5-hero-stats{grid-template-columns:1fr}.hero-v5 .v5-fc-2{top:auto;bottom:90px}}
 @media(max-width:760px){.hero-v5 .v5-portrait{width:330px}}
+
+/* ==== v17: мобильный hero — текст, бегущая строка, потом фото ==== */
+@media(max-width:960px){
+.hero-v5{display:flex;flex-direction:column;padding:44px 0 0}
+.hero-v5 .v5-wrap.v5-hero-grid{display:contents}
+.hero-v5 .v5-hero-left{order:1;padding:0 22px}
+.hero-v5 .v5-marquee{order:2;margin-top:6px}
+.hero-v5 .v5-hero-visual{order:3;min-height:470px;margin:18px 0 0}
+}

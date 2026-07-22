@@ -609,3 +609,16 @@ html,body{overflow-x:clip}
 .pj-brief p{max-width:none}
 .sub{max-width:none}
 .plist{max-width:none}
+
+/* ==== v17: кнопка языка + бургер-меню на весь экран ==== */
+.lang-btn{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ink2)}
+.lang-btn img{width:26px;height:26px;border-radius:50%;display:block;border:1px solid var(--line);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.lang-btn:hover{color:var(--acc)}
+@media(max-width:900px){
+.nav-links{position:fixed;top:72px;left:0;right:0;bottom:0;height:auto;background:var(--canvas);flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:0;padding:30px 26px 40px;transform:translateY(-130%);transition:transform .45s cubic-bezier(.7,0,.25,1);border-bottom:none;box-shadow:none;overflow:auto}
+.nav-links.open{transform:none}
+.nav-links a{font-family:'Unbounded',sans-serif;font-size:clamp(26px,7.5vw,40px);font-weight:700;text-transform:none;letter-spacing:-.02em;color:var(--ink);padding:16px 0;border-bottom:1px solid var(--line);width:100%}
+.nav-links a.active,.nav-links a:hover{color:var(--acc)}
+body.menu-open{overflow:hidden}
+.burger.open{color:var(--acc)}
+}
