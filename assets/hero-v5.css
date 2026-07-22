@@ -131,6 +131,6 @@ html[data-theme="bold"] .hero-v5 .v5-blob{background:radial-gradient(circle at 3
 .hero-v5{display:flex;flex-direction:column;padding:44px 0 0}
 .hero-v5 .v5-wrap.v5-hero-grid{display:contents}
 .hero-v5 .v5-hero-left{order:1;padding:0 22px}
-.hero-v5 .v5-marquee{order:2;margin-top:6px}
-.hero-v5 .v5-hero-visual{order:3;min-height:470px;margin:18px 0 0}
+.hero-v5 .v5-hero-visual{order:2;min-height:440px;margin:10px 0 0}
+.hero-v5 .v5-marquee{order:3;margin-top:-46px}
 }
