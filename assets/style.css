@@ -623,3 +623,7 @@ html,body{overflow-x:clip}
 body.menu-open{overflow:hidden}
 .burger.open{color:var(--acc)}
 }
+
+/* V20-FAILSAFE-CSS: контент виден, даже если анимация/скрипт не сработали */
+html.anim-done .reveal{opacity:1!important;transform:none!important}
+html.anim-done .hero-v5 .v5-hero-left>*,html.anim-done .hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}

@@ -39,6 +39,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<!-- V20-NOSCRIPT --><noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-v5 .v5-hero-left>*,.hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
 </head>
 <body>
 <header class="topnav">
@@ -166,5 +167,7 @@ document.querySelectorAll('.pf-tabs button').forEach(function(b){b.addEventListe
 </div>
 </footer>
 <script src="/assets/app.js"></script>
+<script>/* V20-FAILSAFE-JS: гарантируем видимость контента */
+(function(){function s(){var e=document.querySelectorAll(".reveal"),i;for(i=0;i<e.length;i++){e[i].classList.add("in");}document.documentElement.classList.add("anim-done");}if(!("IntersectionObserver" in window)){s();return;}if(document.readyState==="complete"){setTimeout(s,1400);}else{window.addEventListener("load",function(){setTimeout(s,1400);});}setTimeout(s,2600);})();</script>
 </body>
 </html>
