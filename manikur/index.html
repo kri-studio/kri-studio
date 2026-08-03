@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARI.NAILS — креативный маникюр</title>
+<meta name="description" content="Креативный маникюр: 3D-дизайны, хром, объёмные цветы и авторские идеи. Не как у всех.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#top">MARI<span>.</span>NAILS</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#works" data-hover>Работы</a>
+      <a href="#services" data-hover>Прайс</a>
+      <a href="#about" data-hover>Кто я</a>
+      <a class="btn btn--acid" href="#booking" data-hover>Записаться</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="gl" class="hero__gl" aria-hidden="true"></canvas>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal3d">nail artist · 3D-дизайн · Москва</p>
+      <h1 class="hero__title">
+        <span class="line"><span>НОГТИ</span></span>
+        <span class="line"><span class="stroke">НЕ КАК</span></span>
+        <span class="line"><span>У ВСЕХ<b class="blink">_</b></span></span>
+      </h1>
+      <p class="hero__sub reveal3d" data-delay="2">Объёмные 3D-цветы, жидкий металл, стилеты, аква-эффекты. Если хочется «просто нюд» — это не сюда. Если хочется, чтобы спрашивали «ГДЕ?!» — привет 👋</p>
+      <div class="hero__actions reveal3d" data-delay="3">
+        <a class="btn btn--acid btn--big" href="#booking" data-hover>Хочу такое</a>
+        <a class="btn btn--ghost btn--big" href="#works" data-hover>Смотреть работы</a>
+      </div>
+    </div>
+    <div class="hero__cards" aria-hidden="true">
+      <div class="hero__card tilt" data-tilt><img src="assets/img/work-chrome.png" alt=""></div>
+      <div class="hero__card tilt" data-tilt><img src="assets/img/work-flowers.png" alt=""></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>3D-дизайн</span><i>★</i><span>хром</span><i>★</i><span>стилеты</span><i>★</i><span>объёмные цветы</span><i>★</i><span>аква</span><i>★</i><span>втирка</span><i>★</i>
+      <span>3D-дизайн</span><i>★</i><span>хром</span><i>★</i><span>стилеты</span><i>★</i><span>объёмные цветы</span><i>★</i><span>аква</span><i>★</i><span>втирка</span><i>★</i>
+    </div>
+  </div>
+
+  <!-- WORKS -->
+  <section class="section" id="works">
+    <div class="section__head reveal3d">
+      <p class="section__eyebrow">портфолио</p>
+      <h2><span class="stroke">РАБОТЫ,</span> КОТОРЫЕ НОСЯТ КАК УКРАШЕНИЯ</h2>
+    </div>
+    <div class="works">
+      <figure class="work tilt reveal3d" data-tilt>
+        <img src="assets/img/work-flowers.png" alt="Стилеты с объёмными 3D-цветами и каплями">
+        <figcaption><b>Сакура 3D</b><span>объёмные цветы · капли · стилеты</span></figcaption>
+      </figure>
+      <figure class="work tilt reveal3d" data-delay="1" data-tilt>
+        <img src="assets/img/work-chrome.png" alt="Прозрачные стилеты с жидким металлом и жемчугом">
+        <figcaption><b>Жидкий металл</b><span>хром · жемчуг · прозрачная база</span></figcaption>
+      </figure>
+      <figure class="work tilt reveal3d" data-delay="2" data-tilt>
+        <img src="assets/img/work-ice.png" alt="Экстремальные стилеты с эффектом льда и жемчугом">
+        <figcaption><b>Ледяной риф</b><span>аква-эффект · пена · экстрим-длина</span></figcaption>
+      </figure>
+      <figure class="work tilt reveal3d" data-tilt>
+        <img src="assets/img/work-octopus.png" alt="Маникюр с объёмным осьминогом">
+        <figcaption><b>Осьминожка</b><span>3D-лепка · глянец · перламутр</span></figcaption>
+      </figure>
+      <figure class="work tilt reveal3d" data-delay="1" data-tilt>
+        <img src="assets/img/work-orange.png" alt="Оранжевый маникюр с цветами и золотом">
+        <figcaption><b>Папайя</b><span>роспись · стразы · золото</span></figcaption>
+      </figure>
+      <a class="work work--cta reveal3d" data-delay="2" href="#booking" data-hover>
+        <span class="work--cta__big">+∞</span>
+        <span>твоя идея — следующая. придумаем вместе</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--acid" id="services">
+    <div class="section__head reveal3d">
+      <p class="section__eyebrow section__eyebrow--dark">прайс</p>
+      <h2>СКОЛЬКО СТОИТ КРАСОТА</h2>
+    </div>
+    <ul class="services">
+      <li class="service reveal3d"><div><h3>Маникюр + однотонное покрытие</h3><p>база · идеальные блики · стойкость до 4 недель</p></div><b>2 500 ₽</b></li>
+      <li class="service reveal3d" data-delay="1"><div><h3>Дизайн-мания</h3><p>хром, втирка, роспись, стразы — соберём образ</p></div><b>от 3 500 ₽</b></li>
+      <li class="service reveal3d" data-delay="2"><div><h3>3D-объём</h3><p>лепка: цветы, капли, существа — как в портфолио</p></div><b>от 4 500 ₽</b></li>
+      <li class="service reveal3d" data-delay="3"><div><h3>Экстрим-длина / стилеты</h3><p>наращивание, архитектура, форма под характер</p></div><b>от 5 000 ₽</b></li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="about__text">
+      <p class="section__eyebrow reveal3d">кто я</p>
+      <h2 class="reveal3d" data-delay="1">ПРИВЕТ, Я МАРИ <span class="wave">✌️</span></h2>
+      <p class="reveal3d" data-delay="2">Ногти — мой холст. Учусь у топовых нейл-художников, таскаю идеи с подиумов и из аниме, лью хром и леплю цветы, пока другие спят. В студии играет плейлист, а не радио «Шансон».</p>
+      <div class="about__stats">
+        <div class="stat reveal3d" data-delay="2"><b data-count="5">5</b><span>лет в нейл-арте</span></div>
+        <div class="stat reveal3d" data-delay="3"><b data-count="700">700</b><span>дизайнов сделано</span></div>
+        <div class="stat reveal3d" data-delay="4"><b data-count="100">100</b><span>% стерильно</span></div>
+      </div>
+    </div>
+    <div class="about__tags reveal3d" data-delay="2" aria-hidden="true">
+      <span class="tag tag--pink">y2k</span>
+      <span class="tag tag--lime">chrome</span>
+      <span class="tag">3D-лепка</span>
+      <span class="tag tag--purple">аниме-арт</span>
+      <span class="tag">стилеты</span>
+      <span class="tag tag--pink">аква</span>
+      <span class="tag tag--lime">втирка</span>
+      <span class="tag">жемчуг</span>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section booking" id="booking">
+    <div class="booking__card reveal3d">
+      <h2>ГОТОВА К <span class="stroke">НЕОБЫЧНОМУ</span>?</h2>
+      <p>Кидай референс в мессенджер (можно скрин из TikTok) — скажу цену и подберём время.</p>
+      <div class="booking__actions">
+        <a class="btn btn--acid btn--big" href="https://t.me/username" target="_blank" rel="noopener" data-hover>Telegram</a>
+        <a class="btn btn--ghost btn--big" href="https://wa.me/79000000000" target="_blank" rel="noopener" data-hover>WhatsApp</a>
+        <a class="btn btn--ghost btn--big" href="tel:+79000000000" data-hover>+7 900 000-00-00</a>
+      </div>
+      <p class="booking__note">Москва · ежедневно 10:00–21:00</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 MARI.NAILS — ногти не как у всех</p>
+  <a href="#top" data-hover>наверх ↑</a>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
