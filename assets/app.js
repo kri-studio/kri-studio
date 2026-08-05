@@ -55,7 +55,7 @@
   }
 
   // Форма заявки → Telegram (бот kri·studio)
-  var TG_TOKEN='8876827624:AAEg6wqxzYLEYlqEk2KwzpJYRGh1hBqYyjY';
+  var TG_TOKEN='8966012197:AAED2o0XhMhNaQQ3U6ysQuGsjUKVTZ6uaj4';
   var TG_CHAT='2136903894';
   document.querySelectorAll('form.form').forEach(function(f){
     f.addEventListener('submit',function(ev){
