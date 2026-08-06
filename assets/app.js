@@ -55,7 +55,7 @@
   }
 
   // Форма заявки → Telegram (бот kri·studio)
-  var TG_TOKEN='8876827624:AAEg6wqxzYLEYlqEk2KwzpJYRGh1hBqYyjY';
+  var TG_TOKEN='8966012197:AAED2o0XhMhNaQQ3U6ysQuGsjUKVTZ6uaj4';
   var TG_CHAT='2136903894';
   document.querySelectorAll('form.form').forEach(function(f){
     f.addEventListener('submit',function(ev){
@@ -67,7 +67,7 @@
       var btn=f.querySelector('button[type=submit]');
       var btnText=btn?btn.textContent:'';
       if(btn){btn.disabled=true;btn.textContent='Отправляем…';}
-      fetch('{{https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage',{}}
+      fetch('https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({chat_id:TG_CHAT,text:text})
@@ -131,4 +131,84 @@
       if(document.body)document.body.appendChild(bar);
     }
   }catch(e){}
+})();
+
+// === v21: фото в пиджаке цвета темы + фиксы EN-страниц (язык, настроение, курсор) ===
+(function(){
+  'use strict';
+  var THEMES=['sun','rose','bold','mint'];
+  var MAP={sun:'/assets/img/portrait-sun.webp',rose:'/assets/img/portrait-rose.webp',bold:'/assets/img/portrait-bold.webp',mint:'/assets/img/portrait-mint.webp'};
+  var isEn=((document.documentElement.getAttribute('lang')||'').indexOf('en')===0)||(location.pathname.indexOf('/en/')===0);
+
+  // Фото: подменяем портрет под активную тему (главная и «О студии»)
+  function portraitTargets(){
+    var list=[],sel=['img[data-portrait]','.v5-portrait img','.circle-photo img'],i,j,found;
+    for(i=0;i<sel.length;i++){found=document.querySelectorAll(sel[i]);for(j=0;j<found.length;j++){if(list.indexOf(found[j])<0)list.push(found[j]);}}
+    return list;
+  }
+  function syncPortrait(){
+    var t=document.documentElement.getAttribute('data-theme');
+    if(THEMES.indexOf(t)<0)t='sun';
+    var src=MAP[t],imgs=portraitTargets(),i;
+    for(i=0;i<imgs.length;i++){if(imgs[i].getAttribute('src')!==src)imgs[i].setAttribute('src',src);}
+  }
+  try{new MutationObserver(syncPortrait).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}
+  syncPortrait();
+  window.addEventListener('load',function(){setTimeout(function(){var k;for(k in MAP){var im=new Image();im.src=MAP[k];}},1200);});
+
+  if(!isEn)return;
+
+  // Значок языка на английских страницах — всегда EN
+  var lb=document.querySelector('.lang-btn');
+  if(lb){
+    lb.setAttribute('aria-label','Русская версия');
+    lb.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" style="border-radius:50%;flex:none" aria-hidden="true"><rect width="24" height="24" fill="#012169"/><path d="M0 0L24 24M24 0L0 24" stroke="#fff" stroke-width="4.6"/><path d="M0 0L24 24M24 0L0 24" stroke="#C8102E" stroke-width="2.2"/><path d="M12 0V24M0 12H24" stroke="#fff" stroke-width="7.4"/><path d="M12 0V24M0 12H24" stroke="#C8102E" stroke-width="4.2"/></svg><span>EN</span>';
+  }
+
+  // Панель «настроение» на EN-страницах, если её нет в разметке
+  if(!document.querySelector('.mood-panel')){
+    var mp=document.createElement('div');
+    mp.className='mood-panel';
+    mp.setAttribute('aria-label','Site mood');
+    mp.innerHTML='<button data-theme-set="sun" data-label="Warm" aria-label="Warm theme"></button><button data-theme-set="bold" data-label="Bold" aria-label="Dark theme"></button><button data-theme-set="rose" data-label="Rose" aria-label="Rose theme"></button><button data-theme-set="mint" data-label="Fresh" aria-label="Mint theme"></button><span class="mp-label">mood</span>';
+    document.body.insertBefore(mp,document.body.firstChild);
+    var bs=mp.querySelectorAll('button');
+    var setT=function(t){
+      if(THEMES.indexOf(t)<0)t='sun';
+      document.documentElement.setAttribute('data-theme',t);
+      try{localStorage.setItem('kri-theme',t);}catch(e){}
+      for(var i=0;i<bs.length;i++){bs[i].classList.toggle('active',bs[i].getAttribute('data-theme-set')===t);}
+    };
+    for(var i=0;i<bs.length;i++){
+      (function(b){
+        b.addEventListener('click',function(){
+          setT(b.getAttribute('data-theme-set'));
+          try{if(typeof ym==='function')ym(110943761,'reachGoal','theme_change',{theme:b.getAttribute('data-theme-set')||''});}catch(e){}
+        });
+      })(bs[i]);
+    }
+    setT(document.documentElement.getAttribute('data-theme'));
+  }else{
+    var lbl=document.querySelector('.mood-panel .mp-label');
+    if(lbl)lbl.textContent='mood';
+    var names={sun:'Warm',bold:'Bold',rose:'Rose',mint:'Fresh'};
+    document.querySelectorAll('.mood-panel button').forEach(function(b){var k=b.getAttribute('data-theme-set');if(names[k])b.setAttribute('data-label',names[k]);});
+  }
+
+  // Курсор «view» над кейсами
+  if(!document.getElementById('cur')){
+    var cur=document.createElement('div');
+    cur.id='cur';cur.textContent='view';
+    document.body.appendChild(cur);
+    if(window.matchMedia&&window.matchMedia('(pointer:fine)').matches){
+      document.addEventListener('mousemove',function(e){cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';});
+      document.querySelectorAll('a.case-card').forEach(function(c){
+        c.addEventListener('mouseenter',function(){cur.classList.add('on');});
+        c.addEventListener('mouseleave',function(){cur.classList.remove('on');});
+      });
+    }
+  }else{
+    var c0=document.getElementById('cur');
+    if(c0.textContent==='смотреть')c0.textContent='view';
+  }
 })();
