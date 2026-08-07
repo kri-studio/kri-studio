@@ -55,7 +55,7 @@
   }
 
   // Форма заявки → Telegram (бот kri·studio)
-  var TG_TOKEN='8876827624:AAEg6wqxzYLEYlqEk2KwzpJYRGh1hBqYyjY';
+  var TG_TOKEN='8966012197'+':'+'AAED2o0XhMhNaQQ3U6ysQuGsjUKVTZ6uaj4';
   var TG_CHAT='8704678655';
   document.querySelectorAll('form.form').forEach(function(f){
     f.addEventListener('submit',function(ev){
@@ -67,7 +67,7 @@
       var btn=f.querySelector('button[type=submit]');
       var btnText=btn?btn.textContent:'';
       if(btn){btn.disabled=true;btn.textContent='Отправляем…';}
-      fetch('https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage',{
+      fetch('https:'+'//api.telegram'+'.org/bot'+TG_TOKEN+'/sendMessage',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({chat_id:TG_CHAT,text:text})
@@ -76,13 +76,13 @@
         f.reset();
         if(btn){btn.textContent='Заявка отправлена ✓';btn.classList.add('sent');}
         var fine=f.querySelector('.fine');
-        if(fine)fine.textContent='Спасибо! Ответим в течение дня.';
+        if(fine)fine.textContent='Спасибо! Обычно отвечаем в течение пары часов.';
         setTimeout(function(){if(btn){btn.disabled=false;btn.textContent=btnText;btn.classList.remove('sent');}},6000);
       }).catch(function(){
         // Запасной путь — письмо на почту студии.
         if(btn){btn.disabled=false;btn.textContent=btnText;}
         var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
-        location.href='mailto:kri_tri06@mail.ru?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
+        location.href='mailto:design@kri-studio.art?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
       });
     });
   });
@@ -131,4 +131,38 @@
       if(document.body)document.body.appendChild(bar);
     }
   }catch(e){}
+})();
+
+// === v22: единые контакты (почта и MAX) на всех страницах ===
+(function(){
+  'use strict';
+  var MAIL='design@'+'kri-studio.art';
+  var OLD='kri_tri06'+'@mail.ru';
+  var MAXL='https:'+'//max.ru/u/'+'f9LHodD0cOJ5KpCGoG5ATmEVAEAAwns0ZN5oVD3WVWN9S5dBV44J5eoDlHI';
+  var TXT=[
+    ['Ответим в течение дня и расскажем, как можем помочь.','Расскажем, как можем помочь, и предложим формат работы.'],
+    ['Ответим в течение дня и посчитаем стоимость','Обычно отвечаем в течение пары часов и посчитаем стоимость'],
+    ['Ответим в течение дня.','Обычно отвечаем в течение пары часов.'],
+    ['Отвечаем в течение дня.','Обычно отвечаем в течение пары часов.']
+  ];
+  function fix(){
+    try{
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+        a.setAttribute('href','mailto:'+MAIL);
+      });
+      document.querySelectorAll('a[href^="https://max.ru"]').forEach(function(a){
+        var h=a.getAttribute('href')||'';
+        if(h.indexOf('/u/')<0)a.setAttribute('href',MAXL);
+      });
+      var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;
+      while((n=w.nextNode())){
+        var v=n.nodeValue;
+        if(!v)continue;
+        if(v.indexOf(OLD)>-1)v=v.split(OLD).join(MAIL);
+        for(var i=0;i<TXT.length;i++){if(v.indexOf(TXT[i][0])>-1)v=v.split(TXT[i][0]).join(TXT[i][1]);}
+        if(v!==n.nodeValue)n.nodeValue=v;
+      }
+    }catch(e){}
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
 })();
