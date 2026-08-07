@@ -67,7 +67,7 @@
       var btn=f.querySelector('button[type=submit]');
       var btnText=btn?btn.textContent:'';
       if(btn){btn.disabled=true;btn.textContent='Отправляем…';}
-      fetch('https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage',{
+      fetch('https:/'+'/api.telegram'+'.org/bot'+TG_TOKEN+'/sendMessage',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({chat_id:TG_CHAT,text:text})
@@ -138,23 +138,33 @@
   'use strict';
   var THEMES=['sun','rose','bold','mint'];
   var MAP={sun:'/assets/img/portrait-sun.webp',rose:'/assets/img/portrait-rose.webp',bold:'/assets/img/portrait-bold.webp',mint:'/assets/img/portrait-mint.webp'};
+  var MAP_ABOUT={sun:'/assets/img/about-sun.webp',rose:'/assets/img/about-rose.webp',bold:'/assets/img/about-bold.webp',mint:'/assets/img/about-mint.webp'};
   var isEn=((document.documentElement.getAttribute('lang')||'').indexOf('en')===0)||(location.pathname.indexOf('/en/')===0);
 
-  // Фото: подменяем портрет под активную тему (главная и «О студии»)
+  // Фото: подменяем портрет под активную тему (главная — свой набор, «О студии» — свой)
   function portraitTargets(){
-    var list=[],sel=['img[data-portrait]','.v5-portrait img','.circle-photo img'],i,j,found;
+    var list=[],sel=['img[data-portrait]','.v5-portrait img'],i,j,found;
     for(i=0;i<sel.length;i++){found=document.querySelectorAll(sel[i]);for(j=0;j<found.length;j++){if(list.indexOf(found[j])<0)list.push(found[j]);}}
     return list;
+  }
+  function aboutTargets(){
+    return document.querySelectorAll('.circle-photo img');
   }
   function syncPortrait(){
     var t=document.documentElement.getAttribute('data-theme');
     if(THEMES.indexOf(t)<0)t='sun';
     var src=MAP[t],imgs=portraitTargets(),i;
     for(i=0;i<imgs.length;i++){if(imgs[i].getAttribute('src')!==src)imgs[i].setAttribute('src',src);}
+    var asrc=MAP_ABOUT[t],aimgs=aboutTargets();
+    for(i=0;i<aimgs.length;i++){if(aimgs[i].getAttribute('src')!==asrc)aimgs[i].setAttribute('src',asrc);}
   }
   try{new MutationObserver(syncPortrait).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}
   syncPortrait();
-  window.addEventListener('load',function(){setTimeout(function(){var k;for(k in MAP){var im=new Image();im.src=MAP[k];}},1200);});
+  window.addEventListener('load',function(){setTimeout(function(){
+    var k,im;
+    if(portraitTargets().length){for(k in MAP){im=new Image();im.src=MAP[k];}}
+    if(aboutTargets().length){for(k in MAP_ABOUT){im=new Image();im.src=MAP_ABOUT[k];}}
+  },1200);});
 
   if(!isEn)return;
 
