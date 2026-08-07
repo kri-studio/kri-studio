@@ -76,13 +76,13 @@
         f.reset();
         if(btn){btn.textContent='Заявка отправлена ✓';btn.classList.add('sent');}
         var fine=f.querySelector('.fine');
-        if(fine)fine.textContent='Спасибо! Ответим в течение дня.';
+        if(fine)fine.textContent='Спасибо! Обычно отвечаем в течение пары часов.';
         setTimeout(function(){if(btn){btn.disabled=false;btn.textContent=btnText;btn.classList.remove('sent');}},6000);
       }).catch(function(){
         // Запасной путь — письмо на почту студии.
         if(btn){btn.disabled=false;btn.textContent=btnText;}
         var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
-        location.href='mailto:kri_tri06@mail.ru?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
+        location.href='mailto:design@kri-studio.art?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
       });
     });
   });
@@ -221,4 +221,21 @@
     var c0=document.getElementById('cur');
     if(c0.textContent==='смотреть')c0.textContent='view';
   }
+})();
+
+/* ==== v22: MAX-ссылка, новая почта, тексты ==== */
+(function(){
+ 'use strict';
+ var MAXL='https://max.ru/u/f9LHodD0cOJ5KpCGoG5ATmEVAEAAwns0ZN5oVD3WVWN9S5dBV44J5eoDlHI';
+ var MAIL='design@kri-studio.art';
+ function up(){
+  var i,a,list,tx;
+  list=document.querySelectorAll('a[href^="https://max.ru"]');
+  for(i=0;i<list.length;i++){list[i].setAttribute('href',MAXL);}
+  list=document.querySelectorAll('a[href^="mailto:"]');
+  for(i=0;i<list.length;i++){a=list[i];a.setAttribute('href','mailto:'+MAIL);if(a.innerHTML.indexOf('kri_tri06')>=0){a.innerHTML=a.innerHTML.replace('kri_tri06@mail.ru',MAIL);}}
+  list=document.querySelectorAll('.fine, .c-sub .s');
+  for(i=0;i<list.length;i++){if(list[i].children.length===0){tx=list[i].textContent;if(tx.indexOf('Ответим в течение дня и расскажем')>=0){list[i].textContent='Расскажем, как можем помочь, и предложим формат работы.';}else if(tx.indexOf('Ответим в течение дня')>=0){list[i].textContent='Обычно отвечаем в течение пары часов.';}}}
+ }
+ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',up);}else{up();}
 })();
