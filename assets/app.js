@@ -166,3 +166,25 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
 })();
+
+// === v23: фото по темам-настроениям на главной и «О студии» ===
+(function(){
+  'use strict';
+  var MAP={
+    sun:'/assets/img/about-sun.webp',
+    rose:'/assets/img/about-rose.webp',
+    bold:'/assets/img/about-bold.webp',
+    mint:'/assets/img/about-mint.webp'
+  };
+  function upd(){
+    try{
+      var t=document.documentElement.getAttribute('data-theme');
+      var src=MAP[t]||MAP.sun;
+      document.querySelectorAll('.v5-portrait img, .circle-photo img').forEach(function(im){
+        if(im.getAttribute('src')!==src)im.setAttribute('src',src);
+      });
+    }catch(e){}
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',upd);else upd();
+  try{new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}
+})();
