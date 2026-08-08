@@ -54,25 +54,23 @@
     });
   }
 
-  // Форма заявки → Telegram (бот kri·studio)
-  var TG_TOKEN='8966012197'+':'+'AAED2o0XhMhNaQQ3U6ysQuGsjUKVTZ6uaj4';
-  var TG_CHAT='8704678655';
+  // Форма заявки → Cloudflare Worker → Telegram (токен хранится только на сервере)
+  var LEAD_URL='https://cool-shadow-dc3b.kristinatrifonova903.workers.dev';
   document.querySelectorAll('form.form').forEach(function(f){
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
       var pd=f.querySelector('input[type=checkbox]');
       if(pd&&!pd.checked){pd.focus();return;}
       var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value:'';};
-      var text='\u{1F4E9} Заявка с сайта kri·studio\n\nИмя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+(g('budget')||'не указан')+'\n\nО задаче:\n'+(g('task')||'—');
       var btn=f.querySelector('button[type=submit]');
       var btnText=btn?btn.textContent:'';
       if(btn){btn.disabled=true;btn.textContent='Отправляем…';}
-      fetch('https:'+'//api.telegram'+'.org/bot'+TG_TOKEN+'/sendMessage',{
+      fetch(LEAD_URL,{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({chat_id:TG_CHAT,text:text})
+        body:JSON.stringify({name:g('name'),contact:g('contact'),budget:g('budget'),task:g('task')})
       }).then(function(r){return r.json();}).then(function(res){
-        if(!res.ok)throw new Error('tg');
+        if(!res.ok)throw new Error('send');
         f.reset();
         if(btn){btn.textContent='Заявка отправлена ✓';btn.classList.add('sent');}
         var fine=f.querySelector('.fine');
