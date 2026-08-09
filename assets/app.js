@@ -165,7 +165,7 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
 })();
 // === v23.1: фото по темам-настроениям — ТОЛЬКО на странице «О студии» ===
-// Первый экран главной (.v5-portrait) не трогаем: там остаётся hero-v5.webp из HTML.
+// Первый экран главной (.v5-portrait) меняет отдельный блок v24 ниже.
 (function(){
   'use strict';
   var MAP={
@@ -190,10 +190,10 @@
 /* ===== v24: смена пиджака на ПЕРВОМ ЭКРАНЕ по теме ===== */
 (function () {
   var HERO_MAP = {
-    sun:  '/assets/img/hero-sun.webp',
-    rose: '/assets/img/hero-rose.webp',
-    bold: '/assets/img/hero-bold.webp',
-    mint: '/assets/img/hero-mint.webp'
+    sun:  '/assets/img/portrait-sun.webp',
+    rose: '/assets/img/portrait-rose.webp',
+    bold: '/assets/img/portrait-bold.webp',
+    mint: '/assets/img/portrait-mint.webp'
   };
   function applyHeroPhoto() {
     var t = document.documentElement.getAttribute('data-theme');
