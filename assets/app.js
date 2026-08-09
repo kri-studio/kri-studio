@@ -164,7 +164,6 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
 })();
-
 // === v23.1: фото по темам-настроениям — ТОЛЬКО на странице «О студии» ===
 // Первый экран главной (.v5-portrait) не трогаем: там остаётся hero-v5.webp из HTML.
 (function(){
@@ -187,3 +186,29 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',upd);else upd();
   try{new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}
 })();
+
+/* ===== v24: смена пиджака на ПЕРВОМ ЭКРАНЕ по теме ===== */
+(function () {
+  var HERO_MAP = {
+    sun:  '/assets/img/hero-sun.webp',
+    rose: '/assets/img/hero-rose.webp',
+    bold: '/assets/img/hero-bold.webp',
+    mint: '/assets/img/hero-mint.webp'
+  };
+  function applyHeroPhoto() {
+    var t = document.documentElement.getAttribute('data-theme');
+    var img = document.querySelector('.v5-portrait img');
+    if (!img || !t || !HERO_MAP[t]) return;
+    if (img.getAttribute('src') !== HERO_MAP[t]) img.setAttribute('src', HERO_MAP[t]);
+  }
+  new MutationObserver(applyHeroPhoto).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyHeroPhoto);
+  } else {
+    applyHeroPhoto();
+  }
+})();
+
