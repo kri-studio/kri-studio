@@ -1,0 +1,25 @@
+name: IndexNow ping
+on:
+  push:
+    branches: [ main ]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Yandex/Bing IndexNow
+        run: |
+          curl -sS -X POST "https://yandex.com/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "kri-studio.art",
+              "key": "c67916a5454ba92212d6ee46b13456a8",
+              "keyLocation": "https://kri-studio.art/c67916a5454ba92212d6ee46b13456a8.txt",
+              "urlList": [
+                "https://kri-studio.art/",
+                "https://kri-studio.art/services/",
+                "https://kri-studio.art/projects/",
+                "https://kri-studio.art/about/",
+                "https://kri-studio.art/contacts/",
+                "https://kri-studio.art/en/services/"
+              ]
+            }'
