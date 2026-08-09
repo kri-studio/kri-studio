@@ -165,7 +165,8 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
 })();
 
-// === v23: фото по темам-настроениям на главной и «О студии» ===
+// === v23.1: фото по темам-настроениям — ТОЛЬКО на странице «О студии» ===
+// Первый экран главной (.v5-portrait) не трогаем: там остаётся hero-v5.webp из HTML.
 (function(){
   'use strict';
   var MAP={
@@ -178,7 +179,7 @@
     try{
       var t=document.documentElement.getAttribute('data-theme');
       var src=MAP[t]||MAP.sun;
-      document.querySelectorAll('.v5-portrait img, .circle-photo img').forEach(function(im){
+      document.querySelectorAll('.circle-photo img').forEach(function(im){
         if(im.getAttribute('src')!==src)im.setAttribute('src',src);
       });
     }catch(e){}
