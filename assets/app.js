@@ -164,7 +164,7 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
 })();
-// === v23.1: фото по темам-настроениям — ТОЛЬКО на странице «О студии» ===
+// === v23.2: фото по темам-настроениям — ТОЛЬКО на странице «О студии» (+предзагрузка) ===
 // Первый экран главной (.v5-portrait) меняет отдельный блок v24 ниже.
 (function(){
   'use strict';
@@ -174,6 +174,12 @@
     bold:'/assets/img/about-bold.webp',
     mint:'/assets/img/about-mint.webp'
   };
+  function preload(){
+    try{
+      if(!document.querySelector('.circle-photo img'))return;
+      for(var k in MAP){var im=new Image();im.src=MAP[k];}
+    }catch(e){}
+  }
   function upd(){
     try{
       var t=document.documentElement.getAttribute('data-theme');
@@ -183,11 +189,11 @@
       });
     }catch(e){}
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',upd);else upd();
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){upd();preload();});else{upd();preload();}
   try{new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}
 })();
 
-/* ===== v24: смена пиджака на ПЕРВОМ ЭКРАНЕ по теме ===== */
+/* ===== v24.1: смена пиджака на ПЕРВОМ ЭКРАНЕ по теме — с предзагрузкой всех фото, чтобы смена была мгновенной ===== */
 (function () {
   var HERO_MAP = {
     sun:  '/assets/img/portrait-sun.webp',
@@ -195,6 +201,12 @@
     bold: '/assets/img/portrait-bold.webp',
     mint: '/assets/img/portrait-mint.webp'
   };
+  function preloadHero() {
+    try {
+      if (!document.querySelector('.v5-portrait img')) return;
+      for (var k in HERO_MAP) { var im = new Image(); im.src = HERO_MAP[k]; }
+    } catch (e) {}
+  }
   function applyHeroPhoto() {
     var t = document.documentElement.getAttribute('data-theme');
     var img = document.querySelector('.v5-portrait img');
@@ -206,9 +218,9 @@
     attributeFilter: ['data-theme']
   });
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', applyHeroPhoto);
+    document.addEventListener('DOMContentLoaded', function () { applyHeroPhoto(); preloadHero(); });
   } else {
     applyHeroPhoto();
+    preloadHero();
   }
 })();
-
