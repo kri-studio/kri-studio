@@ -68,7 +68,7 @@
       fetch(LEAD_URL,{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({name:g('name'),contact:g('contact'),budget:g('budget'),task:g('task')})
+        body:JSON.stringify({name:g('name'),contact:g('contact'),budget:g('budget'),task:(g('need')?'['+g('need')+'] ':'')+g('task')})
       }).then(function(r){return r.json();}).then(function(res){
         if(!res.ok)throw new Error('send');
         f.reset();
@@ -79,7 +79,7 @@
       }).catch(function(){
         // Запасной путь — письмо на почту студии.
         if(btn){btn.disabled=false;btn.textContent=btnText;}
-        var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
+        var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nЧто нужно: '+g('need')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
         location.href='mailto:design@kri-studio.art?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
       });
     });
