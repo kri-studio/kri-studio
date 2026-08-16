@@ -1,4 +1,4 @@
-/* kri·studio v26: конверсионный слой — кнопка Telegram перед формой, поле «Что нужно», плашка доверия, sticky-CTA на мобильных, экран «Спасибо» после отправки */
+/* kri·studio v26: конверсионный слой — кнопка Telegram перед формой, поле «Что нужно», плашка доверия, sticky-CTA на мобильных, экран «Спасибо» после УСПЕШНОЙ отправки (сигнал .sent из app.js) */
 (function(){
   'use strict';
   function init(){
@@ -27,14 +27,19 @@
         thanks.className='brief-thanks';
         thanks.innerHTML='<div class="bt-ic"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M9.04 15.31 8.9 19.1c.4 0 .58-.17.8-.38l1.92-1.84 3.98 2.92c.73.4 1.25.19 1.45-.68L20.9 5.6c.26-1.08-.39-1.5-1.1-1.24L3.4 10.66c-1.06.41-1.05 1-.18 1.27l4.2 1.31 9.74-6.14c.46-.3.88-.14.53.16l-8.65 8.05z" fill="#2aabee"/></svg></div><h3>Спасибо! Заявка получена</h3><p>Уже беру вашу задачу в работу и отвечу в течение дня. Хотите быстрее? Напишите мне в Telegram прямо сейчас — обсудим детали в переписке.</p><a class="bt-tg" href="https://t.me/kri_studio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9.04 15.31 8.9 19.1c.4 0 .58-.17.8-.38l1.92-1.84 3.98 2.92c.73.4 1.25.19 1.45-.68L20.9 5.6c.26-1.08-.39-1.5-1.1-1.24L3.4 10.66c-1.06.41-1.05 1-.18 1.27l4.2 1.31 9.74-6.14c.46-.3.88-.14.53.16l-8.65 8.05z" fill="#fff"/></svg>Написать в Telegram</a><a class="bt-alt" href="/projects/">А пока посмотреть работы →</a>';
         f.parentNode.insertBefore(thanks,f.nextSibling);
-        f.addEventListener('submit',function(ev){
-          ev.preventDefault();
-          if(typeof f.checkValidity==='function'&&!f.checkValidity()){if(typeof f.reportValidity==='function')f.reportValidity();return;}
-          try{if(window.ym)ym(110943761,'reachGoal','brief_submit');}catch(e){}
-          f.style.display='none';
-          thanks.classList.add('on');
-          try{thanks.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}
-        });
+        /* Экран «Спасибо» показываем ТОЛЬКО при успешной отправке: app.js на успехе вешает класс .sent на кнопку отправки. */
+        var sb=f.querySelector('button[type=submit]');
+        if(sb&&'MutationObserver'in window){
+          var shown=false;
+          new MutationObserver(function(){
+            if(!shown&&sb.classList.contains('sent')){
+              shown=true;
+              f.style.display='none';
+              thanks.classList.add('on');
+              try{thanks.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}
+            }
+          }).observe(sb,{attributes:true,attributeFilter:['class']});
+        }
       }
       var bar=document.createElement('div');bar.className='sticky-cta';bar.id='stickyCta';
       bar.innerHTML='<a class="sc-tg" href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a><a class="sc-brief" href="#brief">Оставить заявку</a>';
