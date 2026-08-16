@@ -1,9 +1,9 @@
-/* kri·studio v26: конверсионный слой — поле «Что нужно», плашка доверия, sticky-CTA на мобильных, экран «Спасибо» после УСПЕШНОЙ отправки (сигнал .sent из app.js) */
+/* kri·studio v26: конверсионный слой — поле «Что нужно», плашка доверия, sticky-CTA, экран «Спасибо», заметная кнопка Telegram в контактах, меню выбора почты */
 (function(){
   'use strict';
   function init(){
     try{
-      var css='.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.94);backdrop-filter:blur(8px);box-shadow:0 -8px 26px rgba(0,0,0,.14)}html[data-theme="bold"] .sticky-cta{background:rgba(29,24,32,.94)}.sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;padding:12px 10px;border-radius:30px;text-decoration:none}.sticky-cta .sc-tg{background:#2aabee;color:#fff}.sticky-cta .sc-brief{background:var(--acc,#ff5a1f);color:#fff}.sticky-cta.hid{display:none!important}@media(max-width:760px){.sticky-cta{display:flex}}.brief-thanks{display:none;text-align:center;padding:34px 24px;border-radius:22px;background:var(--card,#fff);box-shadow:0 20px 50px rgba(0,0,0,.10)}html[data-theme="bold"] .brief-thanks{background:rgba(255,255,255,.06)}.brief-thanks.on{display:block;animation:briefIn .45s ease}@keyframes briefIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}.brief-thanks .bt-ic{width:66px;height:66px;margin:0 auto 16px;border-radius:50%;background:rgba(42,171,238,.14);display:flex;align-items:center;justify-content:center}.brief-thanks h3{font-size:24px;margin:0 0 10px}.brief-thanks p{color:var(--muted,#8a8a8a);margin:0 auto 22px;max-width:380px;line-height:1.5}.brief-thanks .bt-tg{display:inline-flex;align-items:center;gap:9px;background:#2aabee;color:#fff;font-weight:700;font-size:15px;padding:14px 28px;border-radius:40px;text-decoration:none;box-shadow:0 10px 22px rgba(42,171,238,.35);transition:transform .2s ease}.brief-thanks .bt-tg:hover{transform:translateY(-2px)}.brief-thanks .bt-alt{display:inline-block;margin-top:16px;color:var(--muted,#8a8a8a);font-size:14px}';
+      var css='.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.94);backdrop-filter:blur(8px);box-shadow:0 -8px 26px rgba(0,0,0,.14)}html[data-theme="bold"] .sticky-cta{background:rgba(29,24,32,.94)}.sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;padding:12px 10px;border-radius:30px;text-decoration:none}.sticky-cta .sc-tg{background:#2aabee;color:#fff}.sticky-cta .sc-brief{background:var(--acc,#ff5a1f);color:#fff}.sticky-cta.hid{display:none!important}@media(max-width:760px){.sticky-cta{display:flex}}.brief-thanks{display:none;text-align:center;padding:34px 24px;border-radius:22px;background:var(--card,#fff);box-shadow:0 20px 50px rgba(0,0,0,.10)}html[data-theme="bold"] .brief-thanks{background:rgba(255,255,255,.06)}.brief-thanks.on{display:block;animation:briefIn .45s ease}@keyframes briefIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}.brief-thanks .bt-ic{width:66px;height:66px;margin:0 auto 16px;border-radius:50%;background:rgba(42,171,238,.14);display:flex;align-items:center;justify-content:center}.brief-thanks h3{font-size:24px;margin:0 0 10px}.brief-thanks p{color:var(--muted,#8a8a8a);margin:0 auto 22px;max-width:380px;line-height:1.5}.brief-thanks .bt-tg{display:inline-flex;align-items:center;gap:9px;background:#2aabee;color:#fff;font-weight:700;font-size:15px;padding:14px 28px;border-radius:40px;text-decoration:none;box-shadow:0 10px 22px rgba(42,171,238,.35);transition:transform .2s ease}.brief-thanks .bt-tg:hover{transform:translateY(-2px)}.brief-thanks .bt-alt{display:inline-block;margin-top:16px;color:var(--muted,#8a8a8a);font-size:14px}.contact-list .cl-tg-cta{display:flex;align-items:center;justify-content:center;gap:9px;background:#2aabee;color:#fff;font-weight:700;font-size:15px;padding:15px 20px;border-radius:16px;text-decoration:none;margin-top:6px;box-shadow:0 10px 22px rgba(42,171,238,.30);transition:transform .2s ease}.contact-list .cl-tg-cta:hover{transform:translateY(-2px)}.contact-list .cl-tg-cta svg{width:20px;height:20px;flex:none}.mail-menu{position:absolute;z-index:9999;background:var(--card,#fff);border:1px solid var(--line,#f2dfce);border-radius:12px;box-shadow:0 14px 36px rgba(0,0,0,.18);padding:6px;display:flex;flex-direction:column;min-width:210px;font-family:inherit}.mail-menu button{background:none;border:0;text-align:left;padding:11px 12px;border-radius:8px;font-size:14px;color:var(--ink,#221812);cursor:pointer;font-family:inherit}.mail-menu button:hover{background:rgba(0,0,0,.06)}html[data-theme="bold"] .mail-menu{background:#241c26}html[data-theme="bold"] .mail-menu button{color:#f4ece4}html[data-theme="bold"] .mail-menu button:hover{background:rgba(255,255,255,.08)}';
       var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 
       var f=document.querySelector('#brief form.form');
@@ -22,7 +22,6 @@
         thanks.className='brief-thanks';
         thanks.innerHTML='<div class="bt-ic"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M9.04 15.31 8.9 19.1c.4 0 .58-.17.8-.38l1.92-1.84 3.98 2.92c.73.4 1.25.19 1.45-.68L20.9 5.6c.26-1.08-.39-1.5-1.1-1.24L3.4 10.66c-1.06.41-1.05 1-.18 1.27l4.2 1.31 9.74-6.14c.46-.3.88-.14.53.16l-8.65 8.05z" fill="#2aabee"/></svg></div><h3>Спасибо! Заявка получена</h3><p>Уже беру вашу задачу в работу и отвечу в течение дня. Хотите быстрее? Напишите мне в Telegram прямо сейчас — обсудим детали в переписке.</p><a class="bt-tg" href="https://t.me/kri_studio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9.04 15.31 8.9 19.1c.4 0 .58-.17.8-.38l1.92-1.84 3.98 2.92c.73.4 1.25.19 1.45-.68L20.9 5.6c.26-1.08-.39-1.5-1.1-1.24L3.4 10.66c-1.06.41-1.05 1-.18 1.27l4.2 1.31 9.74-6.14c.46-.3.88-.14.53.16l-8.65 8.05z" fill="#fff"/></svg>Написать в Telegram</a><a class="bt-alt" href="/projects/">А пока посмотреть работы →</a>';
         f.parentNode.insertBefore(thanks,f.nextSibling);
-        /* Экран «Спасибо» показываем ТОЛЬКО при успешной отправке: app.js на успехе вешает класс .sent на кнопку отправки. */
         var sb=f.querySelector('button[type=submit]');
         if(sb&&'MutationObserver'in window){
           var shown=false;
@@ -36,6 +35,46 @@
           }).observe(sb,{attributes:true,attributeFilter:['class']});
         }
       }
+
+      /* Заметная кнопка Telegram внизу левого столбца контактов (вместо обычной строки) */
+      var cl=document.querySelector('#brief .contact-list');
+      if(cl){
+        var oldTg=cl.querySelector('a[href*="t.me/"]:not(.cl-tg-cta)');
+        if(oldTg&&oldTg.parentNode)oldTg.parentNode.removeChild(oldTg);
+        if(!cl.querySelector('.cl-tg-cta')){
+          var tgc=document.createElement('a');
+          tgc.className='cl-tg-cta';tgc.href='https://t.me/kri_studio';tgc.target='_blank';tgc.rel='noopener';
+          tgc.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.04 15.31 8.9 19.1c.4 0 .58-.17.8-.38l1.92-1.84 3.98 2.92c.73.4 1.25.19 1.45-.68L20.9 5.6c.26-1.08-.39-1.5-1.1-1.24L3.4 10.66c-1.06.41-1.05 1-.18 1.27l4.2 1.31 9.74-6.14c.46-.3.88-.14.53.16l-8.65 8.05z" fill="#fff"/></svg>Написать в Telegram';
+          cl.appendChild(tgc);
+        }
+      }
+
+      /* Почта: меню выбора — Gmail в браузере или почтовая программа на устройстве */
+      var MAIL_ADDR='design@kri-studio.art';
+      var MAIL_SU=encodeURIComponent('Заявка с сайта kri·studio');
+      var GMAIL='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(MAIL_ADDR)+'&su='+MAIL_SU;
+      function closeMailMenu(){var m=document.getElementById('mail-menu');if(m&&m.parentNode)m.parentNode.removeChild(m);document.removeEventListener('click',onDocClick,true);}
+      function onDocClick(e){var m=document.getElementById('mail-menu');if(m&&!m.contains(e.target))closeMailMenu();}
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+        a.addEventListener('click',function(ev){
+          ev.preventDefault();
+          closeMailMenu();
+          var menu=document.createElement('div');menu.id='mail-menu';menu.className='mail-menu';
+          menu.innerHTML='<button type="button" data-act="gmail">Открыть в Gmail</button><button type="button" data-act="app">Почта на устройстве</button><button type="button" data-act="copy">Скопировать адрес</button>';
+          document.body.appendChild(menu);
+          var r=a.getBoundingClientRect();
+          var mw=menu.offsetWidth||210;
+          var left=window.pageXOffset+r.left;
+          if(left+mw>window.pageXOffset+document.documentElement.clientWidth-10)left=window.pageXOffset+document.documentElement.clientWidth-mw-10;
+          menu.style.top=(window.pageYOffset+r.bottom+8)+'px';
+          menu.style.left=left+'px';
+          menu.querySelector('[data-act="gmail"]').addEventListener('click',function(){window.open(GMAIL,'_blank','noopener');closeMailMenu();});
+          menu.querySelector('[data-act="app"]').addEventListener('click',function(){window.location.href='mailto:'+MAIL_ADDR+'?subject='+MAIL_SU;closeMailMenu();});
+          menu.querySelector('[data-act="copy"]').addEventListener('click',function(){var b=this;try{if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(MAIL_ADDR);}catch(e){}b.textContent='Скопировано ✓';setTimeout(closeMailMenu,900);});
+          setTimeout(function(){document.addEventListener('click',onDocClick,true);},0);
+        });
+      });
+
       var bar=document.createElement('div');bar.className='sticky-cta';bar.id='stickyCta';
       bar.innerHTML='<a class="sc-tg" href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a><a class="sc-brief" href="#brief">Оставить заявку</a>';
       document.body.appendChild(bar);
