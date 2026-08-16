@@ -146,7 +146,7 @@
   function fix(){
     try{
       document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
-        a.setAttribute('href','mailto:'+MAIL);
+        a.setAttribute('href','mailto:'+MAIL+'?subject='+encodeURIComponent('Заявка с сайта kri·studio'));
       });
       document.querySelectorAll('a[href^="https://max.ru"]').forEach(function(a){
         var h=a.getAttribute('href')||'';
