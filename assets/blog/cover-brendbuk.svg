@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 768" width="1376" height="768" role="img" aria-label="Разворот брендбука">
+<rect width="1376" height="768" fill="#F4E6D4"/>
+<rect x="220" y="130" width="936" height="520" rx="10" fill="#F7F1E8" stroke="#E4D2BB"/>
+<rect x="228" y="138" width="454" height="504" fill="#FFFCFA"/>
+<rect x="694" y="138" width="454" height="504" fill="#FFFCFA"/>
+<rect x="280" y="210" width="150" height="110" fill="#E04A12"/>
+<rect x="450" y="210" width="150" height="110" fill="#1B2A36"/>
+<rect x="280" y="340" width="150" height="110" fill="#E8B8B0"/>
+<rect x="450" y="340" width="150" height="110" fill="#D8C4A8"/>
+<circle cx="920" cy="300" r="70" fill="none" stroke="#221812" stroke-width="6"/>
+<path d="M850 300h140M920 230v140" stroke="#221812" stroke-width="6"/>
+<rect x="780" y="420" width="280" height="12" fill="#2A2A2A"/>
+<rect x="780" y="448" width="220" height="12" fill="#2A2A2A"/>
+<rect x="780" y="476" width="250" height="12" fill="#2A2A2A"/>
+<rect x="780" y="504" width="180" height="12" fill="#2A2A2A"/>
+<rect x="180" y="620" width="180" height="10" rx="4" fill="#E8D5C0" transform="rotate(-8 270 625)"/>
+<rect x="980" y="640" width="220" height="14" rx="3" fill="#C45A28"/>
+</svg>
