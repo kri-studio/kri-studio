@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 768" width="1376" height="768" role="img" aria-label="Страницы гайдлайна">
+<rect width="1376" height="768" fill="#EFE2D0"/>
+<rect x="160" y="90" width="1050" height="590" rx="8" fill="#F8F2EA"/>
+<rect x="168" y="98" width="500" height="574" fill="#E04A12"/>
+<rect x="700" y="130" width="200" height="150" fill="#F3E6D4"/>
+<rect x="920" y="130" width="200" height="150" fill="#F3E6D4"/>
+<rect x="700" y="310" width="200" height="150" fill="#F3E6D4"/>
+<rect x="920" y="310" width="200" height="150" fill="#F3E6D4"/>
+<circle cx="800" cy="205" r="28" fill="none" stroke="#C9892A" stroke-width="3"/>
+<circle cx="800" cy="205" r="16" fill="none" stroke="#C9892A" stroke-width="3"/>
+<g fill="#C9892A">
+<circle cx="980" cy="170" r="3"/><circle cx="996" cy="170" r="3"/><circle cx="1012" cy="170" r="3"/>
+<circle cx="980" cy="186" r="3"/><circle cx="996" cy="186" r="3"/><circle cx="1012" cy="186" r="3"/>
+<circle cx="980" cy="202" r="3"/><circle cx="996" cy="202" r="3"/><circle cx="1012" cy="202" r="3"/>
+</g>
+<rect x="730" y="500" width="160" height="8" fill="#C4B39A"/>
+<rect x="730" y="520" width="130" height="8" fill="#C4B39A"/>
+<rect x="950" y="500" width="160" height="8" fill="#C4B39A"/>
+<rect x="950" y="520" width="110" height="8" fill="#C4B39A"/>
+<circle cx="1120" cy="180" r="46" fill="none" stroke="#C45A28" stroke-width="6"/>
+<circle cx="1120" cy="180" r="18" fill="#E8A04A"/>
+</svg>
