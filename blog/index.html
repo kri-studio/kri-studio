@@ -46,7 +46,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 .blog-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);color:inherit;transition:transform .3s,box-shadow .3s}
 .blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .blog-card .ph{aspect-ratio:16/9;overflow:hidden;background:var(--tint)}
-.blog-card .ph img{width:100%;height:100%;object-fit:cover}
+.blog-card .ph img,.blog-card .ph object{width:100%;height:100%;object-fit:cover;display:block;border:0;pointer-events:none}
 .blog-card .pad{padding:18px 20px 22px}
 .blog-card h2{font-family:var(--dis);font-size:18px;margin:0 0 8px;line-height:1.25;text-transform:none;letter-spacing:-.02em}
 .blog-card p{color:var(--muted);font-size:14.5px;margin:0;line-height:1.5}
@@ -94,7 +94,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="wrap">
 <div class="blog-grid">
 <a class="blog-card" href="/blog/trebovaniya-k-infografike-wb-ozon/">
-<div class="ph"><img src="/assets/blog/cover-infografika.svg" alt="Инфографика карточек Wildberries и Ozon" width="1376" height="768"></div>
+<div class="ph"><object data="/assets/blog/cover-infografika.svg" type="image/svg+xml" role="img" aria-label="Инфографика карточек Wildberries и Ozon"></object></div>
 <div class="pad">
 <h2>Требования к инфографике WB и Ozon</h2>
 <p>Какой размер ставить, что нельзя на главном фото и как собрать карточку, которую не снимет модерация.</p>
@@ -102,7 +102,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </a>
 <a class="blog-card" href="/blog/chto-vhodit-v-brendbuk/">
-<div class="ph"><img src="/assets/blog/cover-brendbuk.svg" alt="Разворот брендбука" width="1376" height="768"></div>
+<div class="ph"><object data="/assets/blog/cover-brendbuk.svg" type="image/svg+xml" role="img" aria-label="Разворот брендбука"></object></div>
 <div class="pad">
 <h2>Что входит в брендбук</h2>
 <p>Какие страницы реально нужны, чем брендбук отличается от гайдлайна и когда хватит коротких правил.</p>
@@ -110,7 +110,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </a>
 <a class="blog-card" href="/blog/skolko-stoit-logotip-2026/">
-<div class="ph"><img src="/assets/blog/cover-logotip.svg" alt="Эскиз знака на бумаге" width="1376" height="768"></div>
+<div class="ph"><object data="/assets/blog/cover-logotip.svg" type="image/svg+xml" role="img" aria-label="Эскиз знака на бумаге"></object></div>
 <div class="pad">
 <h2>Сколько стоит логотип в 2026 году</h2>
 <p>Реальные диапазоны цен у фрилансеров, студий и агентств — и из чего складывается стоимость.</p>
