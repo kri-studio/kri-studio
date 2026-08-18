@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 768" width="1376" height="768" role="img" aria-label="Слайды карточки товара">
+<rect width="1376" height="768" fill="#EFE4D6"/>
+<g font-family="Georgia,serif">
+<rect x="120" y="80" width="340" height="280" rx="8" fill="#FBF6EF"/>
+<rect x="230" y="130" width="120" height="190" rx="60" fill="#C45A28"/>
+<rect x="518" y="80" width="340" height="280" rx="8" fill="#FBF6EF"/>
+<path d="M650 160c40-50 120-20 120 40 0 70-80 90-120 130-40-40-120-60-120-130 0-60 80-90 120-40z" fill="#3E7A4C"/>
+<rect x="560" y="300" width="90" height="16" fill="#3E7A4C"/>
+<rect x="660" y="300" width="120" height="16" fill="#7AA57A"/>
+<rect x="790" y="300" width="40" height="16" fill="#C4A574"/>
+<rect x="916" y="80" width="340" height="280" rx="8" fill="#FBF6EF"/>
+<path d="M1040 230c0-40 30-70 80-70s80 30 80 70c0 20-10 36-26 48v12h-108v-12c-16-12-26-28-26-48z" fill="#E8C9A8"/>
+<circle cx="1120" cy="170" r="28" fill="#3A6EA5"/>
+<rect x="1048" y="300" width="28" height="36" fill="#B7D0B8"/>
+<rect x="1084" y="280" width="28" height="56" fill="#7AA57A"/>
+<rect x="1120" y="260" width="28" height="76" fill="#4F8A5A"/>
+<rect x="1156" y="240" width="28" height="96" fill="#2F6A3C"/>
+<rect x="120" y="400" width="340" height="280" rx="8" fill="#FBF6EF"/>
+<path d="M290 470c40-36 90-20 90 28 0 62-90 96-90 96s-90-34-90-96c0-48 50-64 90-28z" fill="#C45A4A"/>
+<rect x="170" y="600" width="36" height="40" fill="#F0C8C4"/>
+<rect x="214" y="584" width="36" height="56" fill="#E08A80"/>
+<rect x="258" y="568" width="36" height="72" fill="#C45A4A"/>
+<rect x="302" y="548" width="36" height="92" fill="#A63B36"/>
+<rect x="518" y="400" width="340" height="280" rx="8" fill="#FBF6EF"/>
+<circle cx="688" cy="500" r="44" fill="#E8A04A"/>
+<g fill="#E8A04A">
+<rect x="680" y="430" width="16" height="28"/><rect x="680" y="542" width="16" height="28"/>
+<rect x="618" y="492" width="28" height="16"/><rect x="730" y="492" width="28" height="16"/>
+</g>
+<rect x="568" y="600" width="28" height="40" fill="#F3E0B5"/>
+<rect x="604" y="584" width="28" height="56" fill="#E8C36A"/>
+<rect x="640" y="568" width="28" height="72" fill="#D9A33A"/>
+<rect x="676" y="552" width="28" height="88" fill="#C9892A"/>
+<rect x="916" y="400" width="340" height="280" rx="8" fill="#FBF6EF"/>
+<path d="M1020 520h70v16h40l70-70 16 16-54 70h70v28h-196z" fill="#3A6EA5"/>
+<rect x="980" y="600" width="28" height="40" fill="#C5D8F0"/>
+<rect x="1016" y="584" width="28" height="56" fill="#8FB0D8"/>
+<rect x="1052" y="568" width="28" height="72" fill="#5A88C0"/>
+<rect x="1088" y="548" width="28" height="92" fill="#2F5F9A"/>
+</g>
+</svg>
