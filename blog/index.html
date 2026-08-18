@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Блог о дизайне, брендинге и ценах — kri·studio</title>
-<meta name="description" content="Блог kri·studio: понятные гайды о ценах на логотип и фирменный стиль, требованиях к инфографике для WB и Ozon, брендбуках и упаковке.">
+<meta name="description" content="Блог kri·studio: сколько стоит логотип, что входит в брендбук и какие требования к инфографике для Wildberries и Ozon. Понятные гайды без воды.">
 <script>try{var t=localStorage.getItem('kri-theme');if(['sun','rose','bold','mint'].indexOf(t)<0)t='sun';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,15 @@
 <meta property="og:site_name" content="kri·studio">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Блог о дизайне, брендинге и ценах — kri·studio">
-<meta property="og:description" content="Понятные гайды о ценах на логотип, фирменный стиль, инфографику для WB и брендбуках.">
+<meta property="og:description" content="Гайды о ценах на логотип, брендбуке и инфографике для WB и Ozon.">
 <meta property="og:url" content="https://kri-studio.art/blog/">
-<meta property="og:image" content="https://kri-studio.art/assets/favicon-512.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://kri-studio.art/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Блог — kri·studio">
-<meta name="twitter:description" content="Гайды о ценах на дизайн, брендинге и упаковке.">
-<meta name="twitter:image" content="https://kri-studio.art/assets/favicon-512.png">
+<meta name="twitter:description" content="Гайды о ценах на дизайн, брендбуке и карточках маркетплейсов.">
+<meta name="twitter:image" content="https://kri-studio.art/assets/og.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://kri-studio.art/"},{"@type":"ListItem","position":2,"name":"Блог","item":"https://kri-studio.art/blog/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Блог kri·studio","url":"https://kri-studio.art/blog/","inLanguage":"ru-RU","blogPost":[{"@type":"BlogPosting","headline":"Сколько стоит логотип в 2026 году","url":"https://kri-studio.art/blog/skolko-stoit-logotip-2026/","datePublished":"2026-08-15"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Блог kri·studio","url":"https://kri-studio.art/blog/","inLanguage":"ru-RU","blogPost":[{"@type":"BlogPosting","headline":"Требования к инфографике WB и Ozon в 2026","url":"https://kri-studio.art/blog/trebovaniya-k-infografike-wb-ozon/","datePublished":"2026-08-17","image":"https://kri-studio.art/assets/img/w/cards_06.webp"},{"@type":"BlogPosting","headline":"Что входит в брендбук","url":"https://kri-studio.art/blog/chto-vhodit-v-brendbuk/","datePublished":"2026-08-17","image":"https://kri-studio.art/assets/ca/docs.webp"},{"@type":"BlogPosting","headline":"Сколько стоит логотип в 2026 году","url":"https://kri-studio.art/blog/skolko-stoit-logotip-2026/","datePublished":"2026-08-15","image":"https://kri-studio.art/assets/img/smolly-lolly.webp"}]}</script>
 <!-- V17-CLEAN-URLS -->
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -36,12 +36,23 @@ m[i].l=1*new Date();
 for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
 k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
 (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=110943761', 'ym');
-
 ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- V20-NOSCRIPT --><noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+.blog-hero.pj-hero{padding-bottom:20px}
+.blog-hero .pj-title{font-size:clamp(28px,4.2vw,46px);line-height:1.12}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.blog-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);color:inherit;transition:transform .3s,box-shadow .3s}
+.blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.blog-card .ph{aspect-ratio:16/10;overflow:hidden;background:var(--tint)}
+.blog-card .ph img{width:100%;height:100%;object-fit:cover}
+.blog-card .pad{padding:18px 20px 22px}
+.blog-card h2{font-family:var(--dis);font-size:18px;margin:0 0 8px;line-height:1.25;text-transform:none;letter-spacing:-.02em}
+.blog-card p{color:var(--muted);font-size:14.5px;margin:0;line-height:1.5}
+.blog-meta{font-size:13px;color:var(--muted);margin-top:12px}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header class="topnav">
@@ -51,6 +62,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <a href="/">Главная</a>
 <a href="/projects/">Работы</a>
 <a href="/services/">Услуги и цены</a>
+<a href="/blog/" class="active">Блог</a>
 <a href="/about/">О студии</a>
 <a href="/contacts/">Контакты</a>
 </nav>
@@ -69,25 +81,44 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 <div id="cur">смотреть</div>
 
-<section class="pj-hero">
+<section class="pj-hero blog-hero">
 <div class="wrap">
 <nav class="crumbs" aria-label="Хлебные крошки" style="margin:14px 0 4px;font-size:.9rem"><a href="/" style="color:inherit;opacity:.7">Главная</a><span style="opacity:.4;margin:0 8px">/</span><span style="opacity:.9">Блог</span></nav>
 <div class="eyebrow">Блог kri·studio</div>
-<div class="pj-info" style="max-width:840px">
 <h1 class="pj-title">Блог о <em>дизайне</em> и брендинге</h1>
-<div class="pj-tagline">Понятные гайды о ценах, упаковке и брендинге — без воды и жаргона</div>
-</div>
+<div class="pj-tagline">Понятные гайды о ценах, упаковке и брендинге — без воды</div>
 </div>
 </section>
 
-<section class="section">
-<div class="wrap" style="max-width:840px">
-<div class="pj-brief">
-<p style="margin-bottom:6px"><a href="/blog/skolko-stoit-logotip-2026/" style="color:inherit;text-decoration:none"><b style="font-size:1.15em">Сколько стоит логотип в 2026 году ↗</b></a></p>
-<p style="opacity:.75">Реальные диапазоны цен у фрилансеров, студий и агентств, из чего складывается стоимость и как не переплатить. · 15 августа 2026</p>
+<section class="section" style="padding-top:10px">
+<div class="wrap">
+<div class="blog-grid">
+<a class="blog-card" href="/blog/trebovaniya-k-infografike-wb-ozon/">
+<div class="ph"><img src="/assets/img/w/cards_06.webp" alt="Инфографика карточек Wildberries и Ozon" width="800" height="500"></div>
+<div class="pad">
+<h2>Требования к инфографике WB и Ozon</h2>
+<p>Какой размер ставить, что нельзя на главном фото и как собрать карточку, которую не снимет модерация.</p>
+<div class="blog-meta">17 августа 2026 · маркетплейсы</div>
 </div>
-<p class="pj-desc" style="opacity:.7;margin-top:18px">Скоро здесь появятся новые статьи: требования к инфографике для WB и Ozon, что входит в брендбук и другие.</p>
-<div class="center-cta" style="margin-top:24px"><a class="btn btn-primary" href="/contacts/">Обсудить проект ↗</a> <a class="btn btn-ghost" href="/services/">Услуги и цены</a></div>
+</a>
+<a class="blog-card" href="/blog/chto-vhodit-v-brendbuk/">
+<div class="ph"><img src="/assets/ca/docs.webp" alt="Гайдлайн и носители фирменного стиля" width="800" height="500"></div>
+<div class="pad">
+<h2>Что входит в брендбук</h2>
+<p>Какие страницы реально нужны, чем брендбук отличается от гайдлайна и когда хватит коротких правил.</p>
+<div class="blog-meta">17 августа 2026 · брендинг</div>
+</div>
+</a>
+<a class="blog-card" href="/blog/skolko-stoit-logotip-2026/">
+<div class="ph"><img src="/assets/img/smolly-lolly.webp" alt="Фирменный стиль Smolly Lolly" width="800" height="500"></div>
+<div class="pad">
+<h2>Сколько стоит логотип в 2026 году</h2>
+<p>Реальные диапазоны цен у фрилансеров, студий и агентств — и из чего складывается стоимость.</p>
+<div class="blog-meta">15 августа 2026 · цены</div>
+</div>
+</a>
+</div>
+<div class="center-cta" style="margin-top:36px"><a class="btn btn-primary" href="/contacts/">Обсудить проект ↗</a> <a class="btn btn-ghost" href="/services/">Услуги и цены</a></div>
 </div>
 </section>
 
@@ -97,6 +128,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="foot-grid">
 <div class="req">kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.<br>Работаем по договору, оплата с чеком.</div>
 <div class="foot-links">
+<a href="/blog/">Блог</a>
 <a href="/privacy/">Политика обработки ПД</a>
 <a href="/about/#faq">Частые вопросы</a>
 <a href="mailto:design@kri-studio.art">Почта</a>
