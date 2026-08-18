@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 768" width="1376" height="768" role="img" aria-label="Карточка товара и инфографика">
+<rect width="1376" height="768" fill="#F4EDE4"/>
+<rect x="220" y="120" width="420" height="540" rx="8" fill="#fff" stroke="#E8D9C8" stroke-width="16"/>
+<rect x="318" y="220" width="224" height="340" rx="112" fill="#D2653A"/>
+<rect x="360" y="200" width="140" height="50" rx="20" fill="#C25730"/>
+<rect x="760" y="180" width="70" height="320" rx="35" fill="#D2653A"/>
+<rect x="860" y="260" width="70" height="240" rx="35" fill="#D2653A"/>
+<rect x="960" y="210" width="70" height="290" rx="35" fill="#D2653A"/>
+<circle cx="1120" cy="250" r="36" fill="#D2653A"/>
+<rect x="1088" y="286" width="64" height="120" rx="20" fill="#D2653A"/>
+<circle cx="795" cy="560" r="28" fill="#D2653A"/>
+<circle cx="795" cy="560" r="12" fill="#F4EDE4"/>
+<circle cx="895" cy="560" r="28" fill="#E8D3C0"/>
+<circle cx="895" cy="560" r="12" fill="#D2653A"/>
+<circle cx="995" cy="560" r="28" fill="#D2653A"/>
+<circle cx="995" cy="560" r="12" fill="#F4EDE4"/>
+</svg>
