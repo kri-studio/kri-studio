@@ -1,6 +1,6 @@
 .blog-hero.pj-hero{padding:104px 0 12px!important;min-height:0!important}
 @media(max-width:760px){.blog-hero.pj-hero{padding:84px 0 8px!important}}
-.blog-cover,.blog-fig{margin:18px 0;border-radius:18px;overflow:hidden}
-.blog-cover object,.blog-cover img,.blog-fig object,.blog-fig img{display:none!important}
-.blog-fig{display:none!important}
-.bimg,.blog-cover{width:100%;aspect-ratio:16/9;background-size:cover;background-position:center;display:block}
+.blog-cover,.blog-fig{margin:18px 0;border-radius:18px;overflow:hidden;background:#0f1114}
+.blog-cover img,.blog-fig img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.blog-cover object,.blog-fig object,.blog-cover svg,.blog-fig svg{display:none!important}
+.blog-fig figcaption,.blog-cover figcaption{font-size:14px;opacity:.7;margin-top:8px}
