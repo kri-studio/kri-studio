@@ -44,7 +44,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 .blog-hero.pj-hero{padding-bottom:12px}
 .blog-hero .pj-title{font-size:clamp(28px,4.2vw,46px);line-height:1.12}
 .blog-cover{margin:18px 0 0;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);background:var(--tint)}
-.blog-cover img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.blog-cover img,.blog-cover object{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border:0}
 .blog-body{padding-top:8px}
 .blog-body h2{font-family:var(--dis);font-size:clamp(22px,2.6vw,28px);line-height:1.25;margin:34px 0 12px;letter-spacing:-.02em}
 .blog-body p,.blog-body li{color:var(--ink2);font-size:17px;line-height:1.7}
@@ -53,7 +53,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 .blog-body li{margin:0 0 8px}
 .blog-body a{color:var(--acc);text-underline-offset:3px}
 .blog-fig{margin:22px 0 8px}
-.blog-fig img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:block}
+.blog-fig img,.blog-fig object{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:block}
 .blog-fig figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 @media(max-width:760px){.blog-body p,.blog-body li{font-size:16px}}
 </style>
@@ -93,7 +93,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="pj-tagline">Реальные диапазоны цен в России, из чего складывается стоимость и как не переплатить</div>
 <p class="pj-desc" style="opacity:.7;margin-top:8px">Обновлено 18 августа 2026 · автор: Кристина Трифонова, kri·studio</p>
 <figure class="blog-cover">
-<img src="/assets/blog/cover-logotip.svg" alt="Эскиз знака на бумаге: арка, круг и сургучная печать" width="1376" height="768">
+<object data="/assets/blog/cover-logotip.svg" type="image/svg+xml" role="img" aria-label="Эскиз знака на бумаге: арка, круг и сургучная печать"></object>
 </figure>
 </div>
 </section>
@@ -111,7 +111,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </ul>
 
 <figure class="blog-fig">
-<img src="/assets/blog/fig-logotip.svg" alt="Три версии знака: цветной, линейный и инверсия на терракоте" width="1376" height="768">
+<object data="/assets/blog/fig-logotip.svg" type="image/svg+xml" role="img" aria-label="Три версии знака: цветной, линейный и инверсия на терракоте"></object>
 <figcaption>Несколько версий знака входят в нормальную студийную работу — на бирже этого обычно нет.</figcaption>
 </figure>
 
