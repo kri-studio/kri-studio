@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 768" width="1376" height="768" role="img" aria-label="Эскиз знака на бумаге">
+<rect width="1376" height="768" fill="#FFF8F1"/>
+<rect x="620" y="120" width="620" height="520" rx="18" fill="#fff" stroke="#F2DFCE"/>
+<rect x="648" y="148" width="564" height="464" rx="8" fill="#FFFAF6"/>
+<path d="M860 250h220c0 122-98 220-220 220V250z" fill="none" stroke="#221812" stroke-width="8"/>
+<circle cx="980" cy="370" r="88" fill="none" stroke="#221812" stroke-width="8"/>
+<circle cx="1188" cy="548" r="38" fill="#FF5A1F"/>
+<circle cx="1188" cy="548" r="16" fill="#FFF1E7"/>
+<rect x="1120" y="160" width="14" height="220" rx="4" transform="rotate(18 1127 270)" fill="#C4A574"/>
+<rect x="80" y="80" width="420" height="608" fill="#FFF1E7" opacity=".55"/>
+</svg>
