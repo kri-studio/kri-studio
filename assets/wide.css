@@ -1,0 +1,6 @@
+/* WIDE-V1 — тянем контейнер почти на весь экран, как в планшетной версии */
+.wrap{--maxw:1600px!important;max-width:min(1600px,95vw)!important}
+@media(min-width:1400px){.wrap{padding-left:44px;padding-right:44px}}
+@media(max-width:1100px){.wrap{max-width:100%!important}}
+/* блог: текст статьи во всю ширину контейнера */
+.post{max-width:none!important;margin:0!important}
