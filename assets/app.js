@@ -1,3 +1,18 @@
+// === v27: широкая сетка — контент на всю ширину экрана (все страницы) ===
+(function(){
+  try{
+    if(document.getElementById('kri-wide'))return;
+    var s=document.createElement('style');
+    s.id='kri-wide';
+    s.textContent='.wrap{max-width:min(1600px,95vw)!important}'
+      +'.hero-v5 .v5-wrap{max-width:min(1600px,95vw)!important}'
+      +'.post{max-width:none!important;margin-left:0!important;margin-right:0!important}'
+      +'@media(min-width:1400px){.wrap{padding-left:44px!important;padding-right:44px!important}}'
+      +'@media(max-width:1100px){.wrap{max-width:100%!important}}';
+    (document.head||document.documentElement).appendChild(s);
+  }catch(e){}
+})();
+
 // kri·studio — скрипты: темы-настроения, меню, появление секций, счётчики, курсор, форма
 (function(){
   'use strict';
