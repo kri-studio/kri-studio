@@ -224,3 +224,53 @@
     preloadHero();
   }
 })();
+
+/* ===== v25: калькулятор стоимости — ссылка в меню, в подвале и кнопка рядом с ценами.
+   Ничего не удаляет и не заменяет: только добавляет ссылки на /raschet/. ===== */
+(function () {
+  'use strict';
+  var HREF = '/raschet/';
+  var TXT = 'Расчёт стоимости';
+  function goal(n){try{if(typeof ym==='function')ym(110943761,'reachGoal',n);}catch(e){}}
+  function add() {
+    try {
+      var onCalc = location.pathname.indexOf('/raschet') === 0;
+
+      // 1) Пункт в главном меню — после «Услуги и цены»
+      var nav = document.querySelector('.nav-links');
+      if (nav && !nav.querySelector('a[href="' + HREF + '"]')) {
+        var a = document.createElement('a');
+        a.setAttribute('href', HREF);
+        a.textContent = TXT;
+        if (onCalc) a.className = 'active';
+        var svc = nav.querySelector('a[href="/services/"]');
+        if (svc && svc.nextSibling) nav.insertBefore(a, svc.nextSibling);
+        else nav.appendChild(a);
+        a.addEventListener('click', function(){goal('calc_click');});
+      }
+
+      // 2) Ссылка в подвале
+      var foot = document.querySelector('.foot-links');
+      if (foot && !foot.querySelector('a[href="' + HREF + '"]')) {
+        var f = document.createElement('a');
+        f.setAttribute('href', HREF);
+        f.textContent = TXT;
+        foot.insertBefore(f, foot.firstChild);
+      }
+
+      // 3) Кнопка рядом с прайсом (страница услуг), если её ещё нет
+      var note = document.querySelector('.pack-note');
+      if (!onCalc && note && !document.querySelector('.calc-cta')) {
+        var box = document.createElement('div');
+        box.className = 'calc-cta';
+        box.style.cssText = 'margin:18px 0 6px;display:flex;flex-wrap:wrap;gap:12px;align-items:center';
+        box.innerHTML = '<a class="btn btn-primary" href="' + HREF + '">Рассчитать стоимость за минуту</a><span style="font-size:.92rem;opacity:.7">3 вопроса — и увидите вилку цены и срок</span>';
+        note.parentNode.insertBefore(box, note);
+        var cb = box.querySelector('a');
+        if (cb) cb.addEventListener('click', function(){goal('calc_click');});
+      }
+    } catch (e) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', add);
+  else add();
+})();
