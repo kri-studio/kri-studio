@@ -42,6 +42,16 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- V20-NOSCRIPT --><noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-v5 .v5-hero-left>*,.hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
+<style>
+.calc-cta{position:relative;overflow:hidden;text-align:center;max-width:780px;margin:34px auto 0;padding:32px 26px;border:1.5px solid var(--acc);border-radius:26px;background:var(--card);box-shadow:var(--shadow-sm)}
+.calc-cta:before{content:"";position:absolute;inset:-40% -10% auto -10%;height:220px;background:radial-gradient(closest-side,rgba(255,90,31,.18),transparent);pointer-events:none}
+.cc-badge{position:relative;display:inline-block;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:600;margin-bottom:10px}
+.calc-cta h3{position:relative;font-family:var(--dis);font-size:clamp(20px,2.8vw,30px);line-height:1.18;letter-spacing:-.02em;margin:0 0 10px}
+.calc-cta p{position:relative;color:var(--muted);font-size:16px;margin:0 0 20px}
+.calc-cta .btn{position:relative;font-size:16px;padding:15px 28px}
+.cc-fine{position:relative;font-size:13.5px;color:var(--muted);margin:14px 0 0}
+@media(max-width:600px){.calc-cta{padding:26px 18px;border-radius:22px}.calc-cta .btn{width:100%;padding:15px 18px}}
+</style>
 </head>
 <body>
 <header class="topnav">
@@ -51,6 +61,8 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <a href="/" class="active">Главная</a>
 <a href="/projects/">Работы</a>
 <a href="/services/">Услуги и цены</a>
+<a href="/raschet/">Расчёт цены</a>
+<a href="/blog/">Блог</a>
 <a href="/about/">О студии</a>
 <a href="/contacts/">Контакты</a>
 </nav>
@@ -110,7 +122,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <a class="case-card" href="/metro/"><div class="ph"><img src="/assets/img/w/covers_metro.webp" alt="Московский метрополитен" loading="lazy"></div><div class="cap"><h3>Московский метрополитен</h3><span>Награды турнира по мини-футболу — дизайн и печать</span></div></a>
 <a class="case-card" href="/mangonia/"><div class="ph"><img src="/assets/img/w/cards_06.webp" style="object-position:top" alt="Карточки WB и Ozon" loading="lazy"></div><div class="cap"><h3 style="font-size:16px;letter-spacing:-.01em;white-space:nowrap">Карточки WB и Ozon</h3><span>Продающая инфографика для маркетплейсов</span></div></a>
 <a class="case-card" href="/coffee-in-mood/"><div class="ph"><img src="/assets/img/w/social_coffee-in-mood.webp" alt="Coffee in Mood — оформление соцсетей" loading="lazy"></div><div class="cap"><h3>Coffee in Mood</h3><span>Оформление сообщества кофейни</span></div></a>
-<a class="case-card" href="/3d/"><div class="ph"><img src="/assets/img/w/3d_hero-coffee.webp" alt="3D и иллюстрация" loading="lazy"></div><div class="cap"><h3>3D и иллюстрация</h3><span>Маскот-гепард Coffee & Good Mood — от эскиза до рендера</span></div></a>
+<a class="case-card" href="/3d/"><div class="ph"><img src="/assets/img/w/3d_hero-coffee.webp" alt="3D и иллюстрация" loading="lazy"></div><div class="cap"><h3>3D и иллюстрация</h3><span>Маскот-гепард Coffee &amp; Good Mood — от эскиза до рендера</span></div></a>
 </div>
 <div class="center-cta"><a class="btn btn-ghost" href="/projects/">Все работы ↗</a></div>
 </div>
@@ -363,6 +375,14 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <a class="btn btn-primary" href="#brief">Оставить заявку</a>
 </div>
 </div>
+<div class="calc-cta reveal">
+<div class="cc-badge">Калькулятор</div>
+<h3>Не знаете, какой пакет ваш?</h3>
+<p>Ответьте на три вопроса — и увидите вилку цены и срок для своей задачи.</p>
+<a class="btn btn-primary" id="calcCta" href="/raschet/">Рассчитать стоимость за минуту →</a>
+<p class="cc-fine">Без регистрации и звонков · результат сразу на странице</p>
+</div>
+<script>(function(){var b=document.getElementById('calcCta');if(b){b.addEventListener('click',function(){try{ym(110943761,'reachGoal','calc_click')}catch(e){}})}})();</script>
 <p class="pack-note">Цены стартовые — точную стоимость назовём после короткого брифа. Сумму и сроки фиксируем в договоре, предоплата 50%.</p>
 <script>document.querySelectorAll('.pack-tabs button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.pack-tabs button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.querySelectorAll('[data-pg-grid]').forEach(function(g){g.style.display=g.getAttribute('data-pg-grid')===b.getAttribute('data-pg')?'':'none'});});});</script>
 </div>
@@ -432,6 +452,9 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="foot-grid">
 <div class="req">kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.<br>Работаем по договору, оплата с чеком.</div>
 <div class="foot-links">
+<a href="/services/">Услуги и цены</a>
+<a href="/raschet/">Расчёт стоимости</a>
+<a href="/blog/">Блог</a>
 <a href="/privacy/">Политика обработки ПД</a>
 <a href="/about/#faq">Частые вопросы</a>
 <a href="mailto:design@kri-studio.art">Почта</a>
