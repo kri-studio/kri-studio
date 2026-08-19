@@ -43,6 +43,17 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- V20-NOSCRIPT --><noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-v5 .v5-hero-left>*,.hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
+<style>
+.calc-cta{position:relative;overflow:hidden;text-align:center;max-width:780px;margin:38px auto 10px;padding:36px 26px 30px;border:1.5px solid var(--acc);border-radius:28px;background:var(--card);box-shadow:var(--shadow-sm)}
+.calc-cta:before{content:"";position:absolute;left:-10%;right:-10%;bottom:-70%;height:190px;background:radial-gradient(50% 100% at 50% 100%,rgba(255,90,31,.18),transparent 72%);pointer-events:none}
+.calc-cta>*{position:relative}
+.cc-badge{display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:99px;padding:7px 15px;margin:0 0 14px}
+.calc-cta h3{font-family:var(--dis);font-size:clamp(20px,2.8vw,30px);line-height:1.18;letter-spacing:-.02em;margin:0 0 10px}
+.calc-cta p{color:var(--muted);font-size:16px;line-height:1.55;margin:0 auto 22px;max-width:520px}
+.calc-cta .btn{font-size:17px;padding:16px 32px}
+.cc-fine{font-size:13.5px;color:var(--muted);margin-top:14px}
+@media(max-width:600px){.calc-cta{padding:28px 18px 24px;border-radius:24px;margin:30px auto 6px}.calc-cta .btn{width:100%;font-size:16px;padding:15px 20px}}
+</style>
 </head>
 <body>
 <header class="topnav">
@@ -52,6 +63,8 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <a href="/">Главная</a>
 <a href="/projects/">Работы</a>
 <a href="/services/" class="active">Услуги и цены</a>
+<a href="/raschet/">Расчёт цены</a>
+<a href="/blog/">Блог</a>
 <a href="/about/">О студии</a>
 <a href="/contacts/">Контакты</a>
 </nav>
@@ -288,9 +301,17 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <a class="btn btn-primary" href="#brief">Оставить заявку</a>
 </div>
 </div>
+<div class="calc-cta reveal">
+<div class="cc-badge">Калькулятор</div>
+<h3>Не знаете, сколько будет стоить <span class="it">ваш проект?</span></h3>
+<p>Ответьте на три вопроса — сразу покажем вилку цены, срок и что входит в работу. Без звонков и обязательств.</p>
+<a class="btn btn-primary" href="/raschet/" id="calcCta">Рассчитать стоимость за минуту →</a>
+<div class="cc-fine">Меньше минуты · ответ виден сразу на странице</div>
+</div>
 <p class="pack-note">Цены стартовые — точную стоимость назовём после короткого брифа. Сумму и сроки фиксируем в договоре, предоплата 50%.</p>
 <p class="faq-strip">Остались вопросы? <a href="/about/#faq">Загляните в частые вопросы →</a></p>
-<script>document.querySelectorAll('.pack-tabs button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.pack-tabs button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var g=b.getAttribute('data-pg');document.querySelectorAll('[data-pg-grid]').forEach(function(el){el.style.display=(el.getAttribute('data-pg-grid')===g)?'':'none'})})});</script>
+<script>document.querySelectorAll('.pack-tabs button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.pack-tabs button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var g=b.getAttribute('data-pg');document.querySelectorAll('[data-pg-grid]').forEach(function(el){el.style.display=(el.getAttribute('data-pg-grid')===g)?'':'none'})})});
+var _cc=document.getElementById('calcCta');if(_cc){_cc.addEventListener('click',function(){try{if(typeof ym==='function')ym(110943761,'reachGoal','calc_click');}catch(e){}});}</script>
 </div>
 </section>
 <section class="section" style="padding:20px 0 20px">
@@ -354,6 +375,8 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="foot-grid">
 <div class="req">kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.<br>Работаем по договору, оплата с чеком.</div>
 <div class="foot-links">
+<a href="/raschet/">Расчёт стоимости</a>
+<a href="/blog/">Блог</a>
 <a href="/privacy/">Политика обработки ПД</a>
 <a href="/about/#faq">Частые вопросы</a>
 <a href="mailto:design@kri-studio.art">Почта</a>
