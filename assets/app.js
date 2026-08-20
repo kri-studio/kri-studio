@@ -13,6 +13,18 @@
   }catch(e){}
 })();
 
+// === v28: блок плиток «Подробно об услугах» на странице услуг ===
+(function(){
+  try{
+    if(location.pathname.indexOf('/services')===0){
+      var s=document.createElement('script');
+      s.src='/assets/services-tiles.js';
+      s.defer=true;
+      (document.head||document.documentElement).appendChild(s);
+    }
+  }catch(e){}
+})();
+
 // kri·studio — скрипты: темы-настроения, меню, появление секций, счётчики, курсор, форма
 (function(){
   'use strict';
