@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>kri·studio — новый дизайн (превью)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F4EF; --card:#FFFFFF; --ink:#1C1A17; --ink2:#55514B; --muted:#8B857C;
+  --acc:#FF5C38; --acc-soft:#FFE9E2; --lime:#D9F26B; --line:#E8E4DD;
+  --r:20px; --shadow:0 1px 2px rgba(28,26,23,.05),0 8px 24px rgba(28,26,23,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Onest',Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Unbounded',Arial,sans-serif;line-height:1.08;letter-spacing:-.01em}
+.it{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:400;color:var(--acc)}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:12px;z-index:50;margin:12px auto 0;max-width:1200px;padding:0 16px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(255,255,255,.8);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;padding:10px 12px 10px 22px}
+.logo{font-family:'Unbounded';font-weight:800;font-size:17px}
+.logo em{font-style:normal;color:var(--acc)}
+.nav-links{display:flex;gap:26px;font-size:15px;color:var(--ink2)}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:13px 24px;font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:.2s}
+.btn-acc{background:var(--ink);color:#fff}
+.btn-acc:hover{background:var(--acc)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* HERO */
+.hero{padding:72px 0 40px;position:relative;overflow:hidden}
+.hero-blob{position:absolute;right:-140px;top:-120px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#FFD5C8,#FF5C38 55%,#B33217);filter:blur(90px);opacity:.28;pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;color:var(--ink2);box-shadow:var(--shadow)}
+.dot{width:8px;height:8px;border-radius:50%;background:#3DBB6E;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.hero h1{font-size:clamp(44px,7.2vw,92px);font-weight:800;margin:28px 0 24px;max-width:1000px}
+.hero p.lead{font-size:20px;color:var(--ink2);max-width:560px;margin-bottom:36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.proof{display:flex;gap:0;margin-top:56px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;flex-wrap:wrap}
+.proof div{flex:1;min-width:200px;padding:22px 28px;border-right:1px solid var(--line)}
+.proof div:last-child{border-right:none}
+.proof b{font-family:'Unbounded';font-size:26px;display:block;margin-bottom:2px}
+.proof span{font-size:14px;color:var(--muted)}
+
+/* MARQUEE */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--lime);overflow:hidden;white-space:nowrap;padding:14px 0;margin:64px 0 0}
+.marquee span{font-family:'Unbounded';font-size:15px;font-weight:600;margin-right:48px;letter-spacing:.02em}
+
+/* SECTIONS */
+.section{padding:96px 0 0}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:16px}
+.section h2{font-size:clamp(30px,4vw,48px);font-weight:800;max-width:720px}
+.section .sub{color:var(--ink2);max-width:560px;margin-top:16px}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+
+/* BENTO SERVICES */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow);position:relative;transition:.2s;display:flex;flex-direction:column;justify-content:space-between;min-height:210px}
+.tile:hover{transform:translateY(-4px);border-color:var(--acc)}
+.tile h3{font-size:20px;font-weight:600;margin-bottom:10px}
+.tile p{font-size:15px;color:var(--ink2)}
+.tile .price{margin-top:22px;display:flex;align-items:center;justify-content:space-between}
+.tile .price b{font-family:'Unbounded';font-size:17px}
+.tile .arr{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:16px;transition:.2s}
+.tile:hover .arr{background:var(--acc);color:#fff;border-color:var(--acc)}
+.t-big{grid-column:span 3;background:var(--ink);color:#fff;border:none}
+.t-big p{color:rgba(255,255,255,.72)}
+.t-big .arr{border-color:rgba(255,255,255,.3)}
+.t-3{grid-column:span 3}
+.t-2{grid-column:span 2}
+.tag{position:absolute;top:24px;right:24px;background:var(--lime);color:var(--ink);font-size:12px;font-weight:600;border-radius:999px;padding:5px 12px}
+
+/* CASES */
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.case{border-radius:var(--r);overflow:hidden;position:relative;min-height:340px;display:flex;align-items:flex-end;padding:28px;color:#fff;transition:.2s}
+.case:hover{transform:translateY(-4px)}
+.c1{background:linear-gradient(135deg,#2E1F4F,#7A4DD8 60%,#C9A6FF)}
+.c2{background:linear-gradient(135deg,#12351F,#3DBB6E 65%,#D9F26B)}
+.c3{background:linear-gradient(135deg,#4A1408,#FF5C38 60%,#FFC7A1)}
+.c4{background:linear-gradient(135deg,#1A2C4A,#3E7BD8 60%,#A9D0FF)}
+.case .in{background:rgba(20,17,14,.42);backdrop-filter:blur(10px);border-radius:14px;padding:16px 20px;width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.case h3{font-size:19px;font-weight:600}
+.case span{font-size:13px;opacity:.82}
+.case .note{position:absolute;top:24px;left:28px;font-size:13px;background:rgba(255,255,255,.9);color:var(--ink);border-radius:999px;padding:6px 14px;font-weight:600}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+.step .num{font-family:'Unbounded';font-size:14px;font-weight:600;color:var(--acc);display:inline-block;background:var(--acc-soft);border-radius:999px;padding:6px 14px;margin-bottom:18px}
+.step h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.step p{font-size:15px;color:var(--ink2)}
+
+/* REVIEWS */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+.stars{color:var(--acc);letter-spacing:3px;margin-bottom:14px;font-size:15px}
+.rev p{font-size:15.5px;color:var(--ink2)}
+.rev .who{margin-top:18px;font-weight:600;font-size:15px}
+.rev .who span{display:block;font-weight:400;color:var(--muted);font-size:13.5px}
+
+/* CTA */
+.cta{margin:96px 0;background:var(--ink);border-radius:28px;padding:72px 48px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;left:50%;bottom:-220px;transform:translateX(-50%);width:640px;height:420px;background:radial-gradient(ellipse at center,#FF5C38,transparent 70%);opacity:.5;pointer-events:none}
+.cta h2{font-size:clamp(30px,4.4vw,52px);font-weight:800;max-width:760px;margin:0 auto 18px}
+.cta p{color:rgba(255,255,255,.72);max-width:480px;margin:0 auto 36px}
+.cta .btn-acc{background:var(--acc);position:relative;z-index:1}
+.cta .btn-acc:hover{background:#fff;color:var(--ink)}
+.cta .mini{margin-top:22px;font-size:14px;color:rgba(255,255,255,.55);position:relative;z-index:1}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:40px 0 48px;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .bento{grid-template-columns:1fr 1fr}
+  .t-big,.t-3,.t-2{grid-column:span 2}
+  .cases{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .revs{grid-template-columns:1fr}
+  .wrap{padding:0 20px}
+  .cta{padding:56px 24px}
+}
+@media(max-width:560px){
+  .bento{grid-template-columns:1fr}
+  .t-big,.t-3,.t-2{grid-column:span 1}
+  .steps{grid-template-columns:1fr}
+  .proof div{min-width:140px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-in">
+  <a class="logo" href="/">kri<em>·</em>studio</a>
+  <div class="nav-links"><a href="#services">Услуги</a><a href="#cases">Кейсы</a><a href="#process">Процесс</a><a href="#reviews">Отзывы</a><a href="/blog/">Блог</a></div>
+  <a class="btn btn-acc" href="/raschet/">Рассчитать проект</a>
+</div></nav>
+
+<header class="hero"><div class="hero-blob"></div><div class="wrap">
+  <span class="badge"><span class="dot"></span>Свободны 2 слота на сентябрь · Москва</span>
+  <h1>Дизайн, который <span class="it">продаёт</span> —<br>а не просто нравится</h1>
+  <p class="lead">Логотипы, фирменный стиль, сайты и карточки WB/Ozon для малого бизнеса. Фиксированная цена, договор, старт за 3 дня.</p>
+  <div class="hero-cta">
+    <a class="btn btn-acc" href="/raschet/">Рассчитать стоимость за 1 минуту →</a>
+    <a class="btn btn-ghost" href="#cases">Смотреть работы</a>
+  </div>
+  <div class="proof">
+    <div><b>450+</b><span>выполненных работ</span></div>
+    <div><b>5.0</b><span>рейтинг по отзывам клиентов</span></div>
+    <div><b>7 лет</b><span>в дизайне и брендинге</span></div>
+    <div><b>от 3 дней</b><span>до первых концептов</span></div>
+  </div>
+</div></header>
+
+<div class="marquee"><span>ЛОГОТИПЫ</span><span>ФИРМЕННЫЙ СТИЛЬ</span><span>САЙТЫ</span><span>КАРТОЧКИ WB / OZON</span><span>УПАКОВКА</span><span>ПРЕЗЕНТАЦИИ</span><span>БРЕНДБУКИ</span><span>ЛОГОТИПЫ</span><span>ФИРМЕННЫЙ СТИЛЬ</span><span>САЙТЫ</span></div>
+
+<section class="section" id="services"><div class="wrap">
+  <div class="head-row"><div><div class="eyebrow">Услуги и цены</div><h2>Честные цены <span class="it">сразу</span>, без «обсудим на созвоне»</h2></div><a class="btn btn-ghost" href="/services/">Все услуги</a></div>
+  <div class="bento">
+    <div class="tile t-big"><span class="tag">Хит</span><div><h3>Дизайн сайта под ключ</h3><p>Лендинг или сайт на Тильде: структура, тексты, дизайн, сборка. С аналитикой и SEO-базой.</p></div><div class="price"><b>от 80 000 ₽</b><span class="arr">→</span></div></div>
+    <div class="tile t-3"><div><h3>Фирменный стиль</h3><p>Логотип, палитра, шрифты, носители — система, которую узнают.</p></div><div class="price"><b>от 90 000 ₽</b><span class="arr">→</span></div></div>
+    <div class="tile t-2"><div><h3>Логотип</h3><p>3 концепта, все исходники.</p></div><div class="price"><b>от 25 000 ₽</b><span class="arr">→</span></div></div>
+    <div class="tile t-2"><div><h3>Карточки WB / Ozon</h3><p>Инфографика, которая кликается.</p></div><div class="price"><b>от 20 000 ₽</b><span class="arr">→</span></div></div>
+    <div class="tile t-2"><div><h3>Упаковка</h3><p>От идеи до печати.</p></div><div class="price"><b>от 60 000 ₽</b><span class="arr">→</span></div></div>
+  </div>
+</div></section>
+
+<section class="section" id="cases"><div class="wrap">
+  <div class="head-row"><div><div class="eyebrow">Кейсы</div><h2>Работы, которые <span class="it">работают</span></h2></div><a class="btn btn-ghost" href="/projects/">Все 450+ работ</a></div>
+  <div class="cases">
+    <a class="case c1" href="/smolly-lolly/"><span class="note">здесь — реальное фото кейса</span><div class="in"><h3>Smolly Lolly</h3><span>брендинг · упаковка</span></div></a>
+    <a class="case c2" href="/projects/"><span class="note">здесь — реальное фото кейса</span><div class="in"><h3>Veda</h3><span>сайт · айдентика</span></div></a>
+    <a class="case c3" href="/mangonia/"><span class="note">здесь — реальное фото кейса</span><div class="in"><h3>Mangonia</h3><span>карточки WB/Ozon</span></div></a>
+    <a class="case c4" href="/color-art/"><span class="note">здесь — реальное фото кейса</span><div class="in"><h3>Color Art</h3><span>фирменный стиль</span></div></a>
+  </div>
+</div></section>
+
+<section class="section" id="process"><div class="wrap">
+  <div class="head-row"><div><div class="eyebrow">Как работаем</div><h2>Прозрачный процесс — <span class="it">без сюрпризов</span></h2></div></div>
+  <div class="steps">
+    <div class="step"><span class="num">01</span><h3>Бриф — 15 минут</h3><p>Созвон или анкета. Фиксируем задачу, сроки и цену в договоре.</p></div>
+    <div class="step"><span class="num">02</span><h3>Концепты — 3–5 дней</h3><p>Показываем варианты. Правки вносим в тот же день.</p></div>
+    <div class="step"><span class="num">03</span><h3>Финал и сборка</h3><p>Доводим выбранный концепт до готового продукта.</p></div>
+    <div class="step"><span class="num">04</span><h3>Передача исходников</h3><p>Все файлы, гайды и права — ваши. Поддержка после сдачи.</p></div>
+  </div>
+</div></section>
+
+<section class="section" id="reviews"><div class="wrap">
+  <div class="head-row"><div><div class="eyebrow">Отзывы</div><h2>5.0 <span class="it">из пяти</span> — говорят клиенты</h2></div><a class="btn btn-ghost" href="/otzyvy/">Все отзывы</a></div>
+  <div class="revs">
+    <div class="rev"><div class="stars">★★★★★</div><p>«Пришла за логотипом, а получила целый мир бренда. Кристина попала в характер с первого созвона: через три недели всё было готово».</p><div class="who">Алина<span>Smolly Lolly · брендинг</span></div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>«Переупаковали карточки для WB и Ozon. Уже в первый месяц кликабельность заметно выросла, в сезон вышли в топ категории».</p><div class="who">Сергей<span>Mangonia · карточки WB/Ozon</span></div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>«Нужен был стиль, который продаёт студию ещё до визита. За месяц собрали айдентику — клиентки узнают нас по сторис».</p><div class="who">Екатерина<span>Color Art · фирменный стиль</span></div></div>
+  </div>
+</div></section>
+
+<section class="wrap" id="cta"><div class="cta">
+  <h2>Узнайте стоимость проекта за <span class="it" style="color:#FFB39E">1 минуту</span></h2>
+  <p>Квиз из 3 вопросов — и вы получите вилку цены и план работ. Без спама и навязчивых звонков.</p>
+  <a class="btn btn-acc" href="/raschet/">Пройти квиз-расчёт →</a>
+  <div class="mini">или напишите: design@kri-studio.art · t.me/kri_studio · +7 905 516-65-57</div>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.<br>Работаем по договору, оплата с чеком.</div>
+  <div>design@kri-studio.art<br>+7 905 516-65-57 · t.me/kri_studio</div>
+</div></footer>
+
+</body>
+</html>
