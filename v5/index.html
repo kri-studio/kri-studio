@@ -4,85 +4,88 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#3a0716">
+<meta name="theme-color" content="#2a0610">
 <title>kri·studio — концепт v5</title>
 <style>
-:root{--wine:#4a0d22;--deep:#16040a;--cream:#f4eee6;--pink:#e7b7bf;--pad:clamp(16px,3.4vw,64px)}
-*{box-sizing:border-box}html,body{margin:0;overflow-x:hidden}body{background:var(--deep);color:var(--cream);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
-.nav{position:absolute;inset:0 0 auto;z-index:8;display:flex;justify-content:space-between;align-items:center;padding:18px var(--pad);border-bottom:1px solid #ffffff22}
-.logo{font-weight:900;letter-spacing:-.07em;font-size:clamp(22px,2.2vw,36px)}
-.menu{display:flex;gap:22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.talk{border:1px solid #ffffff77;border-radius:999px;padding:10px 16px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
-.hero{min-height:100svh;background:radial-gradient(circle at 78% 8%,#6b1730,#4a0d22 46%,#16040a);position:relative;overflow:hidden;padding:120px var(--pad) 90px}
-.stack{position:absolute;left:var(--pad);top:36%;font-size:clamp(18px,3vw,40px);font-weight:900;line-height:.92;z-index:4}
-.giant{font-size:clamp(84px,21vw,320px);line-height:.72;letter-spacing:-.09em;text-transform:uppercase;font-weight:900;margin:6vh 0 0;position:relative;z-index:2}
-.giant b{display:block}.giant .out{color:transparent;-webkit-text-stroke:2px var(--pink)}
-.photo{position:absolute;right:0;bottom:0;width:min(50vw,680px);z-index:3}
-.photo img{width:100%;height:min(86vh,920px);object-fit:cover;object-position:center 18%;mask-image:linear-gradient(#000 78%,transparent)}
-.bloom{position:absolute;border-radius:50% 40% 55% 45%;filter:blur(.2px);pointer-events:none;z-index:5}
-.b1{width:220px;height:220px;right:-40px;top:70px;background:radial-gradient(circle at 30% 30%,#c45a6d,#7b102f 62%,transparent 63%);transform:rotate(18deg)}
-.b2{width:280px;height:180px;left:-70px;bottom:90px;background:radial-gradient(circle at 40% 40%,#e7b7bf,#8d1a38 58%,transparent 59%);transform:rotate(-24deg)}
-.slash{position:absolute;left:-8%;bottom:14%;width:120%;height:70px;background:#efc2c8;color:#16040a;transform:rotate(-7deg);overflow:hidden;z-index:6;display:flex;align-items:center;border-block:3px solid #16040a}
-.track{display:flex;gap:30px;white-space:nowrap;animation:go 22s linear infinite;font-weight:900;text-transform:uppercase}
-.track i{font-family:Georgia,serif;font-style:italic;font-weight:400;text-transform:none}@keyframes go{to{transform:translateX(-50%)}}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:70px var(--pad)}
-.card{background:#3b0b1c;padding:28px;min-height:320px;position:relative;overflow:hidden}
-.card h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(32px,5vw,56px);color:var(--pink);margin:0 0 14px}
-.card p,.card li{line-height:1.55}.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px}.step{background:#2a0814;padding:14px;border-radius:14px;font-size:13px}.step b{display:block;color:var(--pink);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
-.works{padding:20px var(--pad) 80px}.works h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(40px,7vw,88px);color:var(--pink);margin:0 0 22px}
-.mosaic{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.shot{position:relative;min-height:36vw;overflow:hidden;background:#140309}.shot img{width:100%;height:100%;object-fit:cover}.shot span{position:absolute;left:16px;bottom:14px;font-weight:900;font-size:clamp(22px,3vw,40px)}
-.wave{background:var(--cream);color:#16040a}.wave svg{display:block;width:100%;height:80px}.wave-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:end;padding:0 var(--pad)}
-.wave-in h2{font-size:clamp(38px,6vw,92px);line-height:.8;text-transform:uppercase;color:var(--wine);margin:0 0 12px}
-.wave-in img{width:min(520px,100%);height:min(70vh,720px);object-fit:cover;object-position:center 16%;border-radius:28px 28px 0 0}
-.band{background:var(--wine);padding:80px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-.band h2{font-size:clamp(48px,8vw,120px);line-height:.78;text-transform:uppercase;margin:0}.band h2 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--pink)}
-.pills{display:flex;flex-wrap:wrap;gap:10px}.pill{border:1px solid #ffffff55;border-radius:999px;padding:10px 16px;font-size:12px}
-.cta{background:var(--cream);color:var(--wine);padding:80px var(--pad);display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-.cta h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(40px,6vw,84px);margin:0 0 14px}
-.round{width:min(380px,80vw);aspect-ratio:1;border-radius:50%;overflow:hidden;border:10px solid #3b0b1c;margin:0 auto}.round img{width:100%;height:100%;object-fit:cover;object-position:center 16%}
-.btn{display:inline-flex;margin-top:16px;background:var(--wine);color:var(--cream);border-radius:999px;padding:14px 22px;text-transform:uppercase;letter-spacing:.12em;font-size:11px}
-footer{padding:48px var(--pad) 20px}.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}.brand{font-size:clamp(34px,6vw,80px);font-weight:900;letter-spacing:-.08em}.col{display:flex;flex-direction:column;gap:8px}.col b{color:var(--pink);font-size:10px;letter-spacing:.16em;text-transform:uppercase}.copy{border-top:1px solid #ffffff22;margin-top:24px;padding-top:14px;font-size:10px;color:#ffffff88;display:flex;justify-content:space-between;gap:16px}
-@media(max-width:980px){.menu{display:none}.grid,.steps,.mosaic,.wave-in,.band,.cta,.ft{grid-template-columns:1fr}.photo{position:relative;width:min(90vw,520px);margin:20px auto 0;right:auto}.photo img{height:62vh}.hero{padding-bottom:70px}}
-@media(max-width:640px){.giant{font-size:28vw}.shot{min-height:70vw}.slash{height:54px}}
+:root{--wine:#5a1028;--deep:#140309;--cream:#f3eee6;--pink:#f0c3c9;--pad:clamp(14px,3vw,56px)}
+*{box-sizing:border-box}html,body{margin:0;background:var(--deep);color:var(--cream);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.nav{position:absolute;z-index:20;inset:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:16px var(--pad)}
+.logo{font-weight:900;font-size:clamp(20px,2vw,34px);letter-spacing:-.06em}
+.talk{border:1px solid #ffffff66;border-radius:999px;padding:9px 14px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.hero{min-height:100svh;background:radial-gradient(circle at 70% 0,#7a1833 0,#3a0a19 48%,#140309 100%);position:relative;overflow:hidden}
+.kicker{position:absolute;left:var(--pad);top:38%;z-index:6;font-weight:900;font-size:clamp(16px,2.6vw,34px);line-height:.9;letter-spacing:-.03em}
+.sheet{width:min(1240px,100%);margin:0 auto;padding:88px var(--pad) 40px;position:relative}
+.title{font-size:clamp(72px,19vw,280px);line-height:.7;letter-spacing:-.08em;text-transform:uppercase;font-weight:900;margin:8vh 0 0;position:relative;z-index:2}
+.title span{display:block}.title .line{color:transparent;-webkit-text-stroke:2px var(--pink)}
+.face{position:absolute;right:2%;top:12%;width:min(52vw,720px);z-index:4}
+.face img{width:100%;height:min(82vh,860px);object-fit:cover;object-position:center 16%;filter:contrast(1.05) saturate(.86)}
+.fl{position:absolute;z-index:7;pointer-events:none;filter:drop-shadow(0 16px 18px #0007)}
+.fl-a{width:min(34vw,400px);right:-4%;top:-4%;transform:rotate(14deg)}
+.fl-b{width:min(40vw,480px);left:-8%;bottom:8%;transform:rotate(-26deg)}
+.diag{position:absolute;left:-12%;bottom:16%;width:130%;height:78px;background:#efc4cb;color:#140309;transform:rotate(-8deg);display:flex;align-items:center;overflow:hidden;z-index:8;border-block:4px solid #140309}
+.marq{display:flex;gap:26px;white-space:nowrap;animation:mq 20s linear infinite;font-weight:900;text-transform:uppercase;font-size:clamp(15px,2vw,26px)}
+.marq i{font-family:Georgia,serif;font-style:italic;font-weight:400;text-transform:none}@keyframes mq{to{transform:translateX(-50%)}}
+.board{padding:28px var(--pad) 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:16px}
+.tile{background:#3d0c1d;min-height:360px;padding:26px;position:relative;overflow:hidden;border:1px solid #ffffff14}
+.tile h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(34px,5vw,58px);color:var(--pink);margin:0 0 12px}
+.tile p,.tile li{line-height:1.5;font-size:15px}.tile .fl{width:190px;right:-48px;bottom:-36px;opacity:.95}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px}.n{background:#240713;padding:12px;border-radius:12px;font-size:13px}.n b{display:block;color:var(--pink);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}
+.collage{padding:10px var(--pad) 80px}.collage h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(42px,8vw,96px);color:var(--pink);margin:0 0 18px}
+.wall{display:grid;grid-template-columns:1.25fr .75fr;gap:12px}.pic{position:relative;overflow:hidden;min-height:34vw;background:#0d0206}.pic img{width:100%;height:100%;object-fit:cover}.pic b{position:absolute;left:14px;bottom:12px;font-size:clamp(22px,3vw,40px)}.wall .fl{width:170px;right:-30px;top:-24px;z-index:2}
+.cream{background:var(--cream);color:#140309;position:relative}
+.cream svg{display:block;width:100%;height:84px}.split{display:grid;grid-template-columns:.85fr 1.15fr;align-items:end;padding:0 var(--pad)}
+.split h2{font-size:clamp(40px,7vw,104px);line-height:.78;text-transform:uppercase;color:var(--wine);margin:0 0 12px}
+.split img{width:min(560px,100%);height:min(72vh,740px);object-fit:cover;object-position:center 16%;border-radius:40px 40px 0 0}
+.pinkband{background:var(--wine);padding:90px var(--pad);display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;position:relative;overflow:hidden}
+.pinkband:before{content:'';position:absolute;inset:18% -10% auto;height:90px;background:#efc4cb;transform:rotate(-11deg)}
+.pinkband h2{position:relative;z-index:2;font-size:clamp(52px,10vw,150px);line-height:.74;text-transform:uppercase;margin:0}
+.pinkband h2 i{display:block;font-style:normal;color:transparent;-webkit-text-stroke:2px var(--pink)}
+.cta{background:#3d0c1d;padding:80px var(--pad);display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;position:relative;overflow:hidden}
+.cta h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(40px,6.5vw,88px);color:var(--pink);margin:0 0 12px}
+.oval{width:min(390px,78vw);aspect-ratio:1;border-radius:50%;overflow:hidden;border:9px solid #140309;margin:0 auto;position:relative;z-index:2}.oval img{width:100%;height:100%;object-fit:cover;object-position:center 16%}
+.cta .fl{width:260px;right:-50px;bottom:-50px}
+.btn{display:inline-flex;margin-top:16px;background:var(--cream);color:var(--wine);border-radius:999px;padding:13px 20px;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:800}
+footer{padding:40px var(--pad) 18px;font-size:13px}.ft{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.tiny{opacity:.6;font-size:10px;margin-top:18px}
+@media(max-width:900px){.board,.nums,.wall,.split,.pinkband,.cta{grid-template-columns:1fr}.face{position:relative;width:min(92vw,560px);margin:12px auto 0;right:auto;top:auto}.face img{height:58vh}.title{font-size:23vw}.hero{padding-bottom:70px}.kicker{position:relative;left:0;top:0;margin-top:8px}}
 </style>
 </head>
 <body>
-<header class="nav"><a class="logo" href="/">kri·studio</a><nav class="menu"><a href="#works">Кейсы</a><a href="#about">О студии</a><a href="#process">Процесс</a></nav><a class="talk" href="https://t.me/kri_studio">Обсудить проект</a></header>
+<header class="nav"><a class="logo" href="/">kri·studio</a><a class="talk" href="https://t.me/kri_studio">Обсудить проект</a></header>
 <section class="hero">
-  <div class="bloom b1"></div><div class="bloom b2"></div>
-  <div class="stack">BRAND<br>WEB<br>IDENTITY</div>
-  <h1 class="giant"><b>KRI</b><b class="out">STUDIO</b></h1>
-  <div class="photo"><img src="/assets/img/hero-v5.webp" alt="Кристина Трифонова"></div>
-  <div class="slash"><div class="track"><span>Айдентика <i>влюбляет</i> ✦ Сайты <i>убеждают</i> ✦ Упаковка <i>выделяет</i> ✦ </span><span>Айдентика <i>влюбляет</i> ✦ Сайты <i>убеждают</i> ✦ Упаковка <i>выделяет</i> ✦ </span></div></div>
+  <img class="fl fl-a fl-h" alt="">
+  <div class="kicker">BRAND<br>WEB<br>IDENTITY</div>
+  <div class="sheet"><h1 class="title"><span>KRI</span><span class="line">STUDIO</span></h1></div>
+  <div class="face"><img src="/assets/img/hero-v5.webp" alt="Кристина Трифонова"></div>
+  <img class="fl fl-b fl-p" alt="">
+  <div class="diag"><div class="marq"><span>Айдентика <i>влюбляет</i> ✦ Сайты <i>убеждают</i> ✦ Упаковка <i>выделяет</i> ✦ </span><span>Айдентика <i>влюбляет</i> ✦ Сайты <i>убеждают</i> ✦ Упаковка <i>выделяет</i> ✦ </span></div></div>
 </section>
-<section class="grid" id="about">
-  <article class="card"><h2>кто мы?</h2><p>Студия Кристины Трифоновой. Делаем бренды, которые не растворяются среди похожих: стратегию, айдентику и сайты с характером.</p></article>
-  <article class="card" id="process"><h2>этапы работы</h2><div class="steps"><div class="step"><b>01 знакомство</b>Разбираем задачу и нужное ощущение бренда.</div><div class="step"><b>02 направление</b>Собираем смысл и визуальные маршруты.</div><div class="step"><b>03 система</b>Проверяем идею на реальных носителях.</div><div class="step"><b>04 запуск</b>Передаём файлы и помогаем внедрить.</div></div></article>
+<section class="board">
+  <article class="tile"><h2>кто мы?</h2><p>Студия Кристины Трифоновой. Делаем бренды, которые не растворяются среди похожих.</p><p>Стратегия, айдентика, сайты и упаковка — с характером, а не из шаблона.</p><img class="fl fl-h" alt=""></article>
+  <article class="tile"><h2>этапы работы</h2><div class="nums"><div class="n"><b>01 знакомство</b>Задача, продукт, ощущение бренда.</div><div class="n"><b>02 направление</b>Смысл и визуальные маршруты.</div><div class="n"><b>03 система</b>Проверка на реальных носителях.</div><div class="n"><b>04 запуск</b>Файлы, правила, внедрение.</div></div><img class="fl fl-p" alt=""></article>
 </section>
-<section class="works" id="works">
-  <h2>избранные работы</h2>
-  <div class="mosaic">
-    <a class="shot" href="/works/"><img src="/assets/img/w/brand_kord_v2.webp" alt="KORD"><span>KORD</span></a>
-    <a class="shot" href="/works/"><img src="/assets/img/w/social_coffee-in-mood.webp" alt="Coffee in Mood"><span>Coffee in Mood</span></a>
-    <a class="shot" href="/works/"><img src="/assets/img/w/covers_metro.webp" alt="METRO"><span>METRO</span></a>
-    <a class="shot" href="/works/"><img src="/assets/img/w/cards_06.webp" alt="E-commerce"><span>E-commerce</span></a>
+<section class="collage">
+  <h2>другие работы</h2>
+  <div class="wall">
+    <a class="pic" href="/works/"><img src="/assets/img/w/brand_kord_v2.webp" alt="KORD"><b>KORD</b></a>
+    <a class="pic" href="/works/"><img src="/assets/img/w/social_coffee-in-mood.webp" alt="Coffee in Mood"><b>Coffee in Mood</b><img class="fl fl-h" alt=""></a>
+    <a class="pic" href="/works/"><img src="/assets/img/w/covers_metro.webp" alt="METRO"><b>METRO</b></a>
+    <a class="pic" href="/works/"><img src="/assets/img/w/cards_06.webp" alt="E-commerce"><b>E-commerce</b></a>
   </div>
 </section>
-<section class="wave">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#4a0d22" d="M0 36c240 44 480-36 720-8s480 50 720-4v56H0z"/></svg>
-  <div class="wave-in"><div><h2>Стиль, который<br><i style="font-family:Georgia,serif;text-transform:none">считывается</i></h2><p>Не собираем дизайн из трендов. Ищем приём, который может принадлежать только вашему бренду.</p></div><img src="/assets/img/hero-v5.webp" alt="Кристина Трифонова"></div>
+<section class="cream">
+  <svg viewBox="0 0 1440 84" preserveAspectRatio="none"><path fill="#5a1028" d="M0 40c260 50 500-42 740-8 240 34 480 8 700-32v84H0z"/></svg>
+  <div class="split">
+    <div><h2>BRAND<br>THAT<br>STAYS</h2><p>Не шаблон и не декор. Система, которую видно в живых носителях.</p></div>
+    <img src="/assets/img/hero-v5.webp" alt="">
+  </div>
 </section>
-<section class="band">
-  <h2>IDENTITY<br><span>OVERLAP</span></h2>
-  <div><p>Крупно, смело, с живым фото и диагональным ритмом — чтобы студия выглядела как авторский постер, а не как шаблон.</p><div class="pills" style="margin-top:18px"><a class="pill" href="/services/logo-branding/">Логотип и стиль</a><a class="pill" href="/services/branding/">Бренд под ключ</a><a class="pill" href="/services/web/">Сайт</a><a class="pill" href="/services/packaging/">Упаковка</a></div></div>
-</section>
+<section class="pinkband"><h2>PORT<i>FOLIO</i></h2><p>Кейсы в одном ритме: крупно, тёмно, с характером студии.</p></section>
 <section class="cta">
-  <div><h2>Сотрудничество</h2><p>Напишите о задаче — отвечу, предложу формат и честно скажу, как лучше двигаться.</p><a class="btn" href="https://t.me/kri_studio">Написать в Telegram</a></div>
-  <div class="round"><img src="/assets/img/hero-v5.webp" alt="Кристина Трифонова"></div>
+  <div><h2>обсудим задачу</h2><p>Коротко напишите, что нужно сделать. Отвечу сама и предложу формат работы.</p><a class="btn" href="https://t.me/kri_studio">Написать в Telegram</a></div>
+  <div class="oval"><img src="/assets/img/hero-v5.webp" alt=""></div>
+  <img class="fl fl-p" alt="">
 </section>
-<footer>
-  <div class="ft"><a class="brand" href="/">kri·studio</a><div class="col"><b>Навигация</b><a href="#works">Кейсы</a><a href="/moskva/">Москва</a><a href="/otzyvy/">Отзывы</a></div><div class="col"><b>Контакты</b><a href="mailto:design@kri-studio.art">design@kri-studio.art</a><a href="tel:+79055166557">+7 905 516-65-57</a><a href="https://t.me/kri_studio">Telegram</a></div></div>
-  <div class="copy"><p>kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.</p><p>Концепт v5 · noindex</p></div>
-</footer>
+<footer><div class="ft"><div>design@kri-studio.art<br>+7 905 516-65-57</div><div>t.me/kri_studio</div></div><p class="tiny">концепт v5 · главная не заменена</p></footer>
+<script>(async()=>{const t=async u=>(await(await fetch(u)).text()).replace(/\s/g,'');const[h,p]=await Promise.all([t('assets/hibiscus.b64'),t('assets/peonies.b64')]);document.querySelectorAll('.fl-h').forEach(i=>i.src='data:image/webp;base64,'+h);document.querySelectorAll('.fl-p').forEach(i=>i.src='data:image/webp;base64,'+p);})();</script>
 </body>
 </html>
