@@ -49,7 +49,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 .crumbs{font-size:13px;color:var(--muted);margin-bottom:14px;display:flex;gap:7px;flex-wrap:wrap}
 .crumbs a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
 .crumbs a:hover{color:var(--acc);border-bottom-color:var(--acc)}
-.srv-top{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+.srv-top{display:grid;grid-template-columns:1fr 1.08fr;gap:34px;align-items:center}
 .srv-shot{border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
 .srv-shot img{display:block;width:100%;height:auto}
 .srv-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
@@ -96,6 +96,17 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 .next-links span{color:var(--muted);font-size:14px}
 @media(max-width:980px){.srv-top{grid-template-columns:1fr;gap:22px}.fmt-grid,.gal,.why{grid-template-columns:1fr 1fr}.srv-form{grid-template-columns:1fr}}
 @media(max-width:700px){.fmt-grid,.gal,.why,.next-links{grid-template-columns:1fr}}
+.band{background:var(--tint);padding-top:52px!important;padding-bottom:52px!important}
+.pj-kit{display:flex;flex-wrap:wrap;gap:10px}
+.pj-kit b{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;white-space:nowrap}
+.steps{grid-template-columns:repeat(3,1fr);gap:16px}
+.srv-shot a{display:block}
+.srv-shot img{transition:transform .35s ease}
+.srv-shot a:hover img{transform:scale(1.015)}
+.gal figure a{display:block}
+.center-cta{text-align:center;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+@media(max-width:980px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -132,18 +143,18 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="srv-top">
 <div class="pj-info">
 <div class="eyebrow">Услуга · Дизайн сайтов</div>
-<h1 class="pj-title">Дизайн сайта <em>под ключ</em></h1>
+<h1 class="pj-title">Дизайн сайта<br><em>под ключ</em></h1>
 <div class="pj-tagline">Сайт, который приводит заявки, а не просто «красиво выглядит»</div>
 <p class="pj-desc">Делаем сайт от структуры до готовых макетов и сборки: разбираем, кому и что вы продаёте, выстраиваем путь посетителя к заявке, рисуем все экраны и отдельно мобильную версию. Работаем на Тильде или отдаём макеты разработчику.</p>
 <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="#zayavka">Обсудить сайт ↗</a><a class="btn btn-ghost" href="/raschet/">Рассчитать стоимость</a></div>
 <div class="srv-facts"><b>от 80 000 ₽</b><b>2–5 недель</b><b>Договор и чек</b><b>Права ваши</b></div>
 </div>
-<div class="srv-shot"><img src="/assets/img/w/site_lumi_v2.webp" width="1400" height="900" alt="Дизайн сайта Lumi под ключ: главная страница и мобильная версия" loading="eager"></div>
+<div class="srv-shot"><a href="/projects/" aria-label="Смотреть работы по сайтам"><img src="/assets/img/w/site_lumi_v2.webp" width="1400" height="900" alt="Дизайн сайта Lumi под ключ: главная страница и мобильная версия" loading="eager"></a></div>
 </div>
 </div>
 </section>
 
-<section class="section">
+<section class="section band">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Что <span class="it">входит</span> в работу</h2></div>
 <div class="pj-kit"><b>Бриф и разбор задачи</b><b>Структура и прототип</b><b>Визуальная концепция</b><b>Дизайн всех экранов</b><b>Мобильная версия отдельно</b><b>Иконки и графика</b><b>Подбор шрифтов и цветов</b><b>Сборка на Тильде или передача в вёрстку</b><b>Исходники в Figma</b><b>Инструкция по правкам</b></div>
@@ -194,10 +205,11 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </div>
 <p class="pj-desc" style="margin-top:18px">Цена зависит от числа экранов, сложности графики и того, нужна ли сборка. Точную смету называем после брифа — она фиксируется в договоре и не растёт по ходу работы. Если хотите прикинуть сумму прямо сейчас, есть <a href="/raschet/">калькулятор с вилкой цены</a>.</p>
+<div class="center-cta" style="margin-top:22px"><a class="btn btn-primary" href="/raschet/">Рассчитать стоимость →</a></div>
 </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section band" style="padding-top:0">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Как мы <span class="it">работаем</span></h2></div>
 <div class="steps">
@@ -215,27 +227,24 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Примеры <span class="it">сайтов</span></h2></div>
 <div class="gal">
-<figure><img src="/assets/img/w/site_lumi_v2.webp" width="1400" height="900" alt="Дизайн сайта Lumi: спокойная типографика, крупные фото и понятная кнопка заявки" loading="lazy"><figcaption>Lumi — сайт бренда: спокойная сетка, крупная типографика, один понятный призыв.</figcaption></figure>
-<figure><img src="/assets/img/w/site_smolly.webp" width="1400" height="900" alt="Дизайн сайта Smolly Lolly: карточки форматов мастер-класса с ценами и кнопкой записи" loading="lazy"><figcaption>Smolly Lolly — запись на мастер-классы: форматы с ценами и запись в один экран.</figcaption></figure>
-<figure><img src="/assets/img/w/site_veda.webp" width="1400" height="900" alt="Дизайн сайта Veda: главная страница с мягкими тонами и блоками услуг" loading="lazy"><figcaption>Veda — сайт услуг: мягкая палитра, акцент на доверии и составе услуги.</figcaption></figure>
-<figure><img src="/assets/img/w/site_colorart.webp" width="1400" height="900" alt="Дизайн сайта студии Color Art: портфолио работ и блоки услуг" loading="lazy"><figcaption>Color Art — студия красоты: портфолио, услуги и запись без лишних шагов.</figcaption></figure>
-<figure><img src="/assets/img/w/site_manikur_v3.webp" width="1400" height="900" alt="Мобильная версия сайта студии маникюра: крупные кнопки и удобная запись с телефона" loading="lazy"><figcaption>Студия маникюра — мобильная версия: крупные кнопки, запись с телефона в два тапа.</figcaption></figure>
-<figure><img src="/assets/img/w/site_penka.webp" width="1400" height="900" alt="Дизайн сайта бренда косметики: витрина товаров и акценты на составе" loading="lazy"><figcaption>Бренд косметики — витрина товаров с акцентом на составе и упаковке.</figcaption></figure>
+<figure><a href="/projects/"><img src="/assets/img/w/site_penka.webp" width="1400" height="900" alt="Дизайн сайта бренда косметики Пенка: витрина товаров и акценты на составе" loading="lazy"></a><figcaption>Пенка — сайт бренда косметики: витрина товаров с акцентом на составе и упаковке.</figcaption></figure>
+<figure><a href="/projects/"><img src="/assets/img/w/site_veda.webp" width="1400" height="900" alt="Дизайн сайта Veda: главная страница с мягкими тонами и блоками услуг" loading="lazy"></a><figcaption>Veda — сайт услуг: мягкая палитра, акцент на доверии и составе услуги.</figcaption></figure>
+<figure><a href="/projects/"><img src="/assets/img/w/site_manikur_v3.webp" width="1400" height="900" alt="Мобильная версия сайта студии маникюра: крупные кнопки и удобная запись с телефона" loading="lazy"></a><figcaption>Студия маникюра — мобильная версия: крупные кнопки, запись с телефона в два тапа.</figcaption></figure>
 </div>
-<div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-ghost" href="/projects/">Все работы</a><a class="btn btn-ghost" href="/color-art/">Кейс Color Art</a><a class="btn btn-ghost" href="/smolly-lolly/">Кейс Smolly Lolly</a></div>
+<div class="center-cta" style="margin-top:20px"><a class="btn btn-primary" href="/projects/">Больше работ ↗</a></div>
 </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section band" style="padding-top:0">
 <div class="wrap">
-<div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Почему сайты <span class="it">не работают</span></h2></div>
+<div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Почему <span class="it">наши</span> сайты работают</h2></div>
 <div class="why">
-<div><b>Красиво, но непонятно</b><p>Посетитель за 5 секунд не понял, что ему предлагают, и ушёл. Первый экран должен отвечать на «что это и кому», а не удивлять анимацией.</p></div>
-<div><b>Нет пути к заявке</b><p>Кнопка одна и в самом низу. Мы ставим действие после каждого смыслового блока — в момент, когда человек дочитал до своего аргумента.</p></div>
-<div><b>Мобильная версия «как получилось»</b><p>Больше половины людей приходят с телефона. Если там мелкий текст и кнопки не нажимаются, остальное уже не важно.</p></div>
-<div><b>Нет доказательств</b><p>Цены без примеров и отзывов читаются как расход. Рядом с ценой нужен кейс, отзыв или цифра результата.</p></div>
-<div><b>Тяжёлые картинки</b><p>Сайт грузится 6 секунд — половина посетителей не дождалась. Мы жмём графику и следим за весом страницы.</p></div>
-<div><b>Сайт нельзя обновлять</b><p>Через месяц нужно добавить услугу, а никто не знает как. Мы отдаём инструкцию и делаем блоки, которые можно повторять.</p></div>
+<div><b>Понятно с первого экрана</b><p>За 5 секунд посетитель понимает, что вы предлагаете и кому. Первый экран отвечает на «что это и кому», а не удивляет анимацией.</p></div>
+<div><b>Ведём к заявке</b><p>Действие стоит после каждого смыслового блока — ровно в момент, когда человек дочитал до своего аргумента.</p></div>
+<div><b>Мобильная версия отдельно</b><p>Больше половины людей приходят с телефона, поэтому телефонную версию рисуем отдельно: крупный текст и удобные кнопки.</p></div>
+<div><b>Показываем доказательства</b><p>Рядом с ценой — кейс, отзыв или цифра результата, чтобы стоимость читалась как вложение, а не расход.</p></div>
+<div><b>Лёгкие и быстрые</b><p>Жмём графику и следим за весом страницы, чтобы сайт открывался быстро и посетитель не уходил на загрузке.</p></div>
+<div><b>Легко обновлять</b><p>Отдаём инструкцию и делаем повторяемые блоки — новую услугу или акцию добавите без дизайнера.</p></div>
 </div>
 </div>
 </section>
@@ -252,7 +261,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section band" style="padding-top:0">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Частые <span class="it">вопросы</span></h2></div>
 <div class="faq-list">
