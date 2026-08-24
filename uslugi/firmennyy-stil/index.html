@@ -89,7 +89,18 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 .ff .pd{display:flex;gap:9px;align-items:flex-start;font-weight:400;font-size:13.5px;color:var(--muted)}
 .ff .pd input{width:auto}
 .ff .fine{font-size:13px;color:var(--muted)}
-.section.band{background:var(--tint);padding-top:56px;padding-bottom:56px}
+.section.band{background:var(--acc);padding-top:56px!important;padding-bottom:56px!important}
+.section.band .title,.section.band .title .it{color:#fff}
+.section.band .pj-desc{color:rgba(255,255,255,.92)}
+.section.band .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.section.band .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.section.band .fmt .flag{background:#fff;color:var(--acc)}
+.contact-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.contact-methods .cm{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;color:inherit;transition:border-color .2s}
+.contact-methods .cm:hover{border-color:var(--acc)}
+.contact-methods .cm-l{font-size:13px;color:var(--muted)}
+.contact-methods .cm-v{font-size:15.5px;font-weight:600}
+@media(max-width:700px){.contact-methods{grid-template-columns:1fr 1fr}}
 .next-links{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .next-links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;color:inherit}
 .next-links a:hover{border-color:var(--acc)}
@@ -199,7 +210,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section" style="padding-top:46px">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Как мы <span class="it">работаем</span></h2></div>
 <div class="steps">
@@ -226,7 +237,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section" style="padding-top:46px">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Зачем это <span class="it">бизнесу</span></h2></div>
 <div class="why">
@@ -240,7 +251,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section" style="padding-top:46px">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Частые <span class="it">сомнения</span></h2></div>
 <div class="obj">
@@ -267,34 +278,24 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </section>
 
-<section class="section" id="zayavka" style="padding-top:0">
+<section class="section" id="zayavka" style="padding-top:46px">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Обсудим <span class="it">ваш бренд</span></h2></div>
-<div class="srv-form">
-<div>
-<p class="pj-desc">Напишите пару строк о бизнесе — ответим, какой объём имеет смысл делать сейчас, а что можно отложить. Скажем срок и точную смету. Заявка ни к чему не обязывает.</p>
-<div class="pj-brief" style="margin-top:14px">
-<p><b>Почта:</b> <a href="mailto:design@kri-studio.art">design@kri-studio.art</a></p>
-<p><b>Телефон:</b> <a href="tel:+79055166557">+7 905 516-65-57</a></p>
-<p><b>Мессенджеры:</b> <a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a> · <a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a></p>
-<p style="color:var(--muted);font-size:14px">Работаем по договору, оплата с чеком. Берём 2–3 проекта в месяц.</p>
+<div class="contact-box">
+<p class="pj-desc" style="max-width:760px">Напишите пару строк о бизнесе — ответим, какой объём имеет смысл делать сейчас, а что можно отложить. Скажем срок и точную смету. Заявка ни к чему не обязывает: если задача не наша, честно скажем и подскажем, к кому пойти.</p>
+<div class="contact-methods">
+<a class="cm" href="mailto:design@kri-studio.art"><span class="cm-l">Почта</span><span class="cm-v">design@kri-studio.art</span></a>
+<a class="cm" href="tel:+79055166557"><span class="cm-l">Телефон</span><span class="cm-v">+7 905 516-65-57</span></a>
+<a class="cm" href="https://t.me/kri_studio" target="_blank" rel="noopener"><span class="cm-l">Telegram</span><span class="cm-v">@kri_studio</span></a>
+<a class="cm" href="https://wa.me/79055166557" target="_blank" rel="noopener"><span class="cm-l">WhatsApp</span><span class="cm-v">+7 905 516-65-57</span></a>
 </div>
-</div>
-<form class="form ff">
-<label>Как вас зовут<input type="text" name="name" required placeholder="Имя"></label>
-<label>Куда ответить<input type="text" name="contact" required placeholder="Телеграм, телефон или почта"></label>
-<label>Что нужно<select name="need"><option>Фирменный стиль</option><option>Только логотип</option><option>Бренд под ключ</option><option>Бренд и сайт</option><option>Нейминг</option><option>Освежить текущий стиль</option></select></label>
-<label>Задача<textarea name="task" rows="4" placeholder="Чем занимаетесь, для кого, что уже есть из визуала"></textarea></label>
-<label>Бюджет<select name="budget"><option>до 100 000 ₽</option><option>100 000 – 200 000 ₽</option><option>200 000 – 350 000 ₽</option><option>больше 350 000 ₽</option><option>пока не определён</option></select></label>
-<label class="pd"><input type="checkbox" required> Согласен с <a href="/privacy/">политикой обработки персональных данных</a></label>
-<button class="btn btn-primary" type="submit">Отправить заявку</button>
-<div class="fine">Договор · Чек · Правки 24–48 ч</div>
-</form>
+<div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="mailto:design@kri-studio.art">Написать на почту →</a> <a class="btn btn-ghost" href="/raschet/">Рассчитать стоимость</a></div>
+<p style="color:var(--muted);font-size:14px;margin-top:16px">Работаем по договору, оплата с чеком. Берём 2–3 проекта в месяц.</p>
 </div>
 </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section" style="padding-top:46px">
 <div class="wrap">
 <div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Почитать по <span class="it">теме</span></h2></div>
 <div class="next-links">
