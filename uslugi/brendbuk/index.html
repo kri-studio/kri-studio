@@ -83,6 +83,23 @@
 .next-links a:hover{border-color:var(--acc)}
 .next-links b{display:block;font-family:var(--dis);font-size:17px;margin-bottom:8px}
 .next-links span{font-size:14px;color:var(--muted);line-height:1.55}
+.section.band{background:var(--acc)!important;padding-top:56px!important;padding-bottom:56px!important}
+.section.band .title,.section.band .title .it,.section.band .section-head .it,.section.band .it,.section.band .pj-desc{color:#fff}
+.section.band .pj-desc{color:rgba(255,255,255,.92)}
+.section.band a{color:#fff}
+.section.band .fmt .flag{background:#fff;color:var(--acc)}
+.section.band .gal figcaption{color:rgba(255,255,255,.9)}
+.section.band .faq-list summary{color:#fff}
+.section.band .faq-list p{color:rgba(255,255,255,.92)}
+.section.band .faq-list details{border-color:rgba(255,255,255,.3)}
+.section.band .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.section.band .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.contact-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.contact-methods .cm{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;color:inherit;transition:border-color .2s}
+.contact-methods .cm:hover{border-color:var(--acc)}
+.contact-methods .cm-l{font-size:13px;color:var(--muted)}
+.contact-methods .cm-v{font-size:15.5px;font-weight:600}
+@media(max-width:700px){.contact-methods{grid-template-columns:1fr 1fr}}
 @media(max-width:980px){
 .srv-top{grid-template-columns:1fr;gap:26px}
 .fmt-grid,.steps,.gal,.why,.next-links{grid-template-columns:repeat(2,1fr)}
@@ -181,7 +198,7 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section band">
 <div class="wrap">
 <div class="section-head">
 <h2 class="title">Форматы и цены</h2>
@@ -388,7 +405,7 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section band">
 <div class="wrap">
 <div class="section-head">
 <h2 class="title">Примеры брендов</h2>
@@ -490,7 +507,7 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section band">
 <div class="wrap">
 <div class="section-head">
 <h2 class="title">Частые вопросы</h2>
@@ -510,37 +527,22 @@
 
 <section class="section" id="zayavka">
 <div class="wrap">
-<div class="srv-form">
-<div>
+<div class="section-head">
 <h2 class="title">Обсудим ваш бренд</h2>
-<p class="it">Напишите пару строк о бизнесе — вернёмся с составом работ, сроком и точной сметой. Заявка ни к чему не обязывает.</p>
-<p class="fine">Почта: <a href="mailto:design@kri-studio.art">design@kri-studio.art</a><br>
-Телефон: <a href="tel:+79055166557">+7 905 516-65-57</a><br>
-Мессенджеры: <a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a> · <a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a></p>
-<p class="fine">Работаем по договору, оплата с чеком. Берём 2–3 проекта в месяц, поэтому пишите заранее.</p>
+<p class="it">Напишите пару строк о бизнесе — вернёмся с составом работ, сроком и точной сметой. Заявка ни к чему не обязывает: если задача не наша, честно скажем и подскажем, к кому пойти.</p>
 </div>
-<form class="form ff">
-<label>Как вас зовут<input type="text" name="name" placeholder="Имя" required></label>
-<label>Куда ответить<input type="text" name="contact" placeholder="Телефон, почта или Telegram" required></label>
-<label>Что нужно<select name="need">
-<option>Бренд под ключ</option>
-<option>Бренд и сайт</option>
-<option>Фирменный стиль</option>
-<option>Только стратегия</option>
-<option>Нейминг</option>
-<option>Оформить текущий стиль в брендбук</option>
-</select></label>
-<label>Задача<textarea name="task" rows="4" placeholder="Чем занимаетесь, для кого, что уже есть из материалов"></textarea></label>
-<label>Бюджет<select name="budget">
-<option>до 150 000 ₽</option>
-<option>150 000 – 250 000 ₽</option>
-<option>250 000 – 400 000 ₽</option>
-<option>больше 400 000 ₽</option>
-<option>пока не определён</option>
-</select></label>
-<label class="pd"><input type="checkbox" required> Согласен с <a href="/privacy/">политикой обработки персональных данных</a></label>
-<button class="btn btn-primary" type="submit">Отправить заявку</button>
-</form>
+<div class="contact-box">
+<div class="contact-methods">
+<a class="cm" href="mailto:design@kri-studio.art"><span class="cm-l">Почта</span><span class="cm-v">design@kri-studio.art</span></a>
+<a class="cm" href="tel:+79055166557"><span class="cm-l">Телефон</span><span class="cm-v">+7 905 516-65-57</span></a>
+<a class="cm" href="https://t.me/kri_studio" target="_blank" rel="noopener"><span class="cm-l">Telegram</span><span class="cm-v">@kri_studio</span></a>
+<a class="cm" href="https://wa.me/79055166557" target="_blank" rel="noopener"><span class="cm-l">WhatsApp</span><span class="cm-v">+7 905 516-65-57</span></a>
+</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+<a class="btn btn-primary" href="mailto:design@kri-studio.art">Написать на почту →</a>
+<a class="btn btn-ghost" href="/raschet/">Рассчитать стоимость</a>
+</div>
+<p style="color:var(--muted);font-size:14px;margin-top:16px">Работаем по договору, оплата с чеком. Берём 2–3 проекта в месяц, поэтому пишите заранее.</p>
 </div>
 </div>
 </section>
