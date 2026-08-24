@@ -82,6 +82,23 @@
 .next-links a:hover{border-color:var(--acc)}
 .next-links b{display:block;font-family:var(--dis);font-size:17px;margin-bottom:8px}
 .next-links span{font-size:14px;color:var(--muted);line-height:1.55}
+.section.band{background:var(--acc)!important;padding-top:56px!important;padding-bottom:56px!important}
+.section.band .title,.section.band .title .it,.section.band .section-head .it,.section.band .it,.section.band .pj-desc{color:#fff}
+.section.band .pj-desc{color:rgba(255,255,255,.92)}
+.section.band a{color:#fff}
+.section.band .fmt .flag{background:#fff;color:var(--acc)}
+.section.band .gal figcaption{color:rgba(255,255,255,.9)}
+.section.band .faq-list summary{color:#fff}
+.section.band .faq-list p{color:rgba(255,255,255,.92)}
+.section.band .faq-list details{border-color:rgba(255,255,255,.3)}
+.section.band .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.section.band .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.contact-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.contact-methods .cm{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;color:inherit;transition:border-color .2s}
+.contact-methods .cm:hover{border-color:var(--acc)}
+.contact-methods .cm-l{font-size:13px;color:var(--muted)}
+.contact-methods .cm-v{font-size:15.5px;font-weight:600}
+@media(max-width:700px){.contact-methods{grid-template-columns:1fr 1fr}}
 @media(max-width:980px){
 .srv-top{grid-template-columns:1fr;gap:26px}
 .fmt-grid,.steps,.gal,.why,.next-links{grid-template-columns:repeat(2,1fr)}
@@ -175,7 +192,7 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section band">
 <div class="wrap">
 <div class="section-head">
 <h2 class="title">Форматы и цены</h2>
@@ -373,7 +390,7 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section band">
 <div class="wrap">
 <div class="section-head">
 <h2 class="title">Примеры работ</h2>
@@ -460,122 +477,4 @@
 <p>Это нормально и даже удобно. На созвоне задаём вопросы, записываем разговор и сами собираем структуру. Вы получаете документ со слайдами и заголовками — читаете и правите формулировки.</p>
 </div>
 <div>
-<b>«Нужно очень срочно, к пятнице»</b>
-<p>Скажите объём и дату — ответим честно, реально ли это. Срочные проекты берём с наценкой 30% и обычно сокращаем этап концепции, работая по одному утверждённому стилю.</p>
-</div>
-<div>
-<b>«Мы делаем презентации сами, дорого платить каждый раз»</b>
-<p>Тогда закажите шаблон-конструктор: 20–30 готовых макетов, стили и библиотека схем. Дальше команда собирает презентации самостоятельно, и они выглядят одинаково аккуратно.</p>
-</div>
-<div>
-<b>«Данные конфиденциальные»</b>
-<p>Работаем по договору, при необходимости подписываем NDA. Можно передать цифры условно (проценты вместо сумм), а финальные значения вы подставите сами в редактируемом файле.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<h2 class="title">Частые вопросы</h2>
-</div>
-<div class="faq-list">
-<details><summary>Сколько стоит дизайн презентации?</summary><p>Презентация до 15 слайдов — от 30 000 ₽, до 30 слайдов — от 45 000 ₽, питч для инвесторов — от 60 000 ₽, редизайн готовой презентации — от 25 000 ₽. Отдельный слайд вне пакета — 2 500 ₽.</p></details>
-<details><summary>Сколько времени занимает работа?</summary><p>1–2 недели на презентацию до 30 слайдов. Если дедлайн через 3–4 дня, берём в срочную работу с наценкой 30%.</p></details>
-<details><summary>В каком формате я получу файлы?</summary><p>PowerPoint или Google Slides с редактируемыми слайдами, PDF для рассылки и облегчённая версия для печати. По запросу собираем в Keynote или Figma.</p></details>
-<details><summary>Нужны ли готовые тексты?</summary><p>Не обязательно. Можем работать по вашим материалам или собрать структуру и написать тексты сами — на созвоне вытаскиваем смыслы и превращаем их в слайды.</p></details>
-<details><summary>Смогу ли я сам менять слайды потом?</summary><p>Да. Все слайды собираем на мастер-шаблонах и стилях, поэтому новые слайды добавляются в два клика без сползания вёрстки. Записываем короткое видео-объяснение.</p></details>
-<details><summary>Сколько правок входит в стоимость?</summary><p>Два круга правок на этапе концепции и два — на финальной вёрстке. Дальше правки считаем отдельно: 5 000 ₽ за круг.</p></details>
-<details><summary>Делаете ли вы презентацию под фирменный стиль?</summary><p>Да. Если есть брендбук — работаем строго по нему. Если стиля нет, соберём аккуратную систему специально под презентацию: палитра, шрифты, сетка. Полноценный стиль можно заказать отдельно — смотрите <a href="/uslugi/firmennyy-stil/">фирменный стиль</a>.</p></details>
-<details><summary>Делаете ли анимацию слайдов?</summary><p>Да, аккуратные переходы и появление элементов по клику. Сложную анимацию и видео-версию презентации считаем отдельно.</p></details>
-</div>
-</div>
-</section>
-
-<section class="section" id="zayavka">
-<div class="wrap">
-<div class="srv-form">
-<div>
-<h2 class="title">Обсудим вашу презентацию</h2>
-<p class="it">Напишите, кому и зачем показываете слайды — вернёмся со структурой, сроком и точной сметой. Заявка ни к чему не обязывает.</p>
-<p class="fine">Почта: <a href="mailto:design@kri-studio.art">design@kri-studio.art</a><br>
-Телефон: <a href="tel:+79055166557">+7 905 516-65-57</a><br>
-Мессенджеры: <a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a> · <a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a></p>
-<p class="fine">Работаем по договору, оплата с чеком. При необходимости подписываем NDA.</p>
-</div>
-<form class="form ff">
-<label>Как вас зовут<input type="text" name="name" placeholder="Имя" required></label>
-<label>Куда ответить<input type="text" name="contact" placeholder="Телефон, почта или Telegram" required></label>
-<label>Что нужно<select name="need">
-<option>Презентация до 15 слайдов</option>
-<option>Презентация до 30 слайдов</option>
-<option>Питч для инвесторов</option>
-<option>Шаблон-конструктор</option>
-<option>Редизайн готовой презентации</option>
-<option>Отдельные слайды</option>
-</select></label>
-<label>Задача<textarea name="task" rows="4" placeholder="Кому показываете, сколько слайдов, есть ли тексты и дедлайн"></textarea></label>
-<label>Бюджет<select name="budget">
-<option>до 30 000 ₽</option>
-<option>30 000 – 50 000 ₽</option>
-<option>50 000 – 80 000 ₽</option>
-<option>больше 80 000 ₽</option>
-<option>пока не определён</option>
-</select></label>
-<label class="pd"><input type="checkbox" required> Согласен с <a href="/privacy/">политикой обработки персональных данных</a></label>
-<button class="btn btn-primary" type="submit">Отправить заявку</button>
-</form>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<h2 class="title">Почитать по теме</h2>
-</div>
-<div class="next-links">
-<a href="/uslugi/firmennyy-stil/"><b>Фирменный стиль</b><span>Чтобы презентации и все материалы собирались в одном стиле</span></a>
-<a href="/uslugi/dizayn-sayta/"><b>Дизайн сайта</b><span>Когда после презентации человек идёт на сайт</span></a>
-<a href="/blog/kak-vybrat-dizayn-studiyu/"><b>Как выбрать студию</b><span>На что смотреть в портфолио и договоре</span></a>
-<a href="/raschet/"><b>Расчёт стоимости</b><span>6 вопросов — и вилка цены со сроком</span></a>
-</div>
-<div class="center-cta">
-<a class="btn btn-primary" href="#zayavka">Обсудить презентацию</a>
-</div>
-</div>
-</section>
-
-<footer>
-<div class="wrap">
-<div class="big">thank you ♥</div>
-<div class="foot-grid">
-<div class="req">Трифонова К.А.<br>ИНН 772370935743<br>Налог на профессиональный доход</div>
-<div class="foot-links">
-<a href="/services/">Услуги и цены</a>
-<a href="/raschet/">Расчёт стоимости</a>
-<a href="/blog/">Блог</a>
-<a href="/uslugi/logotip/">Логотип</a>
-<a href="/uslugi/firmennyy-stil/">Фирменный стиль</a>
-<a href="/uslugi/brendbuk/">Брендбук</a>
-<a href="/uslugi/dizayn-sayta/">Дизайн сайта</a>
-<a href="/privacy/">Политика конфиденциальности</a>
-<a href="/about/#faq">Вопросы и ответы</a>
-<a href="mailto:design@kri-studio.art">design@kri-studio.art</a>
-<a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a>
-<a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a>
-</div>
-</div>
-</div>
-</footer>
-
-<!-- V20-NOSCRIPT -->
-<noscript><style>.mood-panel,#cur{display:none}</style></noscript>
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110943761,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute;left:-9999px" alt=""></div></noscript>
-<script src="/assets/app.js"></script>
-</body>
-</html>
+<b>
