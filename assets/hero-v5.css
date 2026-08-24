@@ -174,3 +174,24 @@ html[data-theme="bold"] .hero-v5 .v5-portrait img{transform:translateY(-20px)}
 .hero-v5 .v5-fc-2{top:500px}
 .hero-v5 .v5-track{font-size:26px}
 }
+
+/* ==== v29: главная — фото крупнее и выше вместе с бегущей строкой, лид поднят ==== */
+@media(min-width:961px){
+.hero-v5 .v5-hero-badge-live{margin-bottom:14px}
+.hero-v5 .v5-lead{margin:16px 0 26px}
+.hero-v5 .v5-hero-visual{min-height:680px}
+.hero-v5 .v5-portrait{width:min(640px,100%)}
+.hero-v5 .v5-blob{width:min(640px,94%);height:640px;top:48%}
+.hero-v5 .v5-blob-soft{width:min(780px,106%);height:780px;top:48%}
+.hero-v5 .v5-orbit{top:54%}
+.hero-v5 .v5-fc-1{top:150px;right:0}
+.hero-v5 .v5-fc-2{top:420px;left:0}
+}
+@media(min-width:1400px){
+.hero-v5 .v5-hero-visual{min-height:720px}
+.hero-v5 .v5-portrait{width:min(680px,100%)}
+.hero-v5 .v5-blob{width:min(680px,94%);height:680px}
+.hero-v5 .v5-blob-soft{width:min(820px,106%);height:820px}
+.hero-v5 .v5-fc-1{top:170px}
+.hero-v5 .v5-fc-2{top:450px}
+}
