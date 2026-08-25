@@ -195,3 +195,25 @@ html[data-theme="bold"] .hero-v5 .v5-portrait img{transform:translateY(-20px)}
 .hero-v5 .v5-fc-1{top:170px}
 .hero-v5 .v5-fc-2{top:450px}
 }
+
+/* ==== v30: шире контент (как в версии 3), больше межстрочный интервал,
+     заголовки не прилипают к верхнему краю блоков ==== */
+.wrap{max-width:min(1780px,97vw)!important}
+.hero-v5 .v5-wrap{max-width:min(1780px,97vw)!important}
+@media(min-width:1400px){.wrap,.hero-v5 .v5-wrap{padding-left:30px!important;padding-right:30px!important}}
+@media(max-width:1100px){.wrap,.hero-v5 .v5-wrap{max-width:100%!important}}
+
+.hero-v5 .v5-lead{line-height:1.72}
+@media(min-width:961px){.hero-v5 .v5-lead{line-height:1.72}}
+@media(min-width:1400px){.hero-v5 .v5-lead{line-height:1.74}}
+
+.section .section-head{padding-top:18px}
+.section .section-head .title{line-height:1.16}
+.section .section-head .sub{line-height:1.68}
+.section .svc p{line-height:1.62}
+.section .pack p.for{line-height:1.6}
+.section .pack ul li{line-height:1.55}
+.section .step p{line-height:1.62}
+.section .case-card .cap span{line-height:1.5}
+.section .rev .quote{line-height:1.68}
+@media(max-width:760px){.section .section-head{padding-top:10px}}
