@@ -1,12 +1,20 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="sun">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem('kri-theme');if(['sun','rose','bold','mint'].indexOf(t)<0)t='sun';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>Разработка брендбука — бренд под ключ от 220 000 ₽ | kri·studio</title>
 <meta name="description" content="Разработка брендбука под ключ: стратегия, нейминг, логотип, фирменный стиль, носители и гайдлайн в PDF. Цена от 220 000 ₽, срок 5–7 недель. Примеры брендбуков, состав, этапы работы.">
 <link rel="canonical" href="https://kri-studio.art/uslugi/brendbuk/">
 <link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/brendbuk/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="/assets/favicon-180.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<meta name="theme-color" content="#ff5a1f">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="kri·studio">
 <meta property="og:locale" content="ru_RU">
@@ -32,6 +40,7 @@
 .srv-top{display:grid;grid-template-columns:1.02fr 1.18fr;gap:38px;align-items:center}
 .srv-shot{border-radius:22px;overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
 .srv-shot img{display:block;width:100%;height:auto}
+.srv-shot a{display:block}
 .srv-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .srv-facts b{display:inline-block;padding:9px 14px;border-radius:999px;background:var(--tint);border:1px solid var(--line);font-size:13px;font-weight:600}
 .fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -94,17 +103,27 @@
 .section.band .faq-list details{border-color:rgba(255,255,255,.3)}
 .section.band .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
 .section.band .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.section.band .obj b{color:var(--ink)}
+.section.band .obj p{color:var(--ink2)}
+.section.band .obj a{color:var(--acc)}
 .contact-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
 .contact-methods .cm{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;color:inherit;transition:border-color .2s}
 .contact-methods .cm:hover{border-color:var(--acc)}
 .contact-methods .cm-l{font-size:13px;color:var(--muted)}
 .contact-methods .cm-v{font-size:15.5px;font-weight:600}
+.obj-head{margin:36px 0 16px;font-family:var(--dis);font-size:22px;line-height:1.25}
+.section.band .obj-head{color:#fff}
+.section .section-head{padding-top:18px}
+.section .section-head .title{line-height:1.16}
+.section .section-head .it{line-height:1.68}
+.pj-desc{line-height:1.7}
 @media(max-width:700px){.contact-methods{grid-template-columns:1fr 1fr}}
 @media(max-width:980px){
 .srv-top{grid-template-columns:1fr;gap:26px}
 .fmt-grid,.steps,.gal,.why,.next-links{grid-template-columns:repeat(2,1fr)}
 .srv-form{grid-template-columns:1fr;gap:24px}
 }
+@media(max-width:760px){.section .section-head{padding-top:10px}}
 @media(max-width:700px){
 .fmt-grid,.steps,.gal,.why,.obj,.book,.next-links{grid-template-columns:1fr}
 }
@@ -123,16 +142,17 @@
 <a href="/about/">О студии</a>
 <a href="/contacts/">Контакты</a>
 </nav>
-<a class="btn btn-primary nav-cta" href="/contacts/">Обсудить проект</a>
-<a class="lang-btn" href="/en/" aria-label="Switch to English"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="7" fill="#fff"/><rect y="7" width="20" height="7" fill="#0039A6"/></svg></a>
-<button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+<div style="display:flex;align-items:center;gap:10px">
+<a href="/contacts/" class="btn btn-primary nav-cta">Обсудить проект</a>
+<a class="lang-btn" href="/en/" aria-label="English version"><svg viewBox="0 0 24 24" width="18" height="18" style="border-radius:50%;flex:none" aria-hidden="true"><rect width="24" height="8" fill="#fff"/><rect y="8" width="24" height="8" fill="#0039a6"/><rect y="16" width="24" height="8" fill="#d52b1e"/></svg><span>RU</span></a><button class="burger" id="burger" aria-label="Меню">≡</button>
+</div>
 </div>
 </header>
-<div class="mood-panel">
-<button data-theme="sun" aria-label="sun"></button>
-<button data-theme="bold" aria-label="bold"></button>
-<button data-theme="rose" aria-label="rose"></button>
-<button data-theme="mint" aria-label="mint"></button>
+<div class="mood-panel" aria-label="Настроение сайта">
+<button data-theme-set="sun" data-label="Тёплое" aria-label="Тёплая тема"></button>
+<button data-theme-set="bold" data-label="Смелое" aria-label="Тёмная тема"></button>
+<button data-theme-set="rose" data-label="Розовое" aria-label="Розовая тема"></button>
+<button data-theme-set="mint" data-label="Свежее" aria-label="Мятная тема"></button>
 <span class="mp-label">настроение</span>
 </div>
 <div id="cur">смотреть</div>
@@ -156,11 +176,12 @@
 </div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
 <a class="btn btn-primary" href="#zayavka">Обсудить брендбук</a>
+<a class="btn btn-ghost" href="/kord/">Смотреть кейс KORD</a>
 <a class="btn btn-ghost" href="/raschet/">Рассчитать стоимость</a>
 </div>
 </div>
 <div class="srv-shot">
-<img src="/assets/img/w/brand_kord_v2.webp" alt="Брендбук KORD: логотип, палитра и правила применения фирменного стиля" width="1400" height="900" loading="eager">
+<a href="/kord/" aria-label="Смотреть кейс KORD"><img src="/assets/img/w/brand_kord_v2.webp" alt="Брендбук KORD: логотип, палитра и правила применения фирменного стиля" width="1400" height="900" loading="eager"></a>
 </div>
 </div>
 </div>
@@ -413,7 +434,7 @@
 </div>
 <div class="gal">
 <figure>
-<img src="/assets/img/w/brand_kord.webp" alt="Брендбук KORD: тёмная палитра с оранжевым акцентом, логотип и носители" width="1400" height="900" loading="lazy">
+<a href="/kord/"><img src="/assets/img/w/brand_kord.webp" alt="Брендбук KORD: тёмная палитра с оранжевым акцентом, логотип и носители" width="1400" height="900" loading="lazy"></a>
 <figcaption>KORD — техничный бренд: тёмная база и оранжевый акцент</figcaption>
 </figure>
 <figure>
@@ -421,177 +442,8 @@
 <figcaption>Lumi — светлый бренд с мягкой геометрией</figcaption>
 </figure>
 <figure>
-<img src="/assets/img/w/ident_otto.webp" alt="Айдентика Otto: знак, паттерн и применение на носителях" width="1400" height="900" loading="lazy">
+<a href="/otto/"><img src="/assets/img/w/ident_otto.webp" alt="Айдентика Otto: знак, паттерн и применение на носителях" width="1400" height="900" loading="lazy"></a>
 <figcaption>Otto — знак, паттерн и правила применения</figcaption>
 </figure>
 <figure>
-<img src="/assets/img/w/brand_lumi_logo.webp" alt="Логотип Lumi в основной и дополнительных версиях" width="1400" height="900" loading="lazy">
-<figcaption>Версии логотипа: горизонтальная, вертикальная, знак</figcaption>
-</figure>
-<figure>
-<img src="/assets/img/w/covers_ladypixel-book.webp" alt="Вёрстка брендбука Lady Pixel: разворот с правилами" width="1400" height="900" loading="lazy">
-<figcaption>Вёрстка документа: развороты с правилами</figcaption>
-</figure>
-<figure>
-<img src="/assets/img/w/brand_lumi_v2.webp" alt="Фирменный стиль Lumi: носители и упаковка" width="1400" height="900" loading="lazy">
-<figcaption>Стиль на носителях: упаковка и печать</figcaption>
-</figure>
-</div>
-<div class="wide-shot">
-<img src="/assets/img/w/brand_kord_v2.webp" alt="Разворот брендбука KORD с палитрой и типографикой" width="1600" height="900" loading="lazy">
-</div>
-<div class="center-cta">
-<a class="btn btn-ghost" href="/projects/">Смотреть все работы</a>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<h2 class="title">Когда пора делать брендбук</h2>
-<p class="it">Шесть ситуаций, в которых документ окупается быстрее всего.</p>
-</div>
-<div class="why">
-<div>
-<b>Появились подрядчики</b>
-<p>Маркетолог, дизайнер соцсетей, типография. Каждому приходится объяснять стиль заново — и каждый делает по-своему.</p>
-</div>
-<div>
-<b>Растёт команда</b>
-<p>Новые сотрудники собирают презентации и посты как умеют. Брендбук заменяет десятки вопросов в чате.</p>
-</div>
-<div>
-<b>Выходите в офлайн</b>
-<p>Упаковка, вывеска, печать. Без CMYK, Pantone и правил охранного поля типография сделает по-своему — и это будет дорого.</p>
-</div>
-<div>
-<b>Стиль расползся</b>
-<p>Пять оттенков «того же» синего, три шрифта и логотип в четырёх пропорциях. Нужен аудит и единая система.</p>
-</div>
-<div>
-<b>Ищете инвестора или франшизу</b>
-<p>Брендбук — часть пакета документов. Он показывает, что бренд управляемый и его можно масштабировать.</p>
-</div>
-<div>
-<b>Меняете позиционирование</b>
-<p>Новая аудитория или цена требуют другого языка и другой картинки. Ребрендинг лучше начинать со стратегии.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<h2 class="title">Частые сомнения</h2>
-</div>
-<div class="obj">
-<div>
-<b>«Это дорого для нас сейчас»</b>
-<p>Тогда начните с фирменного стиля за 90 000 ₽ — логотип, цвета, шрифты и базовые правила. Стратегию и большой документ добавим позже, когда бренд вырастет. Главное — сразу зафиксировать основу, чтобы не переделывать.</p>
-</div>
-<div>
-<b>«Брендбук всё равно никто не читает»</b>
-<p>Читают, если он собран как рабочий инструмент: короткие правила, готовые макеты, кликабельное содержание. Мы не пишем эссе про миссию на десять страниц — только то, что применяют на практике.</p>
-</div>
-<div>
-<b>«У нас уже есть логотип от фрилансера»</b>
-<p>Работаем с ним: делаем аудит, проверяем читаемость в малых размерах и на печати, при необходимости аккуратно чистим формы. Если логотип принципиально не работает, скажем честно до старта.</p>
-</div>
-<div>
-<b>«Боюсь, что не подойдёт»</b>
-<p>Поэтому концепции показываем в контексте — на упаковке, вывеске, в интерфейсе, а не отдельным знаком на белом фоне. И согласуем каждый этап: до финала не остаётся сюрпризов.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section band">
-<div class="wrap">
-<div class="section-head">
-<h2 class="title">Частые вопросы</h2>
-</div>
-<div class="faq-list">
-<details><summary>Сколько стоит брендбук?</summary><p>Бренд под ключ с брендбуком — от 220 000 ₽, бренд вместе с сайтом — от 320 000 ₽. Если нужен только фирменный стиль без стратегии и большого документа — от 90 000 ₽.</p></details>
-<details><summary>Чем брендбук отличается от фирменного стиля?</summary><p>Фирменный стиль — это сами элементы: логотип, цвета, шрифты, паттерны. Брендбук — документ с правилами и смыслами: кто ваш клиент, как звучит бренд, как и где применять стиль, что делать нельзя. Подробнее — на странице <a href="/uslugi/firmennyy-stil/">фирменного стиля</a>.</p></details>
-<details><summary>Сколько страниц в брендбуке?</summary><p>Обычно 40–80 страниц. Мы не гоним объём ради объёма: в документе только те разделы, которыми вы будете реально пользоваться.</p></details>
-<details><summary>Сколько времени занимает разработка?</summary><p>5–7 недель. Стратегия и нейминг — 1–2 недели, логотип и стиль — 2–3 недели, носители и сборка документа — 1–2 недели.</p></details>
-<details><summary>В каком виде я получу брендбук?</summary><p>PDF с гиперссылками для чтения и печати, все исходники в векторе, логотипы в SVG, PDF и PNG, цвета в RGB, CMYK и Pantone, ссылки на шрифты с лицензиями, макеты носителей и шаблоны для соцсетей.</p></details>
-<details><summary>У нас уже есть логотип, можно оформить брендбук на его основе?</summary><p>Да. Делаем аудит текущих материалов, аккуратно приводим их в систему и собираем документ. Это дешевле полной разработки — считаем индивидуально.</p></details>
-<details><summary>Кто будет пользоваться брендбуком?</summary><p>Ваши подрядчики и сотрудники: типография, маркетолог, дизайнер соцсетей, разработчик сайта. Брендбук нужен, чтобы каждый новый исполнитель не переизобретал стиль заново.</p></details>
-<details><summary>Можно платить частями?</summary><p>Да, работаем по этапам: предоплата 50%, затем оплата после согласования стиля и финальная — при передаче файлов.</p></details>
-</div>
-</div>
-</section>
-
-<section class="section" id="zayavka">
-<div class="wrap">
-<div class="section-head">
-<h2 class="title">Обсудим ваш бренд</h2>
-<p class="it">Напишите пару строк о бизнесе — вернёмся с составом работ, сроком и точной сметой. Заявка ни к чему не обязывает: если задача не наша, честно скажем и подскажем, к кому пойти.</p>
-</div>
-<div class="contact-box">
-<div class="contact-methods">
-<a class="cm" href="mailto:design@kri-studio.art"><span class="cm-l">Почта</span><span class="cm-v">design@kri-studio.art</span></a>
-<a class="cm" href="tel:+79055166557"><span class="cm-l">Телефон</span><span class="cm-v">+7 905 516-65-57</span></a>
-<a class="cm" href="https://t.me/kri_studio" target="_blank" rel="noopener"><span class="cm-l">Telegram</span><span class="cm-v">@kri_studio</span></a>
-<a class="cm" href="https://wa.me/79055166557" target="_blank" rel="noopener"><span class="cm-l">WhatsApp</span><span class="cm-v">+7 905 516-65-57</span></a>
-</div>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
-<a class="btn btn-primary" href="mailto:design@kri-studio.art">Написать на почту →</a>
-<a class="btn btn-ghost" href="/raschet/">Рассчитать стоимость</a>
-</div>
-<p style="color:var(--muted);font-size:14px;margin-top:16px">Работаем по договору, оплата с чеком. Берём 2–3 проекта в месяц, поэтому пишите заранее.</p>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<div class="section-head">
-<h2 class="title">Почитать по теме</h2>
-</div>
-<div class="next-links">
-<a href="/blog/chto-vhodit-v-brendbuk/"><b>Что входит в брендбук</b><span>Разбор по разделам: что обязательно, а что можно не делать</span></a>
-<a href="/blog/skolko-stoit-logotip-2026/"><b>Сколько стоит логотип</b><span>Цены 2026 года и из чего они складываются</span></a>
-<a href="/uslugi/firmennyy-stil/"><b>Фирменный стиль</b><span>Если большой документ пока не нужен</span></a>
-<a href="/raschet/"><b>Расчёт стоимости</b><span>6 вопросов — и вилка цены со сроком</span></a>
-</div>
-<div class="center-cta">
-<a class="btn btn-primary" href="#zayavka">Обсудить брендбук</a>
-</div>
-</div>
-</section>
-
-<footer>
-<div class="wrap">
-<div class="big">thank you ♥</div>
-<div class="foot-grid">
-<div class="req">Трифонова К.А.<br>ИНН 772370935743<br>Налог на профессиональный доход</div>
-<div class="foot-links">
-<a href="/services/">Услуги и цены</a>
-<a href="/raschet/">Расчёт стоимости</a>
-<a href="/blog/">Блог</a>
-<a href="/uslugi/logotip/">Логотип</a>
-<a href="/uslugi/firmennyy-stil/">Фирменный стиль</a>
-<a href="/uslugi/dizayn-sayta/">Дизайн сайта</a>
-<a href="/privacy/">Политика конфиденциальности</a>
-<a href="/about/#faq">Вопросы и ответы</a>
-<a href="mailto:design@kri-studio.art">design@kri-studio.art</a>
-<a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a>
-<a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a>
-</div>
-</div>
-</div>
-</footer>
-
-<!-- V20-NOSCRIPT -->
-<noscript><style>.mood-panel,#cur{display:none}</style></noscript>
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110943761,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute;left:-9999px" alt=""></div></noscript>
-<script src="/assets/app.js"></script>
-</body>
-</html>
+<img src="/assets/img/w/brand_lumi_logo.webp" alt="Логотип Lumi
