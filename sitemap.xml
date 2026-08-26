@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://kri-studio.art/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/projects/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/contacts/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/about/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/services/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/raschet/</loc><lastmod>2026-08-26</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://kri-studio.art/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://kri-studio.art/"/></url>
+<url><loc>https://kri-studio.art/en/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://kri-studio.art/"/></url>
+<url><loc>https://kri-studio.art/projects/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/projects/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/projects/"/></url>
+<url><loc>https://kri-studio.art/en/projects/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/projects/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/projects/"/></url>
+<url><loc>https://kri-studio.art/services/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/services/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/services/"/></url>
+<url><loc>https://kri-studio.art/en/services/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/services/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/services/"/></url>
+<url><loc>https://kri-studio.art/about/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/about/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/about/"/></url>
+<url><loc>https://kri-studio.art/en/about/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/about/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/about/"/></url>
+<url><loc>https://kri-studio.art/contacts/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/contacts/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/contacts/"/></url>
+<url><loc>https://kri-studio.art/en/contacts/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/contacts/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/contacts/"/></url>
+<url><loc>https://kri-studio.art/raschet/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/raschet/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/raschet/"/></url>
+<url><loc>https://kri-studio.art/en/raschet/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/raschet/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/raschet/"/></url>
+<url><loc>https://kri-studio.art/blog/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/blog/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/blog/"/></url>
+<url><loc>https://kri-studio.art/en/blog/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/blog/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/blog/"/></url>
+<url><loc>https://kri-studio.art/privacy/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/privacy/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/privacy/"/></url>
+<url><loc>https://kri-studio.art/en/privacy/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/privacy/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/privacy/"/></url>
+<url><loc>https://kri-studio.art/uslugi/logotip/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/logotip/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/logotip/"/></url>
+<url><loc>https://kri-studio.art/en/uslugi/logotip/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/logotip/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/logotip/"/></url>
+<url><loc>https://kri-studio.art/uslugi/firmennyy-stil/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/firmennyy-stil/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/firmennyy-stil/"/></url>
+<url><loc>https://kri-studio.art/en/uslugi/firmennyy-stil/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/firmennyy-stil/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/firmennyy-stil/"/></url>
+<url><loc>https://kri-studio.art/uslugi/brendbuk/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/brendbuk/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/brendbuk/"/></url>
+<url><loc>https://kri-studio.art/en/uslugi/brendbuk/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/brendbuk/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/brendbuk/"/></url>
+<url><loc>https://kri-studio.art/uslugi/dizayn-sayta/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/dizayn-sayta/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/dizayn-sayta/"/></url>
+<url><loc>https://kri-studio.art/en/uslugi/dizayn-sayta/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/dizayn-sayta/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/dizayn-sayta/"/></url>
+<url><loc>https://kri-studio.art/uslugi/prezentacii/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/prezentacii/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/prezentacii/"/></url>
+<url><loc>https://kri-studio.art/en/uslugi/prezentacii/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/prezentacii/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/prezentacii/"/></url>
+<url><loc>https://kri-studio.art/uslugi/upakovka/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/upakovka/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/upakovka/"/></url>
+<url><loc>https://kri-studio.art/en/uslugi/upakovka/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/upakovka/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/upakovka/"/></url>
+<url><loc>https://kri-studio.art/uslugi/kartochki-wb-ozon/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/kartochki-wb-ozon/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/kartochki-wb-ozon/"/></url>
+<url><loc>https://kri-studio.art/en/uslugi/kartochki-wb-ozon/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/kartochki-wb-ozon/"/><xhtml:link rel="alternate" hreflang="en" href="https://kri-studio.art/en/uslugi/kartochki-wb-ozon/"/></url>
 <url><loc>https://kri-studio.art/moskva/</loc><lastmod>2026-08-20</lastmod></url>
 <url><loc>https://kri-studio.art/otzyvy/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/privacy/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/uslugi/logotip/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/uslugi/firmennyy-stil/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/uslugi/brendbuk/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/uslugi/dizayn-sayta/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/uslugi/prezentacii/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/uslugi/upakovka/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/uslugi/kartochki-wb-ozon/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/blog/</loc><lastmod>2026-08-26</lastmod></url>
 <url><loc>https://kri-studio.art/blog/skolko-stoit-firmennyy-stil-2026/</loc><lastmod>2026-08-21</lastmod></url>
 <url><loc>https://kri-studio.art/blog/lending-ili-mnogostranichnyy-sayt/</loc><lastmod>2026-08-21</lastmod></url>
 <url><loc>https://kri-studio.art/blog/skolko-stoit-upakovka-2026/</loc><lastmod>2026-08-21</lastmod></url>
 <url><loc>https://kri-studio.art/blog/kak-vybrat-cveta-dlya-brenda/</loc><lastmod>2026-08-21</lastmod></url>
-<url><loc>https://kri-studio.art/blog/skolko-stoit-sayt-2026/</loc><lastmod>2026-08-19</lastmod></url>
+<url><loc>https://kri-studio.art/blog/skolko-stoit-sayt-2026/</loc><lastmod>2026-08-26</lastmod></url>
 <url><loc>https://kri-studio.art/blog/trendy-veb-dizayna-2026/</loc><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://kri-studio.art/blog/kak-vybrat-dizayn-studiyu/</loc><lastmod>2026-08-19</lastmod></url>
 <url><loc>https://kri-studio.art/blog/skolko-stoit-logotip-2026/</loc><lastmod>2026-08-18</lastmod></url>
@@ -35,21 +50,6 @@
 <url><loc>https://kri-studio.art/blog/kak-sostavit-tz-na-logotip/</loc><lastmod>2026-08-26</lastmod></url>
 <url><loc>https://kri-studio.art/blog/oshibki-v-logotipah-malogo-biznesa/</loc><lastmod>2026-08-26</lastmod></url>
 <url><loc>https://kri-studio.art/blog/frilanser-ili-studiya/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/projects/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/services/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/about/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/contacts/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/blog/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/raschet/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/privacy/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/uslugi/dizayn-sayta/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/uslugi/logotip/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/uslugi/firmennyy-stil/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/uslugi/brendbuk/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/uslugi/prezentacii/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/uslugi/kartochki-wb-ozon/</loc><lastmod>2026-08-26</lastmod></url>
-<url><loc>https://kri-studio.art/en/uslugi/upakovka/</loc><lastmod>2026-08-26</lastmod></url>
 <url><loc>https://kri-studio.art/sites/</loc><lastmod>2026-07-22</lastmod></url>
 <url><loc>https://kri-studio.art/lumi/</loc><lastmod>2026-07-31</lastmod></url>
 <url><loc>https://kri-studio.art/veda/</loc><lastmod>2026-07-31</lastmod></url>
