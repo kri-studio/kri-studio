@@ -1,1 +1,283 @@
-<!DOCTYPE html><html lang="en" data-theme="sun"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Project cost estimate — kri·studio</title><meta name="description" content="Estimate your design project: website, logo, identity, packaging, marketplace cards or presentation."><script>try{var t=localStorage.getItem('kri-theme');if(['sun','rose','bold','mint'].indexOf(t)<0)t='sun';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/wide.css"><link rel="canonical" href="https://kri-studio.art/en/raschet/"><link rel="alternate" hreflang="ru" href="https://kri-studio.art/raschet/"><link rel="alternate" hreflang="en" href="https://kri-studio.art/en/raschet/"><link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"></head><body><header class="topnav"><div class="wrap"><a class="brand" href="/en/">kri<b>·</b>studio</a><nav class="nav-links" id="navLinks"></nav><div><a href="/en/contacts/" class="btn btn-primary nav-cta">Start a project</a><a class="lang-btn" href="/raschet/">EN</a><button class="burger" id="burger">≡</button></div></div></header><main class="pj-hero"><div class="wrap"><div class="eyebrow">Estimate</div><h1 class="pj-title">How much will <em>your project</em> cost?</h1><p class="pj-desc">Send us a short description and we will estimate the scope, budget and timeline. The Russian calculator is available on the main version of the site.</p><div style="margin-top:22px"><a class="btn btn-primary" href="/contacts/">Request an estimate</a><a class="btn btn-ghost" href="/raschet/">Open RU calculator</a></div></div></main><footer><div class="wrap"><div class="big">thank you</div><div class="foot-grid"><div class="req">kri·studio</div><div class="foot-links"></div></div></div></footer><script src="/assets/app.js"></script></body></html>
+<!doctype html>
+<html lang="en" data-theme="sun">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem('kri-theme');if(['sun','rose','bold','mint'].indexOf(t)<0)t='sun';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<title>Design project estimate — price and timeline in three questions | kri·studio</title>
+<meta name="description" content="Estimate your design project in three questions: logo, brand identity, full brand, packaging, marketplace cards, website or presentation. Instant price range and timeline, same rates as our Russian price list.">
+<link rel="canonical" href="https://kri-studio.art/en/raschet/">
+<link rel="alternate" hreflang="ru" href="https://kri-studio.art/raschet/">
+<link rel="alternate" hreflang="en" href="https://kri-studio.art/en/raschet/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="/assets/favicon-180.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<meta name="theme-color" content="#ff5a1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="kri·studio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:title" content="Design project estimate — kri·studio">
+<meta property="og:description" content="Three questions, then a price range and a timeline for your project.">
+<meta property="og:url" content="https://kri-studio.art/en/raschet/">
+<meta property="og:image" content="https://kri-studio.art/assets/img/w/pres_01.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design project estimate — kri·studio">
+<meta name="twitter:description" content="Price range and timeline in three questions.">
+<meta name="twitter:image" content="https://kri-studio.art/assets/img/w/pres_01.webp">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/wide.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kri-studio.art/en/"},{"@type":"ListItem","position":2,"name":"Estimate","item":"https://kri-studio.art/en/raschet/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate is this estimate?","acceptedAnswer":{"@type":"Answer","text":"It is a realistic range based on our actual projects, not a teaser price. The final number is fixed in the contract after a short brief, and it normally lands inside the range shown here."}},{"@type":"Question","name":"Why are prices in roubles?","acceptedAnswer":{"@type":"Answer","text":"We are based in Moscow and quote in roubles for every client. For international clients we can invoice and accept payment in another currency at the exchange rate on the invoice date."}},{"@type":"Question","name":"What is included in the price?","acceptedAnswer":{"@type":"Answer","text":"Research and concepts, design work, two revision rounds, final files in all required formats and editable sources. Rights transfer to you after full payment."}},{"@type":"Question","name":"How do payments work?","acceptedAnswer":{"@type":"Answer","text":"We work under a contract with 50% prepayment and the balance after approval. Payment comes with an official receipt."}}]}</script>
+<style>
+.crumbs{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:18px}
+.crumbs a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.crumbs a:hover{color:var(--ink)}
+.crumbs span{opacity:.6}
+.calc-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:26px;align-items:start;margin-top:26px}
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow-sm)}
+.q-bar{display:flex;gap:6px;margin-bottom:22px}
+.q-bar i{flex:1;height:4px;border-radius:999px;background:var(--line)}
+.q-bar i.on{background:var(--acc)}
+.q-step{display:none}
+.q-step.on{display:block}
+.q-step h2{font-family:var(--dis);font-size:22px;margin:0 0 6px}
+.q-step .hint{margin:0 0 18px;font-size:14px;color:var(--muted)}
+.q-opts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.q-opt{text-align:left;background:var(--tint);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font:inherit;font-size:15px;cursor:pointer;transition:border-color .18s,transform .18s}
+.q-opt:hover{border-color:var(--acc);transform:translateY(-1px)}
+.q-opt b{display:block;font-size:15.5px}
+.q-opt small{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}
+.q-back{margin-top:18px;background:none;border:none;color:var(--muted);font:inherit;font-size:13.5px;cursor:pointer;text-decoration:underline}
+.q-price{font-family:var(--dis);font-size:34px;line-height:1.1;margin:2px 0 6px}
+.q-meta{font-size:14.5px;color:var(--ink2);margin:0 0 16px}
+.q-inc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.q-inc span{background:var(--tint);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13.5px}
+.q-note{font-size:13px;color:var(--muted);line-height:1.55;margin-top:14px}
+.calc-side{display:flex;flex-direction:column;gap:16px}
+.calc-card{background:var(--tint);border:1px solid var(--line);border-radius:20px;padding:22px}
+.calc-card b{display:block;font-family:var(--dis);font-size:18px;margin-bottom:10px}
+.calc-card p{margin:0;font-size:14px;line-height:1.6;color:var(--ink2)}
+.calc-steps{margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font-size:14px;line-height:1.55;color:var(--ink2)}
+.calc-contacts{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.calc-contacts a{font-size:14.5px;font-weight:600;text-decoration:none;color:inherit;border-bottom:1px solid var(--line);padding-bottom:4px}
+.calc-contacts a:hover{border-color:var(--acc)}
+.faq-list details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq-list summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list p{margin:10px 0 0;font-size:15px;line-height:1.62;color:var(--ink2)}
+.next-links{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.next-links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;color:inherit}
+.next-links a:hover{border-color:var(--acc)}
+.next-links b{display:block;font-family:var(--dis);font-size:17px;margin-bottom:8px}
+.next-links span{font-size:14px;color:var(--muted);line-height:1.55}
+@media(max-width:980px){.calc-grid{grid-template-columns:1fr}.next-links{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.q-opts{grid-template-columns:1fr}.next-links{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topnav">
+<div class="wrap">
+<a class="brand" href="/en/">kri<b>·</b>studio</a>
+<nav class="nav-links" id="navLinks">
+<a href="/en/">Home</a>
+<a href="/en/projects/">Work</a>
+<a href="/en/services/">Services</a>
+<a href="/en/raschet/" class="active">Estimate</a>
+<a href="/en/blog/">Blog</a>
+<a href="/en/about/">About</a>
+<a href="/en/contacts/">Contacts</a>
+</nav>
+<div style="display:flex;align-items:center;gap:10px">
+<a href="/en/contacts/" class="btn btn-primary nav-cta">Start a project</a>
+<a class="lang-btn" href="/raschet/" aria-label="Russian version"><span>EN</span></a><button class="burger" id="burger" aria-label="Menu">≡</button>
+</div>
+</div>
+</header>
+<div class="mood-panel" aria-label="Site mood">
+<button data-theme-set="sun" data-label="Warm" aria-label="Warm theme"></button>
+<button data-theme-set="bold" data-label="Bold" aria-label="Dark theme"></button>
+<button data-theme-set="rose" data-label="Rose" aria-label="Rose theme"></button>
+<button data-theme-set="mint" data-label="Fresh" aria-label="Mint theme"></button>
+<span class="mp-label">mood</span>
+</div>
+<div id="cur">look</div>
+
+<section class="pj-hero">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumbs"><a href="/en/">Home</a><span>/</span>Estimate</nav>
+<div class="eyebrow">Estimate</div>
+<h1 class="pj-title">Three questions — and you know the budget</h1>
+<p class="pj-desc">No forms before the number. Choose what you need, tell us where you are starting from and how urgent it is — you will see a realistic price range and a timeline straight away, with the same rates we quote in Russian.</p>
+<div class="calc-grid">
+<div class="quiz" id="quiz">
+<div class="q-bar"><i class="on" data-bar="1"></i><i data-bar="2"></i><i data-bar="3"></i><i data-bar="4"></i></div>
+<div class="q-step on" data-step="1">
+<h2>What do you need?</h2>
+<p class="hint">Pick the closest option — we can combine services later.</p>
+<div class="q-opts">
+<button class="q-opt" data-need="logo"><b>Logo</b><small>mark, versions, source files</small></button>
+<button class="q-opt" data-need="ident"><b>Brand identity</b><small>logo, colours, typography, carriers</small></button>
+<button class="q-opt" data-need="brand"><b>Full brand</b><small>strategy, identity, brandbook</small></button>
+<button class="q-opt" data-need="site"><b>Website</b><small>landing or multi-page</small></button>
+<button class="q-opt" data-need="pack"><b>Packaging</b><small>label, box, product line</small></button>
+<button class="q-opt" data-need="cards"><b>Marketplace cards</b><small>WB and Ozon infographics</small></button>
+<button class="q-opt" data-need="pres"><b>Presentation</b><small>investor or sales deck</small></button>
+</div>
+</div>
+<div class="q-step" data-step="2">
+<h2>Where are you starting from?</h2>
+<p class="hint">This changes how much research and groundwork is needed.</p>
+<div class="q-opts">
+<button class="q-opt" data-base="new"><b>Brand new project</b><small>nothing exists yet</small></button>
+<button class="q-opt" data-base="has"><b>We already have a style</b><small>logo and rules exist</small></button>
+<button class="q-opt" data-base="redesign"><b>Redesign</b><small>something exists but does not work</small></button>
+</div>
+<button class="q-back" data-back="1">Back</button>
+</div>
+<div class="q-step" data-step="3">
+<h2>How urgent is it?</h2>
+<p class="hint">Rush work costs more because it moves other projects aside.</p>
+<div class="q-opts">
+<button class="q-opt" data-urg="calm"><b>No hard deadline</b><small>normal schedule</small></button>
+<button class="q-opt" data-urg="month"><b>Within a month</b><small>slightly tighter</small></button>
+<button class="q-opt" data-urg="fast"><b>Urgent</b><small>priority in the queue</small></button>
+</div>
+<button class="q-back" data-back="2">Back</button>
+</div>
+<div class="q-step" data-step="4">
+<h2>Your estimate</h2>
+<div class="q-price" id="qPrice">—</div>
+<p class="q-meta" id="qMeta"></p>
+<div class="q-inc" id="qInc"></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a class="btn btn-primary" href="mailto:design@kri-studio.art?subject=Project%20estimate">Send the brief by email</a>
+<a class="btn btn-ghost" href="https://t.me/kri_studio" target="_blank" rel="noopener">Ask in Telegram</a>
+</div>
+<p class="q-note">The range covers realistic scope for this kind of project. The exact figure is fixed in the contract after a short brief — and it normally lands inside this range.</p>
+<button class="q-back" data-back="1">Start again</button>
+</div>
+</div>
+<div class="calc-side">
+<div class="calc-card">
+<b>How we get to a firm price</b>
+<ol class="calc-steps">
+<li>You send the task, references and any deadline.</li>
+<li>We ask 5–7 questions — usually one message, not a meeting.</li>
+<li>You get scope, price, timeline and payment terms in writing.</li>
+<li>We sign the contract, take 50% and start.</li>
+</ol>
+</div>
+<div class="calc-card">
+<b>Write to us directly</b>
+<p>If your project is unusual, the calculator will not capture it — just describe it in a couple of sentences.</p>
+<div class="calc-contacts">
+<a href="mailto:design@kri-studio.art">design@kri-studio.art</a>
+<a href="tel:+79055166557">+7 905 516-65-57</a>
+<a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram — @kri_studio</a>
+<a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="section-head">
+<h2 class="title">Questions about the estimate</h2>
+</div>
+<div class="faq-list">
+<details><summary>How accurate is this estimate?</summary><p>It is a realistic range based on our actual projects, not a teaser price. The final number is fixed in the contract after a short brief, and it normally lands inside the range shown here.</p></details>
+<details><summary>Why are prices in roubles?</summary><p>We are based in Moscow and quote in roubles for every client. For international clients we can invoice and accept payment in another currency at the exchange rate on the invoice date.</p></details>
+<details><summary>What is included in the price?</summary><p>Research and concepts, design work, two revision rounds, final files in all required formats and editable sources. Rights transfer to you after full payment.</p></details>
+<details><summary>How do payments work?</summary><p>We work under a contract with 50% prepayment and the balance after approval. Payment comes with an official receipt.</p></details>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="section-head"><h2 class="title">Service details</h2></div>
+<div class="next-links">
+<a href="/en/uslugi/logotip/"><b>Logo</b><span>from 25,000 ₽, 7–10 days</span></a>
+<a href="/en/uslugi/firmennyy-stil/"><b>Brand identity</b><span>from 45,000 ₽, 3–4 weeks</span></a>
+<a href="/en/uslugi/dizayn-sayta/"><b>Website</b><span>from 80,000 ₽, 3–5 weeks</span></a>
+<a href="/en/uslugi/kartochki-wb-ozon/"><b>Marketplace cards</b><span>from 20,000 ₽, 5–8 days</span></a>
+<a href="/en/uslugi/upakovka/"><b>Packaging</b><span>from 60,000 ₽, 2–3 weeks</span></a>
+<a href="/en/uslugi/brendbuk/"><b>Brandbook</b><span>from 60,000 ₽, 5–7 weeks</span></a>
+<a href="/en/uslugi/prezentacii/"><b>Presentations</b><span>from 30,000 ₽, 1–2 weeks</span></a>
+<a href="/en/services/"><b>All services</b><span>full price list</span></a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="big">thank you<i style="color:var(--acc);font-style:normal;font-size:.42em;vertical-align:.55em;margin-left:8px">♥</i></div>
+<div class="foot-grid">
+<div class="req">kri·studio · Trifonova K.A., self-employed taxpayer, INN 772370935743.<br>We work under a contract, payment comes with a receipt.</div>
+<div class="foot-links">
+<a href="/en/services/">Services</a>
+<a href="/en/raschet/">Estimate</a>
+<a href="/en/blog/">Blog</a>
+<a href="/en/privacy/">Privacy policy</a>
+<a href="/en/about/">FAQ</a>
+<a href="mailto:design@kri-studio.art">Email</a>
+<a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a>
+<a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</div>
+</div>
+</footer>
+
+<noscript><style>.mood-panel,#cur{display:none}.q-step{display:block!important}.q-bar{display:none}</style></noscript>
+<script>
+(function(){
+var NEEDS={
+logo:{t:'Logo',lo:25000,hi:45000,term:'7–10 days',inc:['2–3 concepts','all file formats','mini usage guide']},
+ident:{t:'Brand identity',lo:90000,hi:140000,term:'3–4 weeks',inc:['logo and versions','colours and typography','brand carriers','style guide']},
+brand:{t:'Full brand',lo:220000,hi:320000,term:'5–7 weeks',inc:['positioning','full identity','brandbook','templates']},
+pack:{t:'Packaging',lo:60000,hi:110000,term:'2–3 weeks',inc:['2–3 concepts','dieline layout','print-ready files','3D visuals']},
+cards:{t:'Marketplace cards',lo:20000,hi:45000,term:'5–8 days',inc:['main image','infographic slides','rich content','WB and Ozon files']},
+site:{t:'Website',lo:80000,hi:150000,term:'3–5 weeks',inc:['structure and copy anchors','unique design','responsive build','SEO basics']},
+pres:{t:'Presentation',lo:30000,hi:60000,term:'1–2 weeks',inc:['structure','infographics','PDF and PPTX','editable template']}
+};
+var BASE={new:{k:1,l:'new project'},has:{k:.9,l:'existing style'},redesign:{k:.95,l:'redesign'}};
+var URG={calm:{k:1,l:'no hard deadline'},month:{k:1.05,l:'within a month'},fast:{k:1.3,l:'urgent'}};
+var s={need:null,base:null,urg:null},started=false;
+var q=document.getElementById('quiz');if(!q)return;
+function goal(n){try{if(window.ym)ym(110943761,'reachGoal',n)}catch(e){}}
+function fmt(n){return String(Math.round(n/1000)*1000).replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')}
+function show(n){
+q.querySelectorAll('.q-step').forEach(function(el){el.classList.toggle('on',el.getAttribute('data-step')===String(n))});
+q.querySelectorAll('.q-bar i').forEach(function(el){el.classList.toggle('on',Number(el.getAttribute('data-bar'))<=n)});
+}
+function result(){
+var d=NEEDS[s.need],k=BASE[s.base].k*URG[s.urg].k;
+document.getElementById('qPrice').textContent=fmt(d.lo*k)+'–'+fmt(d.hi*k)+' ₽';
+document.getElementById('qMeta').textContent=d.t+' · '+d.term+' · '+BASE[s.base].l+' · '+URG[s.urg].l;
+var inc=document.getElementById('qInc');inc.innerHTML='';
+d.inc.forEach(function(x){var el=document.createElement('span');el.textContent=x;inc.appendChild(el)});
+show(4);goal('quiz_done');
+}
+q.addEventListener('click',function(e){
+var b=e.target.closest('button');if(!b)return;
+if(b.hasAttribute('data-need')){if(!started){started=true;goal('quiz_start')}s.need=b.getAttribute('data-need');show(2);return}
+if(b.hasAttribute('data-base')){s.base=b.getAttribute('data-base');show(3);return}
+if(b.hasAttribute('data-urg')){s.urg=b.getAttribute('data-urg');result();return}
+if(b.hasAttribute('data-back')){show(Number(b.getAttribute('data-back')));return}
+});
+})();
+</script>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110943761,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute;left:-9999px" alt=""></div></noscript>
+<script src="/assets/app.js"></script>
+</body>
+</html>
