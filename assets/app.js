@@ -1,303 +1,145 @@
-// === v27: широкая сетка — контент на всю ширину экрана (все страницы) ===
+// kri·studio — unified site scripts (Priority 1 service pages)
 (function(){
-  try{
-    if(document.getElementById('kri-wide'))return;
-    var s=document.createElement('style');
-    s.id='kri-wide';
-    s.textContent='.wrap{max-width:min(1600px,95vw)!important}'
-      +'.hero-v5 .v5-wrap{max-width:min(1600px,95vw)!important}'
-      +'.post{max-width:none!important;margin-left:0!important;margin-right:0!important}'
-      +'@media(min-width:1400px){.wrap{padding-left:44px!important;padding-right:44px!important}}'
-      +'@media(max-width:1100px){.wrap{max-width:100%!important}}';
-    (document.head||document.documentElement).appendChild(s);
-  }catch(e){}
-})();
+  'use strict';
+  var YM_ID=110943761;
+  var MAIL='design@kri-studio.art';
+  var OLD='kri_tri06@mail.ru';
+  var MAXL='https://max.ru/u/f9LHodD0cOJ5KpCGoG5ATmEVAEAAwns0ZN5oVD3WVWN9S5dBV44J5eoDlHI';
+  var THEMES=['sun','rose','bold','mint'];
+  var NAV=[['/','Главная'],['/projects/','Работы'],['/services/','Услуги и цены'],['/raschet/','Расчёт цены'],['/blog/','Блог'],['/about/','О студии'],['/contacts/','Контакты']];
+  var FOOT=[['/services/','Услуги и цены'],['/raschet/','Расчёт стоимости'],['/blog/','Блог'],['/privacy/','Политика обработки ПД'],['/about/#faq','Частые вопросы'],['mailto:'+MAIL,'Почта'],['https://t.me/kri_studio','Telegram'],['https://wa.me/79055166557','WhatsApp']];
 
-// === v28: блок плиток «Подробно об услугах» на странице услуг ===
-(function(){
+  function goal(name,params){try{if(typeof ym==='function')ym(YM_ID,'reachGoal',name,params||{});}catch(e){}}
+  function normPath(p){return (p||'/').replace(/index\.html$/,'').replace(/\/+/g,'/');}
+  function isActive(h){var p=normPath(location.pathname); if(h==='/')return p==='/'; return p.indexOf(h)===0;}
+
+  // Wide layout: align utility pages with the service-page benchmark.
   try{
-    if(location.pathname.indexOf('/services')===0){
-      var s=document.createElement('script');
-      s.src='/assets/services-tiles.js';
-      s.defer=true;
+    if(!document.getElementById('kri-wide')){
+      var s=document.createElement('style');
+      s.id='kri-wide';
+      s.textContent='.wrap{max-width:min(1600px,95vw)!important}.hero-v5 .v5-wrap,.v5-wrap{max-width:min(1600px,95vw)!important}.post{max-width:none!important;margin-left:0!important;margin-right:0!important}@media(min-width:1400px){.wrap,.v5-wrap{padding-left:44px!important;padding-right:44px!important}}@media(max-width:1100px){.wrap,.v5-wrap{max-width:100%!important}}html{scroll-padding-top:92px}section[id],div[id]{scroll-margin-top:92px}';
       (document.head||document.documentElement).appendChild(s);
     }
   }catch(e){}
-})();
 
-// kri·studio — скрипты: темы-настроения, меню, появление секций, счётчики, курсор, форма
-(function(){
-  'use strict';
-
-  // Настроения (темы)
-  var THEMES=['sun','rose','bold','mint'];
   function applyTheme(t){
     if(THEMES.indexOf(t)<0)t='sun';
     document.documentElement.setAttribute('data-theme',t);
     try{localStorage.setItem('kri-theme',t);}catch(e){}
     document.querySelectorAll('.mood-panel button').forEach(function(b){
-      b.classList.toggle('active',b.getAttribute('data-theme-set')===t);
-    });
-  }
-  document.querySelectorAll('.mood-panel button').forEach(function(b){
-    b.addEventListener('click',function(){applyTheme(b.getAttribute('data-theme-set'));});
-  });
-  applyTheme(document.documentElement.getAttribute('data-theme'));
-
-  // Бургер
-  var burger=document.querySelector('.burger'),links=document.querySelector('.nav-links');
-  if(burger&&links){burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.classList.toggle('open',o);document.body.classList.toggle('menu-open',o);burger.textContent=o?'✕':'≡';});links.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){links.classList.remove('open');burger.classList.remove('open');document.body.classList.remove('menu-open');burger.textContent='≡';});});}
-
-  // Появление секций при скролле
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-
-  // Счётчики
-  function animateCount(el){
-    var raw=el.getAttribute('data-count');var suffix=el.getAttribute('data-suffix')||'';
-    var target=parseFloat(raw.replace(',','.'));var dec=raw.indexOf(',')>=0?1:0;
-    var t0=null,DUR=1400;
-    function tick(ts){
-      if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/DUR);p=1-Math.pow(1-p,3);
-      el.textContent=(target*p).toFixed(dec).replace('.',',')+suffix;
-      if(p<1)requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  var cio=new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});
-  },{threshold:.6});
-  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
-
-  // Кастомный курсор «смотреть» над кейсами
-  var cur=document.getElementById('cur');
-  if(cur&&window.matchMedia('(pointer:fine)').matches){
-    document.addEventListener('mousemove',function(e){cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';});
-    document.querySelectorAll('a.case-card').forEach(function(c){
-      c.addEventListener('mouseenter',function(){cur.classList.add('on');});
-      c.addEventListener('mouseleave',function(){cur.classList.remove('on');});
+      var on=b.getAttribute('data-theme-set')===t;
+      b.classList.toggle('active',on); b.classList.toggle('on',on);
     });
   }
 
-  // Форма заявки → Cloudflare Worker → Telegram (токен хранится только на сервере)
-  var LEAD_URL='https://cool-shadow-dc3b.kristinatrifonova903.workers.dev';
-  document.querySelectorAll('form.form').forEach(function(f){
-    f.addEventListener('submit',function(ev){
-      ev.preventDefault();
-      var pd=f.querySelector('input[type=checkbox]');
-      if(pd&&!pd.checked){pd.focus();return;}
-      var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value:'';};
-      var btn=f.querySelector('button[type=submit]');
-      var btnText=btn?btn.textContent:'';
-      if(btn){btn.disabled=true;btn.textContent='Отправляем…';}
-      fetch(LEAD_URL,{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({name:g('name'),contact:g('contact'),budget:g('budget'),task:(g('need')?'['+g('need')+'] ':'')+g('task')})
-      }).then(function(r){return r.json();}).then(function(res){
-        if(!res.ok)throw new Error('send');
-        f.reset();
-        if(btn){btn.textContent='Заявка отправлена ✓';btn.classList.add('sent');}
-        var fine=f.querySelector('.fine');
-        if(fine)fine.textContent='Спасибо! Обычно отвечаем в течение пары часов.';
-        setTimeout(function(){if(btn){btn.disabled=false;btn.textContent=btnText;btn.classList.remove('sent');}},6000);
-      }).catch(function(){
-        // Запасной путь — письмо на почту студии.
-        if(btn){btn.disabled=false;btn.textContent=btnText;}
-        var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nЧто нужно: '+g('need')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));
-        location.href='mailto:design@kri-studio.art?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;
-      });
-    });
-  });
-})();
+  function normalizeNav(){
+    var nav=document.querySelector('.nav-links');
+    if(!nav)return;
+    nav.innerHTML=NAV.map(function(x){return '<a href="'+x[0]+'"'+(isActive(x[0])?' class="active"':'')+'>'+x[1]+'</a>';}).join('');
+  }
 
-// === Аналитика v20: цели Яндекс Метрики + баннер согласия на cookie ===
-(function(){
-  'use strict';
-  var YM_ID=110943761;
-  function goal(name,params){try{if(typeof ym==='function')ym(YM_ID,'reachGoal',name,params||{});}catch(e){}}
+  function normalizeFooter(){
+    var foot=document.querySelector('.foot-links');
+    if(!foot)return;
+    foot.innerHTML=FOOT.map(function(x){
+      var ext=x[0].indexOf('http')===0?' target="_blank" rel="noopener"':'';
+      return '<a href="'+x[0]+'"'+ext+'>'+x[1]+'</a>';
+    }).join('');
+  }
 
-  // Цель form_sent: срабатывает только при УСПЕШНОЙ отправке (кнопка получает класс .sent)
-  document.querySelectorAll('form.form button[type=submit]').forEach(function(btn){
-    var fired=false;
-    new MutationObserver(function(){
-      if(!fired&&btn.classList.contains('sent')){fired=true;goal('form_sent');}
-    }).observe(btn,{attributes:true,attributeFilter:['class']});
-  });
-
-  // Цели по кликам: CTA, Telegram, телефон, e-mail
-  document.addEventListener('click',function(e){
-    var a=e.target&&e.target.closest?e.target.closest('a'):null;
-    if(!a)return;
-    var h=a.getAttribute('href')||'';
-    if(h.indexOf('contacts')>=0||h.indexOf('#form')>=0)goal('cta_click');
-    if(h.indexOf('t.me/')>=0||h.indexOf('tg://')===0)goal('tg_click');
-    if(h.indexOf('tel:')===0)goal('phone_click');
-    if(h.indexOf('mailto:')===0)goal('email_click');
-  },true);
-
-  // Событие переключения темы «настроения» — исследование палитры на реальных данных
-  document.querySelectorAll('.mood-panel button').forEach(function(b){
-    b.addEventListener('click',function(){goal('theme_change',{theme:b.getAttribute('data-theme-set')||''});});
-  });
-
-  // Баннер согласия на cookie (показывается один раз)
-  try{
-    if(!localStorage.getItem('kri-cookie-ok')){
-      var bar=document.createElement('div');
-      bar.id='cookie-bar';
-      bar.setAttribute('role','dialog');
-      bar.setAttribute('aria-label','Использование cookie');
-      bar.style.cssText='position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:var(--card,#fff);color:var(--ink,#221812);border:1px solid var(--line,#f2dfce);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.14);padding:14px 16px;display:flex;gap:12px;align-items:center;font-size:14px;line-height:1.45;font-family:inherit';
-      bar.innerHTML='<span>Мы используем cookie для аналитики (Яндекс Метрика), чтобы делать сайт лучше. <a href="/privacy/" style="color:inherit">Подробнее</a></span><button type="button" style="flex:none;border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;background:var(--acc,#ff5a1f);color:#fff;font-family:inherit">Хорошо</button>';
-      bar.querySelector('button').addEventListener('click',function(){try{localStorage.setItem('kri-cookie-ok','1');}catch(e){}bar.remove();});
-      if(document.body)document.body.appendChild(bar);
-    }
-  }catch(e){}
-})();
-
-// === v22: единые контакты (почта и MAX) на всех страницах ===
-(function(){
-  'use strict';
-  var MAIL='design@'+'kri-studio.art';
-  var OLD='kri_tri06'+'@mail.ru';
-  var MAXL='https:'+'//max.ru/u/'+'f9LHodD0cOJ5KpCGoG5ATmEVAEAAwns0ZN5oVD3WVWN9S5dBV44J5eoDlHI';
-  var TXT=[
-    ['Ответим в течение дня и расскажем, как можем помочь.','Расскажем, как можем помочь, и предложим формат работы.'],
-    ['Ответим в течение дня и посчитаем стоимость','Обычно отвечаем в течение пары часов и посчитаем стоимость'],
-    ['Ответим в течение дня.','Обычно отвечаем в течение пары часов.'],
-    ['Отвечаем в течение дня.','Обычно отвечаем в течение пары часов.']
-  ];
-  function fix(){
+  function normalizeContacts(){
     try{
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
-        a.setAttribute('href','mailto:'+MAIL+'?subject='+encodeURIComponent('Заявка с сайта kri·studio'));
-      });
-      document.querySelectorAll('a[href^="https://max.ru"]').forEach(function(a){
-        var h=a.getAttribute('href')||'';
-        if(h.indexOf('/u/')<0)a.setAttribute('href',MAXL);
-      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){a.setAttribute('href','mailto:'+MAIL+'?subject='+encodeURIComponent('Заявка с сайта kri·studio'));});
+      document.querySelectorAll('a[href^="https://max.ru"]').forEach(function(a){a.setAttribute('href',MAXL);});
       var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;
       while((n=w.nextNode())){
-        var v=n.nodeValue;
-        if(!v)continue;
-        if(v.indexOf(OLD)>-1)v=v.split(OLD).join(MAIL);
-        for(var i=0;i<TXT.length;i++){if(v.indexOf(TXT[i][0])>-1)v=v.split(TXT[i][0]).join(TXT[i][1]);}
+        var v=n.nodeValue;if(!v)continue;
+        v=v.split(OLD).join(MAIL)
+          .split('Ответим в течение дня и расскажем, как можем помочь.').join('Расскажем, как можем помочь, и предложим формат работы.')
+          .split('Ответим в течение дня.').join('Обычно отвечаем в течение пары часов.')
+          .split('Отвечаем в течение дня.').join('Обычно отвечаем в течение пары часов.');
         if(v!==n.nodeValue)n.nodeValue=v;
       }
     }catch(e){}
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
-})();
-// === v23.2: фото по темам-настроениям — ТОЛЬКО на странице «О студии» (+предзагрузка) ===
-// Первый экран главной (.v5-portrait) меняет отдельный блок v24 ниже.
-(function(){
-  'use strict';
-  var MAP={
-    sun:'/assets/img/about-sun.webp',
-    rose:'/assets/img/about-rose.webp',
-    bold:'/assets/img/about-bold.webp',
-    mint:'/assets/img/about-mint.webp'
-  };
-  function preload(){
-    try{
-      if(!document.querySelector('.circle-photo img'))return;
-      for(var k in MAP){var im=new Image();im.src=MAP[k];}
-    }catch(e){}
+
+  function bindMenu(){
+    var burger=document.querySelector('.burger'),links=document.querySelector('.nav-links');
+    if(!burger||!links)return;
+    burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.classList.toggle('open',o);document.body.classList.toggle('menu-open',o);burger.textContent=o?'✕':'≡';});
+    links.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){links.classList.remove('open');burger.classList.remove('open');document.body.classList.remove('menu-open');burger.textContent='≡';});});
   }
-  function upd(){
-    try{
-      var t=document.documentElement.getAttribute('data-theme');
-      var src=MAP[t]||MAP.sun;
-      document.querySelectorAll('.circle-photo img').forEach(function(im){
-        if(im.getAttribute('src')!==src)im.setAttribute('src',src);
+
+  function bindTheme(){
+    document.querySelectorAll('.mood-panel button').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-theme-set');applyTheme(t);goal('theme_change',{theme:t||''});});});
+    applyTheme(document.documentElement.getAttribute('data-theme')||'sun');
+  }
+
+  function reveal(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+    setTimeout(function(){document.documentElement.classList.add('anim-done');},1600);
+  }
+
+  function counters(){
+    function animateCount(el){
+      var raw=el.getAttribute('data-count')||'0',suffix=el.getAttribute('data-suffix')||'',target=parseFloat(raw.replace(',','.')),dec=raw.indexOf(',')>=0?1:0,t0=null,DUR=1400;
+      function tick(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/DUR);p=1-Math.pow(1-p,3);el.textContent=(target*p).toFixed(dec).replace('.',',')+suffix;if(p<1)requestAnimationFrame(tick);}requestAnimationFrame(tick);
+    }
+    if(!('IntersectionObserver' in window))return;
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});},{threshold:.6});
+    document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+  }
+
+  function cursor(){
+    var cur=document.getElementById('cur');
+    if(cur&&window.matchMedia&&window.matchMedia('(pointer:fine)').matches){
+      document.addEventListener('mousemove',function(e){cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';});
+      document.querySelectorAll('a.case-card,.wcard').forEach(function(c){c.addEventListener('mouseenter',function(){cur.classList.add('on');});c.addEventListener('mouseleave',function(){cur.classList.remove('on');});});
+    }
+  }
+
+  function forms(){
+    var LEAD_URL='https://cool-shadow-dc3b.kristinatrifonova903.workers.dev';
+    document.querySelectorAll('form.form').forEach(function(f){
+      f.addEventListener('submit',function(ev){
+        ev.preventDefault();
+        var pd=f.querySelector('input[type=checkbox]'); if(pd&&!pd.checked){pd.focus();return;}
+        var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value:'';};
+        var btn=f.querySelector('button[type=submit]'),btnText=btn?btn.textContent:'';
+        if(btn){btn.disabled=true;btn.textContent='Отправляем…';}
+        fetch(LEAD_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:g('name'),contact:g('contact'),budget:g('budget'),task:(g('need')?'['+g('need')+'] ':'')+g('task')})})
+          .then(function(r){return r.json();}).then(function(res){if(!res.ok)throw new Error('send');f.reset();if(btn){btn.textContent='Заявка отправлена ✓';btn.classList.add('sent');}var fine=f.querySelector('.fine');if(fine)fine.textContent='Спасибо! Обычно отвечаем в течение пары часов.';goal('form_sent');setTimeout(function(){if(btn){btn.disabled=false;btn.textContent=btnText;btn.classList.remove('sent');}},6000);})
+          .catch(function(){if(btn){btn.disabled=false;btn.textContent=btnText;}var body=encodeURIComponent('Имя: '+g('name')+'\nКонтакт: '+g('contact')+'\nЧто нужно: '+g('need')+'\nБюджет: '+g('budget')+'\n\nО задаче:\n'+g('task'));location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Заявка с сайта kri·studio')+'&body='+body;});
       });
-    }catch(e){}
+    });
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){upd();preload();});else{upd();preload();}
-  try{new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}
-})();
 
-/* ===== v24.1: смена пиджака на ПЕРВОМ ЭКРАНЕ по теме — с предзагрузкой всех фото, чтобы смена была мгновенной ===== */
-(function () {
-  var HERO_MAP = {
-    sun:  '/assets/img/portrait-sun.webp',
-    rose: '/assets/img/portrait-rose.webp',
-    bold: '/assets/img/portrait-bold.webp',
-    mint: '/assets/img/portrait-mint.webp'
-  };
-  function preloadHero() {
-    try {
-      if (!document.querySelector('.v5-portrait img')) return;
-      for (var k in HERO_MAP) { var im = new Image(); im.src = HERO_MAP[k]; }
-    } catch (e) {}
+  function analytics(){
+    document.addEventListener('click',function(e){
+      var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;var h=a.getAttribute('href')||'';
+      if(h.indexOf('contacts')>=0||h.indexOf('#brief')>=0||h.indexOf('#zayavka')>=0)goal('cta_click');
+      if(h.indexOf('/raschet/')>=0)goal('calc_click');
+      if(h.indexOf('t.me/')>=0||h.indexOf('tg://')===0)goal('tg_click');
+      if(h.indexOf('tel:')===0)goal('phone_click');
+      if(h.indexOf('mailto:')===0)goal('email_click');
+    },true);
   }
-  function applyHeroPhoto() {
-    var t = document.documentElement.getAttribute('data-theme');
-    var img = document.querySelector('.v5-portrait img');
-    if (!img || !t || !HERO_MAP[t]) return;
-    if (img.getAttribute('src') !== HERO_MAP[t]) img.setAttribute('src', HERO_MAP[t]);
+
+  function cookie(){
+    try{if(localStorage.getItem('kri-cookie-ok'))return;var bar=document.createElement('div');bar.id='cookie-bar';bar.setAttribute('role','dialog');bar.setAttribute('aria-label','Использование cookie');bar.style.cssText='position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:var(--card,#fff);color:var(--ink,#221812);border:1px solid var(--line,#f2dfce);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.14);padding:14px 16px;display:flex;gap:12px;align-items:center;font-size:14px;line-height:1.45;font-family:inherit';bar.innerHTML='<span>Мы используем cookie для аналитики (Яндекс Метрика), чтобы делать сайт лучше. <a href="/privacy/" style="color:inherit">Подробнее</a></span><button type="button" style="flex:none;border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;background:var(--acc,#ff5a1f);color:#fff;font-family:inherit">Хорошо</button>';bar.querySelector('button').addEventListener('click',function(){try{localStorage.setItem('kri-cookie-ok','1');}catch(e){}bar.remove();});document.body.appendChild(bar);}catch(e){}
   }
-  new MutationObserver(applyHeroPhoto).observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ['data-theme']
-  });
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () { applyHeroPhoto(); preloadHero(); });
-  } else {
-    applyHeroPhoto();
-    preloadHero();
+
+  function themePhotos(){
+    var ABOUT={sun:'/assets/img/about-sun.webp',rose:'/assets/img/about-rose.webp',bold:'/assets/img/about-bold.webp',mint:'/assets/img/about-mint.webp'};
+    var HERO={sun:'/assets/img/portrait-sun.webp',rose:'/assets/img/portrait-rose.webp',bold:'/assets/img/portrait-bold.webp',mint:'/assets/img/portrait-mint.webp'};
+    function upd(){try{var t=document.documentElement.getAttribute('data-theme')||'sun';document.querySelectorAll('.circle-photo img').forEach(function(im){if(ABOUT[t])im.setAttribute('src',ABOUT[t]);});var hi=document.querySelector('.v5-portrait img');if(hi&&HERO[t])hi.setAttribute('src',HERO[t]);}catch(e){}}
+    try{new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){} upd();
   }
-})();
 
-/* ===== v25: калькулятор стоимости — ссылка в меню, в подвале и кнопка рядом с ценами.
-   Ничего не удаляет и не заменяет: только добавляет ссылки на /raschet/. ===== */
-(function () {
-  'use strict';
-  var HREF = '/raschet/';
-  var TXT = 'Расчёт стоимости';
-  function goal(n){try{if(typeof ym==='function')ym(110943761,'reachGoal',n);}catch(e){}}
-  function add() {
-    try {
-      var onCalc = location.pathname.indexOf('/raschet') === 0;
-
-      // 1) Пункт в главном меню — после «Услуги и цены»
-      var nav = document.querySelector('.nav-links');
-      if (nav && !nav.querySelector('a[href="' + HREF + '"]')) {
-        var a = document.createElement('a');
-        a.setAttribute('href', HREF);
-        a.textContent = TXT;
-        if (onCalc) a.className = 'active';
-        var svc = nav.querySelector('a[href="/services/"]');
-        if (svc && svc.nextSibling) nav.insertBefore(a, svc.nextSibling);
-        else nav.appendChild(a);
-        a.addEventListener('click', function(){goal('calc_click');});
-      }
-
-      // 2) Ссылка в подвале
-      var foot = document.querySelector('.foot-links');
-      if (foot && !foot.querySelector('a[href="' + HREF + '"]')) {
-        var f = document.createElement('a');
-        f.setAttribute('href', HREF);
-        f.textContent = TXT;
-        foot.insertBefore(f, foot.firstChild);
-      }
-
-      // 3) Кнопка рядом с прайсом (страница услуг), если её ещё нет
-      var note = document.querySelector('.pack-note');
-      if (!onCalc && note && !document.querySelector('.calc-cta')) {
-        var box = document.createElement('div');
-        box.className = 'calc-cta';
-        box.style.cssText = 'margin:18px 0 6px;display:flex;flex-wrap:wrap;gap:12px;align-items:center';
-        box.innerHTML = '<a class="btn btn-primary" href="' + HREF + '">Рассчитать стоимость за минуту</a><span style="font-size:.92rem;opacity:.7">3 вопроса — и увидите вилку цены и срок</span>';
-        note.parentNode.insertBefore(box, note);
-        var cb = box.querySelector('a');
-        if (cb) cb.addEventListener('click', function(){goal('calc_click');});
-      }
-    } catch (e) {}
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', add);
-  else add();
+  function init(){normalizeNav();normalizeFooter();normalizeContacts();bindMenu();bindTheme();reveal();counters();cursor();forms();analytics();cookie();themePhotos();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
