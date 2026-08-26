@@ -81,6 +81,16 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 .next-links a:hover{border-color:var(--acc)}
 .next-links b{display:block;font-size:16px;margin-bottom:4px}
 .next-links span{color:var(--muted);font-size:14px}
+.logo-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.logo-gal a{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);transition:border-color .2s,transform .2s}
+.logo-gal a:hover{border-color:var(--acc);transform:translateY(-3px)}
+.logo-gal .ph{aspect-ratio:4/3;overflow:hidden;background:var(--tint)}
+.logo-gal .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.logo-gal .cap{padding:14px 16px}
+.logo-gal .cap b{display:block;font-size:16px;margin-bottom:3px}
+.logo-gal .cap span{color:var(--muted);font-size:14px}
+@media(max-width:900px){.logo-gal{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.logo-gal{grid-template-columns:1fr}}
 @media(max-width:980px){.srv-top{grid-template-columns:1fr;gap:22px}.fmt-grid,.why{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.fmt-grid,.why,.next-links{grid-template-columns:1fr}}
 .section.band{background:var(--acc);padding-top:56px!important;padding-bottom:56px!important}
@@ -216,14 +226,11 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 
 <section class="section" id="primery" style="padding-top:46px">
 <div class="wrap">
-<div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Примеры <span class="it">работ</span></h2></div>
-<div class="next-links">
-<a href="/pawly/"><b>Pawly — зообренд</b><span>Логотип и айдентика для бренда товаров для животных</span></a>
-<a href="/moro/"><b>Moro — игрушки</b><span>Знак и фирменный стиль для бренда детских игрушек</span></a>
-<a href="/color-art/"><b>Color Art — студия красоты</b><span>Логотип и визуальный язык бьюти-студии</span></a>
-<a href="/otto/"><b>OTTO — кофейня-пекарня</b><span>Логотип и носители для кофейни-пекарни</span></a>
-<a href="/sunlit/"><b>Sunlit — SPF-косметика</b><span>Айдентика и логотип для бренда солнцезащитной косметики</span></a>
-<a href="/projects/"><b>Все работы →</b><span>Смотреть полное портфолио студии</span></a>
+<div class="section-head"><h2 class="title" style="font-size:clamp(24px,3vw,38px)">Примеры <span class="it">логотипов</span></h2></div>
+<div class="logo-gal">
+<a href="/lumi-brand/"><div class="ph"><img src="/assets/img/w/brand_lumi.webp" alt="LUMI — логотип и фирменный стиль студии груминга" loading="lazy" decoding="async"></div><div class="cap"><b>LUMI — студия груминга</b><span>Логотип, маскот и айдентика</span></div></a>
+<a href="/color-art/"><div class="ph"><img src="/assets/img/w/covers_color-art-studio.webp" alt="Color Art — логотип и фирменный стиль бьюти-студии" loading="lazy" decoding="async"></div><div class="cap"><b>Color Art — бьюти-студия</b><span>Логотип и визуальный язык</span></div></a>
+<a href="/smolly-lolly/"><div class="ph"><img src="/assets/img/w/covers_smolly-lolly.webp" alt="Smolly Lolly — логотип и упаковка бренда изделий из эпоксидной смолы" loading="lazy" decoding="async"></div><div class="cap"><b>Smolly Lolly — эпоксидная смола</b><span>Логотип и фирменная упаковка</span></div></a>
 </div>
 <div class="center-cta" style="margin-top:20px"><a class="btn btn-primary" href="/projects/">Больше работ ↗</a></div>
 </div>
