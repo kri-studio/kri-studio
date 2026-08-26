@@ -1,12 +1,20 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="sun">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem('kri-theme');if(['sun','rose','bold','mint'].indexOf(t)<0)t='sun';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>Дизайн презентаций на заказ — от 30 000 ₽ | kri·studio</title>
 <meta name="description" content="Дизайн презентаций на заказ: для инвесторов, продаж, конференций и обучения. Структура, тексты, иллюстрации, шаблон в PowerPoint и Google Slides. Цена от 30 000 ₽, срок 1–2 недели.">
 <link rel="canonical" href="https://kri-studio.art/uslugi/prezentacii/">
 <link rel="alternate" hreflang="ru" href="https://kri-studio.art/uslugi/prezentacii/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="/assets/favicon-180.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<meta name="theme-color" content="#ff5a1f">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="kri·studio">
 <meta property="og:locale" content="ru_RU">
@@ -116,22 +124,23 @@
 <nav class="nav-links" id="navLinks">
 <a href="/">Главная</a>
 <a href="/projects/">Работы</a>
-<a href="/services/">Услуги и цены</a>
+<a href="/services/" class="active">Услуги и цены</a>
 <a href="/raschet/">Расчёт цены</a>
 <a href="/blog/">Блог</a>
 <a href="/about/">О студии</a>
 <a href="/contacts/">Контакты</a>
 </nav>
-<a class="btn btn-primary nav-cta" href="/contacts/">Обсудить проект</a>
-<a class="lang-btn" href="/en/" aria-label="Switch to English"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="7" fill="#fff"/><rect y="7" width="20" height="7" fill="#0039A6"/></svg></a>
-<button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+<div style="display:flex;align-items:center;gap:10px">
+<a href="/contacts/" class="btn btn-primary nav-cta">Обсудить проект</a>
+<a class="lang-btn" href="/en/services/" aria-label="English version"><svg viewBox="0 0 24 24" width="18" height="18" style="border-radius:50%;flex:none" aria-hidden="true"><rect width="24" height="8" fill="#fff"/><rect y="8" width="24" height="8" fill="#0039a6"/><rect y="16" width="24" height="8" fill="#d52b1e"/></svg><span>RU</span></a><button class="burger" id="burger" aria-label="Меню">≡</button>
+</div>
 </div>
 </header>
-<div class="mood-panel">
-<button data-theme="sun" aria-label="sun"></button>
-<button data-theme="bold" aria-label="bold"></button>
-<button data-theme="rose" aria-label="rose"></button>
-<button data-theme="mint" aria-label="mint"></button>
+<div class="mood-panel" aria-label="Настроение сайта">
+<button data-theme-set="sun" data-label="Тёплое" aria-label="Тёплая тема"></button>
+<button data-theme-set="bold" data-label="Смелое" aria-label="Тёмная тема"></button>
+<button data-theme-set="rose" data-label="Розовое" aria-label="Розовая тема"></button>
+<button data-theme-set="mint" data-label="Свежее" aria-label="Мятная тема"></button>
 <span class="mp-label">настроение</span>
 </div>
 <div id="cur">смотреть</div>
@@ -538,7 +547,7 @@
 <h2 class="title">Почитать по теме</h2>
 </div>
 <div class="next-links">
-<a href="/uslugi/firmennyy-stil/"><b>Фирменный стиль</b><span>Чтобы презентации и все материалы собирались в одном стиле</span></a>
+<a href="/uslugi/firmennyy-stil/"><b>Фирменный стиль</b><span>Чтобы präзентации и все материалы собирались в одном стиле</span></a>
 <a href="/uslugi/dizayn-sayta/"><b>Дизайн сайта</b><span>Когда после презентации человек идёт на сайт</span></a>
 <a href="/blog/kak-vybrat-dizayn-studiyu/"><b>Как выбрать студию</b><span>На что смотреть в портфолио и договоре</span></a>
 <a href="/raschet/"><b>Расчёт стоимости</b><span>6 вопросов — и вилка цены со сроком</span></a>
@@ -551,20 +560,16 @@
 
 <footer>
 <div class="wrap">
-<div class="big">thank you ♥</div>
+<div class="big">thank you<i style="color:var(--acc);font-style:normal;font-size:.42em;vertical-align:.55em;margin-left:8px">♥</i></div>
 <div class="foot-grid">
-<div class="req">Трифонова К.А.<br>ИНН 772370935743<br>Налог на профессиональный доход</div>
+<div class="req">kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.<br>Работаем по договору, оплата с чеком.</div>
 <div class="foot-links">
 <a href="/services/">Услуги и цены</a>
 <a href="/raschet/">Расчёт стоимости</a>
 <a href="/blog/">Блог</a>
-<a href="/uslugi/logotip/">Логотип</a>
-<a href="/uslugi/firmennyy-stil/">Фирменный стиль</a>
-<a href="/uslugi/brendbuk/">Брендбук</a>
-<a href="/uslugi/dizayn-sayta/">Дизайн сайта</a>
-<a href="/privacy/">Политика конфиденциальности</a>
-<a href="/about/#faq">Вопросы и ответы</a>
-<a href="mailto:design@kri-studio.art">design@kri-studio.art</a>
+<a href="/privacy/">Политика обработки ПД</a>
+<a href="/about/#faq">Частые вопросы</a>
+<a href="mailto:design@kri-studio.art">Почта</a>
 <a href="https://t.me/kri_studio" target="_blank" rel="noopener">Telegram</a>
 <a href="https://wa.me/79055166557" target="_blank" rel="noopener">WhatsApp</a>
 </div>
