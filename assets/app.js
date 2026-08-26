@@ -13,12 +13,28 @@
   function normPath(p){return (p||'/').replace(/index\.html$/,'').replace(/\/+/g,'/');}
   function isActive(h){var p=normPath(location.pathname); if(h==='/')return p==='/'; return p.indexOf(h)===0;}
 
-  // Wide layout: align utility pages with the service-page benchmark.
+  // Wide layout + utility-page polish: align with /uslugi/dizayn-sayta/.
   try{
     if(!document.getElementById('kri-wide')){
       var s=document.createElement('style');
       s.id='kri-wide';
-      s.textContent='.wrap{max-width:min(1600px,95vw)!important}.hero-v5 .v5-wrap,.v5-wrap{max-width:min(1600px,95vw)!important}.post{max-width:none!important;margin-left:0!important;margin-right:0!important}@media(min-width:1400px){.wrap,.v5-wrap{padding-left:44px!important;padding-right:44px!important}}@media(max-width:1100px){.wrap,.v5-wrap{max-width:100%!important}}html{scroll-padding-top:92px}section[id],div[id]{scroll-margin-top:92px}';
+      s.textContent='\
+.wrap{max-width:min(1600px,95vw)!important}\
+.hero-v5 .v5-wrap,.v5-wrap{max-width:min(1600px,95vw)!important}\
+.post{max-width:none!important;margin-left:0!important;margin-right:0!important}\
+html{scroll-padding-top:92px}\
+section[id],div[id]{scroll-margin-top:92px}\
+.case-hero,.pj-hero{padding-top:clamp(64px,7vw,132px)}\
+.case-hero .wrap,.pj-hero .wrap{max-width:min(1600px,95vw)!important}\
+.case-hero .sub,.pj-hero .pj-tagline,.pj-hero .pj-desc{max-width:900px}\
+.contact{box-shadow:var(--shadow);overflow:hidden}\
+.wgrid{gap:38px 28px}\
+.blog-grid{gap:24px}\
+.calc-grid{align-items:start}\
+.calc-side{position:sticky;top:96px}\
+@media(min-width:1400px){.wrap,.v5-wrap{padding-left:44px!important;padding-right:44px!important}}\
+@media(max-width:1100px){.wrap,.v5-wrap{max-width:100%!important}.calc-side{position:static}}\
+@media(max-width:900px){.case-hero,.pj-hero{padding-top:72px}.case-hero{padding-bottom:8px}}';
       (document.head||document.documentElement).appendChild(s);
     }
   }catch(e){}
@@ -57,6 +73,7 @@
         var v=n.nodeValue;if(!v)continue;
         v=v.split(OLD).join(MAIL)
           .split('Ответим в течение дня и расскажем, как можем помочь.').join('Расскажем, как можем помочь, и предложим формат работы.')
+          .split('Ответим в течение дня и посчитаем стоимость').join('Обычно отвечаем в течение пары часов и посчитаем стоимость')
           .split('Ответим в течение дня.').join('Обычно отвечаем в течение пары часов.')
           .split('Отвечаем в течение дня.').join('Обычно отвечаем в течение пары часов.');
         if(v!==n.nodeValue)n.nodeValue=v;
