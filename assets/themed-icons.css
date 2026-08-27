@@ -44,3 +44,29 @@
 [data-theme="sun"] .ic.themed[data-icon="print"],[data-theme="bold"] .ic.themed[data-icon="print"]{background-image:url("/upload/orange-bold/Полиграфия.png")}
 [data-theme="rose"] .ic.themed[data-icon="print"]{background-image:url("/upload/rose/Полиграфия.png")}
 [data-theme="mint"] .ic.themed[data-icon="print"]{background-image:url("/upload/mint/Полиграфия.png")}
+
+/* V22-ICONS-LAYOUT: USP icons fill the whole tile without a plate; services grid — bigger icons keeping the plate */
+.usp-grid .svc{text-align:center}
+.usp-grid .svc .ic.themed{
+  display:block;
+  width:100%;
+  max-width:none;
+  height:220px;
+  margin:0 auto 18px;
+  background-color:transparent !important;
+  background-size:contain;
+  background-position:center center;
+  border:0 !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+}
+@media(max-width:900px){.usp-grid .svc .ic.themed{height:180px}}
+@media(max-width:600px){.usp-grid .svc .ic.themed{height:160px}}
+
+.svc-grid:not(.usp-grid) .svc .ic.themed{
+  width:96px;
+  height:96px;
+  background-size:78%;
+}
+@media(max-width:600px){.svc-grid:not(.usp-grid) .svc .ic.themed{width:80px;height:80px;background-size:76%}}
