@@ -1,0 +1,46 @@
+/* V21-THEMED-ICONS: main-page USP + service card icons swap per theme */
+.svc .ic.themed{background-repeat:no-repeat;background-position:center;background-size:contain;color:transparent}
+
+[data-theme="sun"] .ic.themed[data-icon="sales"],[data-theme="bold"] .ic.themed[data-icon="sales"]{background-image:url("/upload/orange-bold/Работает на продажи.png")}
+[data-theme="rose"] .ic.themed[data-icon="sales"]{background-image:url("/upload/rose/Работает на продажи.png")}
+[data-theme="mint"] .ic.themed[data-icon="sales"]{background-image:url("/upload/mint/Работает на продажи.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="uiux"],[data-theme="bold"] .ic.themed[data-icon="uiux"]{background-image:url("/upload/orange-bold/Сайты UIUX.png")}
+[data-theme="rose"] .ic.themed[data-icon="uiux"]{background-image:url("/upload/rose/Сайты по канонам UIUX.png")}
+[data-theme="mint"] .ic.themed[data-icon="uiux"]{background-image:url("/upload/mint/Сайты по канонам.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="search"],[data-theme="bold"] .ic.themed[data-icon="search"]{background-image:url("/upload/orange-bold/Видно в поиске.png")}
+[data-theme="rose"] .ic.themed[data-icon="search"]{background-image:url("/upload/rose/Видно в поиске.png")}
+[data-theme="mint"] .ic.themed[data-icon="search"]{background-image:url("/upload/mint/Видно в поиске.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="brand"],[data-theme="bold"] .ic.themed[data-icon="brand"]{background-image:url("/upload/orange-bold/Фирменный стиль.png")}
+[data-theme="rose"] .ic.themed[data-icon="brand"]{background-image:url("/upload/rose/Фирменный стиль.png")}
+[data-theme="mint"] .ic.themed[data-icon="brand"]{background-image:url("/upload/mint/Фирменный стиль.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="logo"],[data-theme="bold"] .ic.themed[data-icon="logo"]{background-image:url("/upload/orange-bold/Логотип.png")}
+[data-theme="rose"] .ic.themed[data-icon="logo"]{background-image:url("/upload/rose/Логотип.png")}
+[data-theme="mint"] .ic.themed[data-icon="logo"]{background-image:url("/upload/mint/Логотип.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="site"],[data-theme="bold"] .ic.themed[data-icon="site"]{background-image:url("/upload/orange-bold/Сайты.png")}
+[data-theme="rose"] .ic.themed[data-icon="site"]{background-image:url("/upload/rose/Сайты.png")}
+[data-theme="mint"] .ic.themed[data-icon="site"]{background-image:url("/upload/mint/Сайты.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="social"],[data-theme="bold"] .ic.themed[data-icon="social"]{background-image:url("/upload/orange-bold/Соцсети.png")}
+[data-theme="rose"] .ic.themed[data-icon="social"]{background-image:url("/upload/rose/Соцсети.png")}
+[data-theme="mint"] .ic.themed[data-icon="social"]{background-image:url("/upload/mint/Соц сети.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="cards"],[data-theme="bold"] .ic.themed[data-icon="cards"]{background-image:url("/upload/orange-bold/Карточки вб.png")}
+[data-theme="rose"] .ic.themed[data-icon="cards"]{background-image:url("/upload/rose/Карточки вб.png")}
+[data-theme="mint"] .ic.themed[data-icon="cards"]{background-image:url("/upload/mint/Карточки.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="presentation"],[data-theme="bold"] .ic.themed[data-icon="presentation"]{background-image:url("/upload/orange-bold/Презентации.png")}
+[data-theme="rose"] .ic.themed[data-icon="presentation"]{background-image:url("/upload/rose/Презентации.png")}
+[data-theme="mint"] .ic.themed[data-icon="presentation"]{background-image:url("/upload/mint/Презентации.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="naming"],[data-theme="bold"] .ic.themed[data-icon="naming"]{background-image:url("/upload/orange-bold/Нейминг.png")}
+[data-theme="rose"] .ic.themed[data-icon="naming"]{background-image:url("/upload/rose/Нейминг.png")}
+[data-theme="mint"] .ic.themed[data-icon="naming"]{background-image:url("/upload/mint/Нейминг.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="print"],[data-theme="bold"] .ic.themed[data-icon="print"]{background-image:url("/upload/orange-bold/Полиграфия.png")}
+[data-theme="rose"] .ic.themed[data-icon="print"]{background-image:url("/upload/rose/Полиграфия.png")}
+[data-theme="mint"] .ic.themed[data-icon="print"]{background-image:url("/upload/mint/Полиграфия.png")}
