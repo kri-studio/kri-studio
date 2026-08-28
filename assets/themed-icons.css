@@ -70,3 +70,42 @@
   background-size:78%;
 }
 @media(max-width:600px){.svc-grid:not(.usp-grid) .svc .ic.themed{width:80px;height:80px;background-size:76%}}
+
+/* V23-STEPS-ICONS: «Как мы работаем» — icon on the left, text left-aligned, full-tile no plate */
+.steps .step{display:flex;gap:22px;align-items:flex-start;text-align:left}
+.steps .step .step-body{flex:1;min-width:0;text-align:left}
+.steps .step .step-body .num,.steps .step .step-body h3,.steps .step .step-body p{text-align:left}
+.steps .step .ic.themed{
+  flex:0 0 auto;
+  display:block;
+  width:160px;
+  height:160px;
+  margin:0;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:contain;
+  background-color:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  color:transparent;
+}
+@media(max-width:900px){.steps .step .ic.themed{width:130px;height:130px}}
+@media(max-width:600px){.steps .step{gap:14px}.steps .step .ic.themed{width:96px;height:96px}}
+
+[data-theme="sun"] .ic.themed[data-icon="step-brief"],[data-theme="bold"] .ic.themed[data-icon="step-brief"]{background-image:url("/upload/orange-bold/kak-rabotaem/Бриф и исследование.png")}
+[data-theme="rose"] .ic.themed[data-icon="step-brief"]{background-image:url("/upload/rose/kak-rabotaem/Бриф и исследование.png")}
+[data-theme="mint"] .ic.themed[data-icon="step-brief"]{background-image:url("/upload/mint/kak-rabotaem/Бриф и исследование.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="step-concept"],[data-theme="bold"] .ic.themed[data-icon="step-concept"]{background-image:url("/upload/orange-bold/kak-rabotaem/Концепция.png")}
+[data-theme="rose"] .ic.themed[data-icon="step-concept"]{background-image:url("/upload/rose/kak-rabotaem/Концепция.png")}
+[data-theme="mint"] .ic.themed[data-icon="step-concept"]{background-image:url("/upload/mint/kak-rabotaem/Концепция.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="step-refine"],[data-theme="bold"] .ic.themed[data-icon="step-refine"]{background-image:url("/upload/orange-bold/kak-rabotaem/Доработка.png")}
+[data-theme="rose"] .ic.themed[data-icon="step-refine"]{background-image:url("/upload/rose/kak-rabotaem/Доработка.png")}
+[data-theme="mint"] .ic.themed[data-icon="step-refine"]{background-image:url("/upload/mint/kak-rabotaem/Доработка.png")}
+
+[data-theme="sun"] .ic.themed[data-icon="step-handoff"],[data-theme="bold"] .ic.themed[data-icon="step-handoff"]{background-image:url("/upload/orange-bold/kak-rabotaem/Передача.png")}
+[data-theme="rose"] .ic.themed[data-icon="step-handoff"]{background-image:url("/upload/rose/kak-rabotaem/Передача.png")}
+[data-theme="mint"] .ic.themed[data-icon="step-handoff"]{background-image:url("/upload/mint/kak-rabotaem/Передача.png")}
