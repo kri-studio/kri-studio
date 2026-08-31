@@ -113,3 +113,43 @@
 [data-theme="sun"] .ic.themed[data-icon="step-handoff"],[data-theme="bold"] .ic.themed[data-icon="step-handoff"]{background-image:url("/upload/orange-bold/kak-rabotaem/Передача.png")}
 [data-theme="rose"] .ic.themed[data-icon="step-handoff"]{background-image:url("/upload/rose/kak-rabotaem/Передача.png")}
 [data-theme="mint"] .ic.themed[data-icon="step-handoff"]{background-image:url("/upload/mint/kak-rabotaem/Передача.png")}
+
+/* V25-MINT-LOWERCASE: mint theme redesign uses lowercase renamed files — overrides V21 mint rules */
+[data-theme="mint"] .ic.themed[data-icon="sales"]{background-image:url("/upload/mint/работает на продажи.png")}
+[data-theme="mint"] .ic.themed[data-icon="uiux"]{background-image:url("/upload/mint/сайты по канонам.png")}
+[data-theme="mint"] .ic.themed[data-icon="search"]{background-image:url("/upload/mint/видно в поиске.png")}
+[data-theme="mint"] .ic.themed[data-icon="brand"]{background-image:url("/upload/mint/фирменный стиль.png")}
+[data-theme="mint"] .ic.themed[data-icon="logo"]{background-image:url("/upload/mint/логотип.png")}
+[data-theme="mint"] .ic.themed[data-icon="site"]{background-image:url("/upload/mint/сайты.png")}
+[data-theme="mint"] .ic.themed[data-icon="social"]{background-image:url("/upload/mint/соцсети.png")}
+[data-theme="mint"] .ic.themed[data-icon="cards"]{background-image:url("/upload/mint/карточки wb и ozon.png")}
+[data-theme="mint"] .ic.themed[data-icon="presentation"]{background-image:url("/upload/mint/презентация.png")}
+[data-theme="mint"] .ic.themed[data-icon="naming"]{background-image:url("/upload/mint/нейминг.png")}
+[data-theme="mint"] .ic.themed[data-icon="print"]{background-image:url("/upload/mint/полиграфия.png")}
+
+/* V26-USLUGI-TSENY: category icons on «Услуги и цены» page + gift icon inside tariff cards */
+
+/* Упаковка category */
+[data-theme="sun"] .ic.themed[data-icon="pack"],[data-theme="bold"] .ic.themed[data-icon="pack"]{background-image:url("/upload/orange-bold/uslugi-tseny/упаковка.png")}
+[data-theme="rose"] .ic.themed[data-icon="pack"]{background-image:url("/upload/rose/uslugi-tseny/упаковка.png")}
+[data-theme="mint"] .ic.themed[data-icon="pack"]{background-image:url("/upload/mint/uslugi-tseny/упаковка.png")}
+
+/* Сопровождение + Продвижение — same «продвижение» icon per owner */
+[data-theme="sun"] .ic.themed[data-icon="support"],[data-theme="bold"] .ic.themed[data-icon="support"],[data-theme="sun"] .ic.themed[data-icon="promo"],[data-theme="bold"] .ic.themed[data-icon="promo"]{background-image:url("/upload/orange-bold/uslugi-tseny/продвижение.png")}
+[data-theme="rose"] .ic.themed[data-icon="support"],[data-theme="rose"] .ic.themed[data-icon="promo"]{background-image:url("/upload/rose/uslugi-tseny/продвижение.png")}
+[data-theme="mint"] .ic.themed[data-icon="support"],[data-theme="mint"] .ic.themed[data-icon="promo"]{background-image:url("/upload/mint/uslugi-tseny/продвижение.png")}
+
+/* Дополнительно */
+[data-theme="sun"] .ic.themed[data-icon="extra"],[data-theme="bold"] .ic.themed[data-icon="extra"]{background-image:url("/upload/orange-bold/uslugi-tseny/дополнительно.png")}
+[data-theme="rose"] .ic.themed[data-icon="extra"]{background-image:url("/upload/rose/uslugi-tseny/дополнительно.png")}
+[data-theme="mint"] .ic.themed[data-icon="extra"]{background-image:url("/upload/mint/uslugi-tseny/дополнительно.png")}
+
+/* Gift — replaces 🎁 emoji in tariff cards */
+[data-theme="sun"] .ic.themed[data-icon="gift"],[data-theme="bold"] .ic.themed[data-icon="gift"]{background-image:url("/upload/orange-bold/uslugi-tseny/подарок.png")}
+[data-theme="rose"] .ic.themed[data-icon="gift"]{background-image:url("/upload/rose/uslugi-tseny/подарок.png")}
+[data-theme="mint"] .ic.themed[data-icon="gift"]{background-image:url("/upload/mint/uslugi-tseny/подарки.png")}
+
+/* Category icons on service cards use existing V21 sizing (.svc-grid:not(.usp-grid)); no size override needed. */
+
+/* Gift inline sizing — sits at the start of each 🎁 list item */
+.gift .ic.themed[data-icon="gift"]{display:inline-block;width:22px;height:22px;vertical-align:-5px;margin:0 6px 0 0;background-repeat:no-repeat;background-position:center;background-size:contain;background-color:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
