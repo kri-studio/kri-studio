@@ -71,15 +71,15 @@
 }
 @media(max-width:600px){.svc-grid:not(.usp-grid) .svc .ic.themed{width:80px;height:80px;background-size:76%}}
 
-/* V23-STEPS-ICONS: «Как мы работаем» — icon on the left, text left-aligned, full-tile no plate */
-.steps .step{display:flex;gap:22px;align-items:flex-start;text-align:left}
+/* V24-STEPS-ICONS: «Как мы работаем» — bigger side icons, left-aligned text on desktop, USP-style stack on mobile */
+.steps .step{display:flex;gap:26px;align-items:flex-start;text-align:left}
 .steps .step .step-body{flex:1;min-width:0;text-align:left}
 .steps .step .step-body .num,.steps .step .step-body h3,.steps .step .step-body p{text-align:left}
 .steps .step .ic.themed{
   flex:0 0 auto;
   display:block;
-  width:160px;
-  height:160px;
+  width:220px;
+  height:220px;
   margin:0;
   background-repeat:no-repeat;
   background-position:center center;
@@ -91,8 +91,12 @@
   border-radius:0 !important;
   color:transparent;
 }
-@media(max-width:900px){.steps .step .ic.themed{width:130px;height:130px}}
-@media(max-width:600px){.steps .step{gap:14px}.steps .step .ic.themed{width:96px;height:96px}}
+@media(max-width:900px){.steps .step .ic.themed{width:170px;height:170px}}
+@media(max-width:600px){
+  .steps .step{flex-direction:column;gap:14px;text-align:center;align-items:stretch}
+  .steps .step .step-body,.steps .step .step-body .num,.steps .step .step-body h3,.steps .step .step-body p{text-align:center}
+  .steps .step .ic.themed{width:100%;height:180px;margin:0 auto}
+}
 
 [data-theme="sun"] .ic.themed[data-icon="step-brief"],[data-theme="bold"] .ic.themed[data-icon="step-brief"]{background-image:url("/upload/orange-bold/kak-rabotaem/Бриф и исследование.png")}
 [data-theme="rose"] .ic.themed[data-icon="step-brief"]{background-image:url("/upload/rose/kak-rabotaem/Бриф и исследование.png")}
