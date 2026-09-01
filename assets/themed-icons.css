@@ -71,15 +71,16 @@
 }
 @media(max-width:600px){.svc-grid:not(.usp-grid) .svc .ic.themed{width:80px;height:80px;background-size:76%}}
 
-/* V24-STEPS-ICONS: «Как мы работаем» — bigger side icons, left-aligned text on desktop, USP-style stack on mobile */
-.steps .step{display:flex;gap:26px;align-items:flex-start;text-align:left}
-.steps .step .step-body{flex:1;min-width:0;text-align:left}
+/* V24-STEPS-ICONS: «Как мы работаем» — side icons, left-aligned text on desktop, USP-style stack on mobile */
+.steps .step{display:flex;gap:26px;align-items:flex-start;text-align:left;min-width:0;overflow:hidden}
+.steps .step .step-body{flex:1 1 auto;min-width:0;text-align:left}
 .steps .step .step-body .num,.steps .step .step-body h3,.steps .step .step-body p{text-align:left}
+.steps .step .step-body h3{overflow-wrap:break-word;word-break:break-word;hyphens:auto}
 .steps .step .ic.themed{
   flex:0 0 auto;
   display:block;
-  width:220px;
-  height:220px;
+  width:130px;
+  height:130px;
   margin:0;
   background-repeat:no-repeat;
   background-position:center center;
@@ -91,9 +92,12 @@
   border-radius:0 !important;
   color:transparent;
 }
-@media(max-width:900px){.steps .step .ic.themed{width:170px;height:170px}}
+@media(min-width:1400px){.steps .step .ic.themed{width:160px;height:160px}}
+@media(max-width:1200px){.steps .step{gap:20px}.steps .step .ic.themed{width:110px;height:110px}}
+@media(max-width:1080px){.steps .step{gap:24px}.steps .step .ic.themed{width:180px;height:180px}}
+@media(max-width:900px){.steps .step .ic.themed{width:150px;height:150px}}
 @media(max-width:600px){
-  .steps .step{flex-direction:column;gap:14px;text-align:center;align-items:stretch}
+  .steps .step{flex-direction:column;gap:14px;text-align:center;align-items:stretch;overflow:visible}
   .steps .step .step-body,.steps .step .step-body .num,.steps .step .step-body h3,.steps .step .step-body p{text-align:center}
   .steps .step .ic.themed{width:100%;height:180px;margin:0 auto}
 }
