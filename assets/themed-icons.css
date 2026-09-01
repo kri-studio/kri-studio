@@ -153,3 +153,13 @@
 
 /* Gift inline sizing — sits at the start of each 🎁 list item */
 .gift .ic.themed[data-icon="gift"]{display:inline-block;width:22px;height:22px;vertical-align:-5px;margin:0 6px 0 0;background-repeat:no-repeat;background-position:center;background-size:contain;background-color:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
+
+/* V27-CATEGORY-BADGES-BIGGER: enlarge round category badges in «Стоимость по направлениям» */
+.acc-cat-head{gap:18px;margin-bottom:18px}
+.acc-cat-head .ci{width:76px;height:76px;border-radius:22px}
+.acc-cat-head .ci .ic.themed{background-size:86%}
+@media(max-width:600px){.acc-cat-head{gap:14px}.acc-cat-head .ci{width:64px;height:64px;border-radius:18px}.acc-cat-head .ci .ic.themed{background-size:84%}}
+
+/* V27-MOBILE-MOOD-PANEL: lift theme switcher above the floating Telegram/messenger button on phones */
+@media(max-width:760px){.mood-panel{bottom:86px}}
+@media(max-width:400px){.mood-panel{bottom:80px;right:12px;padding:8px 10px;gap:10px}.mood-panel button{width:20px;height:20px}}
