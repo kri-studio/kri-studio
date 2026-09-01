@@ -71,16 +71,17 @@
 }
 @media(max-width:600px){.svc-grid:not(.usp-grid) .svc .ic.themed{width:80px;height:80px;background-size:76%}}
 
-/* V24-STEPS-ICONS: «Как мы работаем» — side icons, left-aligned text on desktop, USP-style stack on mobile */
-.steps .step{display:flex;gap:26px;align-items:flex-start;text-align:left;min-width:0;overflow:hidden}
+/* V27c-STEPS-2x2: force 2-column grid on desktop for larger step icons */
+.steps{grid-template-columns:repeat(2,1fr) !important;gap:36px 44px}
+.steps .step{display:flex;gap:30px;align-items:center;text-align:left;min-width:0}
 .steps .step .step-body{flex:1 1 auto;min-width:0;text-align:left}
 .steps .step .step-body .num,.steps .step .step-body h3,.steps .step .step-body p{text-align:left}
 .steps .step .step-body h3{overflow-wrap:break-word;word-break:break-word;hyphens:auto}
 .steps .step .ic.themed{
   flex:0 0 auto;
   display:block;
-  width:130px;
-  height:130px;
+  width:240px;
+  height:240px;
   margin:0;
   background-repeat:no-repeat;
   background-position:center center;
@@ -92,12 +93,12 @@
   border-radius:0 !important;
   color:transparent;
 }
-@media(min-width:1400px){.steps .step .ic.themed{width:160px;height:160px}}
-@media(max-width:1200px){.steps .step{gap:20px}.steps .step .ic.themed{width:110px;height:110px}}
-@media(max-width:1080px){.steps .step{gap:24px}.steps .step .ic.themed{width:180px;height:180px}}
-@media(max-width:900px){.steps .step .ic.themed{width:150px;height:150px}}
+@media(min-width:1500px){.steps .step .ic.themed{width:280px;height:280px}}
+@media(max-width:1200px){.steps .step{gap:24px}.steps .step .ic.themed{width:200px;height:200px}}
+@media(max-width:960px){.steps .step{gap:20px}.steps .step .ic.themed{width:170px;height:170px}}
+@media(max-width:760px){.steps{grid-template-columns:1fr !important;gap:26px}.steps .step .ic.themed{width:160px;height:160px}}
 @media(max-width:600px){
-  .steps .step{flex-direction:column;gap:14px;text-align:center;align-items:stretch;overflow:visible}
+  .steps .step{flex-direction:column;gap:14px;text-align:center;align-items:stretch}
   .steps .step .step-body,.steps .step .step-body .num,.steps .step .step-body h3,.steps .step .step-body p{text-align:center}
   .steps .step .ic.themed{width:100%;height:180px;margin:0 auto}
 }
@@ -153,8 +154,6 @@
 [data-theme="rose"] .ic.themed[data-icon="gift"]{background-image:url("/upload/rose/uslugi-tseny/подарок.png")}
 [data-theme="mint"] .ic.themed[data-icon="gift"]{background-image:url("/upload/mint/uslugi-tseny/подарки.png")}
 
-/* Category icons on service cards use existing V21 sizing (.svc-grid:not(.usp-grid)); no size override needed. */
-
 /* Gift inline sizing — sits at the start of each 🎁 list item */
 .gift .ic.themed[data-icon="gift"]{display:inline-block;width:22px;height:22px;vertical-align:-5px;margin:0 6px 0 0;background-repeat:no-repeat;background-position:center;background-size:contain;background-color:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
 
@@ -163,6 +162,18 @@
 .acc-cat-head .ci{width:76px;height:76px;border-radius:22px}
 .acc-cat-head .ci .ic.themed{background-size:86%}
 @media(max-width:600px){.acc-cat-head{gap:14px}.acc-cat-head .ci{width:64px;height:64px;border-radius:18px}.acc-cat-head .ci .ic.themed{background-size:84%}}
+
+/* V27c-USLUGI-BADGES-FILL: pack / support / promo / extra artwork has more inner padding — fill the badge more */
+.acc-cat-head .ci .ic.themed[data-icon="pack"],
+.acc-cat-head .ci .ic.themed[data-icon="support"],
+.acc-cat-head .ci .ic.themed[data-icon="promo"],
+.acc-cat-head .ci .ic.themed[data-icon="extra"]{background-size:108%}
+@media(max-width:600px){
+.acc-cat-head .ci .ic.themed[data-icon="pack"],
+.acc-cat-head .ci .ic.themed[data-icon="support"],
+.acc-cat-head .ci .ic.themed[data-icon="promo"],
+.acc-cat-head .ci .ic.themed[data-icon="extra"]{background-size:106%}
+}
 
 /* V27-MOBILE-MOOD-PANEL: lift theme switcher above the floating Telegram/messenger button on phones */
 @media(max-width:760px){.mood-panel{bottom:86px}}
