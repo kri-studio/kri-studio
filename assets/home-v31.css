@@ -1,0 +1,14 @@
+/* V31-CONTACT-WAVE: full-bleed contacts + wave cap */
+body.home .contact-wave{display:block;width:100%;height:auto;margin:0 0 -1px;line-height:0;object-fit:cover;object-position:center bottom}
+body.home #brief.contact-full,
+body.home section.section.contact-full:nth-of-type(even){background:linear-gradient(160deg,var(--acc),var(--accD));padding:0 0 72px;margin:0}
+body.home #brief.contact-full.section,
+body.home .section+#brief.contact-full{padding-top:0}
+body.home #brief.contact-full .contact{background:transparent;border-radius:0;padding:32px 0 0;box-shadow:none}
+body.home footer{margin-top:0}
+html:not([data-theme="sun"]) body.home .contact-wave{display:none}
+html:not([data-theme="sun"]) body.home #brief.contact-full{padding-top:48px}
+@media(max-width:760px){
+body.home .contact-wave{min-height:84px;height:88px}
+body.home #brief.contact-full .contact{padding:22px 0 0}
+}
