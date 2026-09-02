@@ -4,7 +4,7 @@ body.home #brief.contact-full,
 body.home section.section.contact-full:nth-of-type(even){background:linear-gradient(160deg,var(--acc),var(--accD));padding:0 0 72px;margin:0}
 body.home #brief.contact-full.section,
 body.home .section+#brief.contact-full{padding-top:0}
-body.home #brief.contact-full .contact{background:transparent;border-radius:0;padding:32px 0 0;box-shadow:none}
+body.home #brief.contact-full .contact{background:transparent;border-radius:0;padding:32px 0 0;box-shadow:none;overflow:visible}
 body.home footer{margin-top:0}
 html:not([data-theme="sun"]) body.home .contact-wave{display:none}
 html:not([data-theme="sun"]) body.home #brief.contact-full{padding-top:48px}
