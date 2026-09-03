@@ -4,7 +4,7 @@
 
 ## Схема имён
 
-`{позиция}-{номер}-{цвет}.png`
+`{позиция}_{номер}_{цвет}.png`
 
 - **позиция**: `top` (верх блока) или `bottom` (низ блока)
 - **номер**: 1, 2, 3, 4… (вариант формы)
@@ -12,18 +12,16 @@
 
 ### Примеры
 
-По твоему текущему списку:
-
 Верх блока (варианты 1–4):
-- `top-1-orange.png`, `top-1-green.png`, `top-1-rose.png`
-- `top-2-orange.png`, `top-2-green.png`, `top-2-rose.png`
-- `top-3-orange.png`, `top-3-green.png`, `top-3-rose.png`
-- `top-4-orange.png`, `top-4-green.png`, `top-4-rose.png`
+- `top_1_orange.png`, `top_1_green.png`, `top_1_rose.png`
+- `top_2_orange.png`, `top_2_green.png`, `top_2_rose.png`
+- `top_3_orange.png`, `top_3_green.png`, `top_3_rose.png`
+- `top_4_orange.png`, `top_4_green.png`, `top_4_rose.png`
 
 Низ блока (варианты 6–8):
-- `bottom-6-orange.png`, `bottom-6-green.png`, `bottom-6-rose.png`
-- `bottom-7-orange.png`, `bottom-7-green.png`, `bottom-7-rose.png`
-- `bottom-8-orange.png`, `bottom-8-green.png`, `bottom-8-rose.png`
+- `bottom_6_orange.png`, `bottom_6_green.png`, `bottom_6_rose.png`
+- `bottom_7_orange.png`, `bottom_7_green.png`, `bottom_7_rose.png`
+- `bottom_8_orange.png`, `bottom_8_green.png`, `bottom_8_rose.png`
 
 ## Как загрузить
 
