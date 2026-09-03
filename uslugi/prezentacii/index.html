@@ -56,7 +56,7 @@
 .step p{margin:0;font-size:14px;line-height:1.6;color:var(--ink2)}
 .step .when{display:block;margin-top:10px;font-size:12px;color:var(--muted)}
 .logo-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.logo-gal a,.logo-gal figure{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);transition:border-color .2s,transform .2s;margin:0}
+.logo-gal a{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);transition:border-color .2s,transform .2s}
 .logo-gal a:hover{border-color:var(--acc);transform:translateY(-3px)}
 .logo-gal .ph{aspect-ratio:4/3;overflow:hidden;background:var(--tint)}
 .logo-gal .ph img{width:100%;height:100%;object-fit:cover;display:block}
@@ -67,10 +67,6 @@
 .why div{background:var(--tint);border-radius:18px;padding:22px}
 .why b{display:block;font-family:var(--dis);font-size:17px;margin-bottom:8px}
 .why p{margin:0;font-size:14px;line-height:1.6;color:var(--ink2)}
-.obj{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.obj div{border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--card)}
-.obj b{display:block;font-size:15px;margin-bottom:8px}
-.obj p{margin:0;font-size:14px;line-height:1.6;color:var(--ink2)}
 .faq-list details{border-bottom:1px solid var(--line);padding:16px 0}
 .faq-list summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none}
 .faq-list summary::-webkit-details-marker{display:none}
@@ -79,22 +75,19 @@
 .section.band .title,.section.band .title .it,.section.band .it,.section.band .pj-desc{color:#fff}
 .section.band a{color:#fff}
 .section.band .fmt .flag{background:#fff;color:var(--acc)}
-.section.band .faq-list summary{color:#fff}
-.section.band .faq-list p{color:rgba(255,255,255,.92)}
-.section.band .faq-list details{border-color:rgba(255,255,255,.3)}
 .section.band .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
 .section.band .pj-kit b,.section.band .pj-kit span{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.3)}
-.section.band .obj b{color:var(--ink)}
-.section.band .obj p{color:var(--ink2)}
-.section.band .logo-gal a,.section.band .logo-gal figure{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff}
-.section.band .logo-gal .cap span{color:rgba(255,255,255,.85)}
+.section.band .step,.section.band .why div{background:rgba(255,255,255,.96)}
+.section.band .step b,.section.band .why b{color:var(--ink)}
+.section.band .step p,.section.band .why p{color:var(--ink2)}
+.section.band .step .when{color:var(--muted)}
 .next-links{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .next-links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;color:inherit}
 .next-links a:hover{border-color:var(--acc)}
 .next-links b{display:block;font-family:var(--dis);font-size:17px;margin-bottom:8px}
 .next-links span{font-size:14px;color:var(--muted);line-height:1.55}
 @media(max-width:980px){.srv-top{grid-template-columns:1fr;gap:26px}.srv-shot{max-width:520px}.fmt-grid,.steps,.why,.logo-gal,.next-links{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.fmt-grid,.steps,.why,.obj,.kinds,.logo-gal,.next-links{grid-template-columns:1fr}}
+@media(max-width:700px){.fmt-grid,.steps,.why,.kinds,.logo-gal,.next-links{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -140,7 +133,7 @@
 <a class="btn btn-ghost" href="/raschet/">Рассчитать стоимость</a>
 </div>
 </div>
-<div class="srv-shot"><img src="/assets/img/w/pres_01.webp" alt="Разворот презентации: титульный слайд, схема и слайд с цифрами в едином стиле" width="1400" height="900" loading="eager"></div>
+<div class="srv-shot"><img src="/assets/img/w/pres_01.webp" alt="Разворот презентации: титульный слайд, схема и слайд с цифрами" width="1400" height="900" loading="eager"></div>
 </div>
 </div>
 </section>
@@ -169,7 +162,7 @@
 </div>
 </section>
 
-<section class="section band">
+<section class="section band" data-wave-top="3" data-wave-bottom="5">
 <div class="wrap">
 <div class="section-head"><h2 class="title">Форматы и цены</h2><p class="it">Цена зависит от числа слайдов и от того, нужна ли работа с текстом и цифрами.</p></div>
 <div class="fmt-grid">
@@ -196,9 +189,9 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section band" data-wave-top="2" data-wave-bottom="7">
 <div class="wrap">
-<div class="section-head"><h2 class="title">Как мы работаем</h2><p class="it">Пять этапов. Дизайн начинаем только после того, как согласована структура.</p></div>
+<div class="section-head"><h2 class="title">Как мы работаем</h2><p class="it">Шесть этапов. Дизайн начинаем только после того, как согласована структура.</p></div>
 <div class="steps">
 <div class="step"><span class="num">1</span><b>Брифинг</b><p>Созвон на 30–40 минут: кому показываете и какое действие должен совершить человек.</p><span class="when">1–2 дня</span></div>
 <div class="step"><span class="num">2</span><b>Структура и тексты</b><p>Присылаем список слайдов с заголовками-тезисами.</p><span class="when">2–3 дня</span></div>
@@ -210,42 +203,42 @@
 </div>
 </section>
 
-<section class="section band" id="primery">
+<section class="section" id="primery">
 <div class="wrap">
 <div class="section-head"><h2 class="title">Примеры <span class="it">работ</span></h2></div>
 <div class="logo-gal">
-<a href="/projects/"><div class="ph"><img src="/assets/img/w/pres_01.webp" alt="Презентация услуг: обложка, схема и цифры" loading="lazy" decoding="async"></div><div class="cap"><b>Презентация услуг</b><span>Обложка, схема процесса, цифры</span></div></a>
+<a href="/projects/"><div class="ph"><img src="/assets/img/w/pres_01.webp" alt="Презентация услуг" loading="lazy" decoding="async"></div><div class="cap"><b>Презентация услуг</b><span>Обложка, схема процесса, цифры</span></div></a>
 <a href="/projects/"><div class="ph"><img src="/assets/img/w/covers_metro.webp" alt="Материалы корпоративного проекта" loading="lazy" decoding="async"></div><div class="cap"><b>Корпоративный проект</b><span>Материалы и оформление</span></div></a>
-<a href="/projects/"><div class="ph"><img src="/assets/img/w/metro_forum-stage.webp" alt="Экран и графика для выступления на форуме" loading="lazy" decoding="async"></div><div class="cap"><b>Форум — выступление</b><span>Экран и фирменная графика</span></div></a>
+<a href="/projects/"><div class="ph"><img src="/assets/img/w/metro_forum-stage.webp" alt="Экран для выступления на форуме" loading="lazy" decoding="async"></div><div class="cap"><b>Форум — выступление</b><span>Экран и фирменная графика</span></div></a>
 </div>
 <div style="text-align:center;margin-top:20px"><a class="btn btn-ghost" href="/projects/">Смотреть все работы</a></div>
 </div>
 </section>
 
-<section class="section">
+<section class="section band" data-wave-top="4" data-wave-bottom="6">
 <div class="wrap">
-<div class="section-head"><h2 class="title">Почему презентации не работают</h2><p class="it">Шесть типичных проблем. Мы закрываем каждую.</p></div>
+<div class="section-head"><h2 class="title">Почему наши презентации работают</h2><p class="it">Шесть принципов, по которым мы собираем каждую презентацию.</p></div>
 <div class="why">
-<div><b>Слайд-простыня</b><p>Абзацы на восемь строк никто не читает. Мы оставляем один тезис на слайд.</p></div>
-<div><b>Нет главного вывода</b><p>Данные есть, а что с ними делать — непонятно. На каждом слайде ставим короткий вывод.</p></div>
-<div><b>Случайные картинки</b><p>Пять разных стилей фото и клипарт из поиска. Подбираем изображения в одной тональности.</p></div>
-<div><b>Диаграммы из шаблона</b><p>Стандартные графики с легендой мелким шрифтом. Мы рисуем схемы вручную.</p></div>
-<div><b>Всё сползает при правках</b><p>Если слайды собраны вручную, любое изменение ломает вёрстку. Мы работаем на мастер-шаблонах.</p></div>
-<div><b>Нет призыва в конце</b><p>Последний слайд со словом «Спасибо» не работает. Ставим конкретный следующий шаг.</p></div>
+<div><b>Один тезис на слайд</b><p>Коротко читается, запоминается с первого взгляда и держит внимание аудитории.</p></div>
+<div><b>Вывод на каждом слайде</b><p>Короткий итог ведёт человека к следующему шагу и помогает принять решение.</p></div>
+<div><b>Единый визуальный ряд</b><p>Фото, иконки и цвета в одной тональности — слайды читаются как цельная история.</p></div>
+<div><b>Рукотворные схемы</b><p>Графики и диаграммы рисуем вручную под ваши данные, а не берём стандартные шаблоны.</p></div>
+<div><b>Мастер-шаблоны</b><p>Стили и сетка заданы один раз — правки и новые слайды не ломают вёрстку.</p></div>
+<div><b>Понятный следующий шаг</b><p>На финальном слайде — чёткий call-to-action: позвонить, написать или открыть сайт.</p></div>
 </div>
 </div>
 </section>
 
-<section class="section band">
+<section class="section">
 <div class="wrap">
 <div class="section-head"><h2 class="title">Частые вопросы</h2></div>
 <div class="faq-list">
-<details><summary>Сколько стоит дизайн презентации?</summary><p>Презентация до 15 слайдов — от 30 000 ₽, до 30 слайдов — от 45 000 ₽, питч для инвесторов — от 60 000 ₽, редизайн — от 25 000 ₽.</p></details>
-<details><summary>Сколько времени занимает работа?</summary><p>1–2 недели на презентацию до 30 слайдов. Срочная работа — наценка 30%.</p></details>
-<details><summary>В каком формате файлы?</summary><p>PowerPoint или Google Slides с редактируемыми слайдами, PDF для рассылки и облегчённая версия для печати.</p></details>
-<details><summary>Нужны ли готовые тексты?</summary><p>Не обязательно. Можем работать по вашим материалам или собрать структуру и написать тексты сами.</p></details>
-<details><summary>Смогу ли я сам менять слайды потом?</summary><p>Да. Все слайды собираем на мастер-шаблонах и стилях. Записываем короткое видео-объяснение.</p></details>
-<details><summary>Сколько правок входит?</summary><p>Два круга на этапе концепции и два — на финальной вёрстке. Дальше — 5 000 ₽ за круг.</p></details>
+<details><summary>Сколько стоит презентация?</summary><p>Компактная до 15 слайдов — от 30 000 ₽, полная до 30 слайдов — от 45 000 ₽, питч для инвесторов — от 60 000 ₽.</p></details>
+<details><summary>Сколько времени занимает?</summary><p>Компактная — 5–7 дней, полная — 1–2 недели, питч — 2 недели.</p></details>
+<details><summary>В каком виде я получу файлы?</summary><p>PowerPoint (.pptx) или Google Slides + PDF для рассылки. Шаблон собран так, что правки не ломают вёрстку.</p></details>
+<details><summary>Смогу ли я править сам?</summary><p>Да. Пришлём видео-инструкцию как менять тексты, цифры и добавлять слайды.</p></details>
+<details><summary>Сколько кругов правок входит?</summary><p>Два круга — после концепции и после сборки. Дополнительный круг — 20% от стоимости.</p></details>
+<details><summary>А если у меня уже есть шаблон?</summary><p>Работаем в вашем стиле. Если шаблон сломан — предложим починить его отдельно.</p></details>
 </div>
 </div>
 </section>
@@ -255,7 +248,7 @@
 <div class="contact reveal">
 <div>
 <h2>Обсудим <span class="it">презентацию?</span></h2>
-<p class="c-sub"><span class="s">Опишите задачу, сроки и пришлите материалы.</span><span class="s">Ответим в течение дня и расскажем, как можем помочь.</span></p>
+<p class="c-sub"><span class="s">Опишите задачу, аудиторию и срок.</span><span class="s">Ответим в течение дня.</span></p>
 <div class="contact-list">
 <a href="mailto:design@kri-studio.art"><span class="ci">@</span>design@kri-studio.art</a>
 <a href="tel:+79055166557"><span class="ci">☎</span>+7 (905) 516-65-57</a>
@@ -284,10 +277,10 @@
 <div class="wrap">
 <div class="section-head"><h2 class="title">Почитать по теме</h2></div>
 <div class="next-links">
-<a href="/uslugi/firmennyy-stil/"><b>Фирменный стиль</b><span>Чтобы презентации собирались в одном стиле</span></a>
-<a href="/uslugi/dizayn-sayta/"><b>Дизайн сайта</b><span>Когда после презентации человек идёт на сайт</span></a>
-<a href="/uslugi/brendbuk/"><b>Брендбук</b><span>Когда пора собрать все правила бренда</span></a>
-<a href="/raschet/"><b>Расчёт стоимости</b><span>6 вопросов — и вилка цены</span></a>
+<a href="/uslugi/brendbuk/"><b>Разработка брендбука</b><span>Если нужен единый стиль для компании.</span></a>
+<a href="/uslugi/firmennyy-stil/"><b>Фирменный стиль</b><span>Логотип, цвета, шрифты.</span></a>
+<a href="/uslugi/dizayn-sayta/"><b>Дизайн сайта</b><span>Если презентация — часть воронки продаж.</span></a>
+<a href="/raschet/"><b>Расчёт стоимости</b><span>6 вопросов — и вилка цены.</span></a>
 </div>
 </div>
 </section>
@@ -310,6 +303,9 @@
 </div>
 </div>
 </footer>
+
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110943761,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute;left:-9999px" alt=""></div></noscript>
 <script src="/assets/app.js"></script>
 </body>
 </html>
