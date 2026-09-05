@@ -20,9 +20,6 @@
 <meta property="og:title" content="Заказать логотип — разработка от 25 000 ₽ | kri·studio">
 <meta property="og:description" content="Разработка логотипа и фирменного стиля на заказ.">
 <meta property="og:url" content="https://kri-studio.art/uslugi/logotip/">
-<meta property="og:image" content="https://kri-studio.art/assets/img/w/brand_lumi.webp">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://kri-studio.art/"},{"@type":"ListItem","position":2,"name":"Услуги и цены","item":"https://kri-studio.art/services/"},{"@type":"ListItem","position":3,"name":"Разработка логотипа","item":"https://kri-studio.art/uslugi/logotip/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Разработка логотипа","name":"Разработка логотипа","provider":{"@type":"ProfessionalService","name":"kri·studio","url":"https://kri-studio.art/","telephone":"+7 905 516-65-57","email":"design@kri-studio.art"},"offers":[{"@type":"Offer","name":"Логотип","price":"25000","priceCurrency":"RUB"},{"@type":"Offer","name":"Логотип + мини-стиль","price":"45000","priceCurrency":"RUB"},{"@type":"Offer","name":"Фирменный стиль","price":"90000","priceCurrency":"RUB"},{"@type":"Offer","name":"Бренд под ключ","price":"220000","priceCurrency":"RUB"}]}</script>
 <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=110943761','ym');ym(110943761,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute;left:-9999px" alt=""></div></noscript>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
@@ -31,8 +28,11 @@
 .crumbs a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
 .crumbs a:hover{color:var(--acc);border-bottom-color:var(--acc)}
 .srv-top{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
-.srv-shot{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4;background:var(--tint)}
-.srv-shot img{display:block;width:100%;height:100%;object-fit:contain;padding:24px}
+.srv-shot{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4;background:var(--tint)}
+.srv-shot img{display:block;width:100%;height:100%;object-fit:contain;padding:20px}
+.lumi-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:10px}
+.lumi-word{font-family:var(--dis);font-weight:900;font-size:clamp(64px,10vw,140px);letter-spacing:-.045em;color:var(--acc);line-height:.95}
+.lumi-note{font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
 .srv-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .srv-facts b{background:var(--tint);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600}
 .fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -78,6 +78,8 @@
 .pj-kit{display:flex;flex-wrap:wrap;gap:10px}
 .pj-kit b{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;white-space:nowrap}
 .center-cta{text-align:center;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+footer{background:var(--tint);border-top:1px solid var(--line)}
+[data-theme="bold"] footer{background:#1c1613;border-top-color:#2b241f}
 @media(max-width:980px){.srv-top{grid-template-columns:1fr;gap:22px}.steps,.fmt-grid,.why{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.steps,.fmt-grid,.why,.next-links,.logo-gal{grid-template-columns:1fr}}
 </style>
@@ -110,7 +112,7 @@
 </div>
 <div id="cur">смотреть</div>
 
-<section class="pj-hero">
+<section class="pj-hero" style="padding-bottom:60px">
 <div class="wrap">
 <nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> · <a href="/services/">Услуги и цены</a> · <span>Разработка логотипа</span></nav>
 <div class="srv-top">
@@ -122,7 +124,10 @@
 <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="#brief">Обсудить логотип ↗</a><a class="btn btn-ghost" href="/raschet/">Рассчитать стоимость</a></div>
 <div class="srv-facts"><b>от 25 000 ₽</b><b>от 1 недели</b><b>2–3 концепта</b><b>Права ваши</b></div>
 </div>
-<div class="srv-shot"><img src="/assets/img/w/brand_lumi_logo.webp" alt="Логотип LUMI — студия груминга (собачка в ванночке)" loading="eager"></div>
+<div class="srv-shot lumi-ph">
+<div class="lumi-word">LUMI</div>
+<div class="lumi-note">брендбук</div>
+</div>
 </div>
 </div>
 </section>
