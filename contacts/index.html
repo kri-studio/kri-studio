@@ -35,12 +35,15 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-v5 .v5-hero-left>*,.hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
 <style>
-#brief.contact-full{background:var(--tint,#fff6ec);padding:44px 0}
-[data-theme="bold"] #brief.contact-full{background:#2a2320}
-#brief.contact-full .contact{align-items:start}
-#brief.contact-full .contact>div:first-child{padding-top:6px}
-#brief.contact-full .contact .form{background:var(--card,#fff);border:1px solid var(--line,#f2dfce);border-radius:20px;padding:24px 22px;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
-[data-theme="bold"] #brief.contact-full .contact .form{background:#1c1613;border-color:#3d332e}
+#brief.contact-full{background:transparent;padding:44px 0}
+#brief.contact-full .c-head{max-width:900px;margin:0 auto 22px;text-align:center}
+#brief.contact-full .c-head h2{margin:0 0 10px}
+#brief.contact-full .c-head .c-sub{margin:0;color:var(--muted,#6b5c50)}
+#brief.contact-full .contact{background:var(--tint,#fff6ec);border:1px solid var(--line,#f2dfce);border-radius:26px;padding:32px 34px;align-items:start;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
+[data-theme="bold"] #brief.contact-full .contact{background:#2a2320;border-color:#3d332e}
+#brief.contact-full .contact .form{background:transparent;border:none;padding:0;box-shadow:none}
+#brief.contact-full .contact .form input,#brief.contact-full .contact .form textarea,#brief.contact-full .contact .form select{background:var(--card,#fff);border:1px solid var(--line,#f2dfce)}
+[data-theme="bold"] #brief.contact-full .contact .form input,[data-theme="bold"] #brief.contact-full .contact .form textarea,[data-theme="bold"] #brief.contact-full .contact .form select{background:#1c1613;border-color:#3d332e;color:#fff}
 .budget-note{margin-top:22px;background:var(--card,#fff);border:1px solid var(--line,#f2dfce);border-radius:18px;padding:18px 20px;color:#221812;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
 .budget-note .bn-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
 .budget-note .bn-badge{flex:none;width:38px;height:38px;border-radius:12px;background:var(--acc,#ff5a1f);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
@@ -52,6 +55,7 @@
 footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 [data-theme="bold"] footer{background:#1c1613;border-top-color:#2b241f}
 body:has(#brief.contact-full) footer .big{display:none}
+@media(max-width:720px){#brief.contact-full .contact{padding:24px 20px;border-radius:20px}}
 </style>
 </head>
 <body>
@@ -90,10 +94,12 @@ body:has(#brief.contact-full) footer .big{display:none}
 </section>
 <section class="section contact-full" id="brief" data-wave-top="0" data-wave-bottom="0">
 <div class="wrap">
+<div class="c-head reveal">
+<h2>Обсудим <span class="it">проект?</span></h2>
+<p class="c-sub"><span class="s">Опишите задачу, сроки и пришлите референсы.</span> <span class="s">Ответим в течение дня и расскажем, как можем помочь.</span></p>
+</div>
 <div class="contact reveal">
 <div>
-<h2>Обсудим <span class="it">проект?</span></h2>
-<p class="c-sub"><span class="s">Опишите задачу, сроки и пришлите референсы.</span><span class="s">Ответим в течение дня и расскажем, как можем помочь.</span></p>
 <div class="contact-list">
 <a href="mailto:kri_tri06@mail.ru"><span class="ci">@</span>kri_tri06@mail.ru</a>
 <a href="tel:+79055166557"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor"/></svg></span>+7 (905) 516-65-57</a>
