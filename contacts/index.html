@@ -35,16 +35,23 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-v5 .v5-hero-left>*,.hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
 <style>
-.budget-note{margin-top:22px;background:var(--tint,#fff6ec);border:1px solid var(--line,#f2dfce);border-radius:22px;padding:24px 26px;color:#221812;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
-.budget-note .bn-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.budget-note .bn-badge{flex:none;width:42px;height:42px;border-radius:12px;background:var(--acc,#ff5a1f);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
-.budget-note b{color:#221812;font-size:17px}
+#brief.contact-full{background:var(--tint,#fff6ec);padding:44px 0}
+[data-theme="bold"] #brief.contact-full{background:#2a2320}
+#brief.contact-full .contact{align-items:start}
+#brief.contact-full .contact>div:first-child{padding-top:6px}
+#brief.contact-full .contact .form{background:var(--card,#fff);border:1px solid var(--line,#f2dfce);border-radius:20px;padding:24px 22px;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
+[data-theme="bold"] #brief.contact-full .contact .form{background:#1c1613;border-color:#3d332e}
+.budget-note{margin-top:22px;background:var(--card,#fff);border:1px solid var(--line,#f2dfce);border-radius:18px;padding:18px 20px;color:#221812;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
+.budget-note .bn-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.budget-note .bn-badge{flex:none;width:38px;height:38px;border-radius:12px;background:var(--acc,#ff5a1f);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+.budget-note b{color:#221812;font-size:16.5px}
 .budget-note p{margin:0;font-size:15.5px;line-height:1.6;color:#221812}
 .budget-note a{color:var(--acc,#ff5a1f);font-weight:600;text-decoration:underline}
-[data-theme="bold"] .budget-note{background:#2a2320;border-color:#3d332e;color:#fff}
+[data-theme="bold"] .budget-note{background:#1c1613;border-color:#3d332e;color:#fff}
 [data-theme="bold"] .budget-note b,[data-theme="bold"] .budget-note p{color:#fff}
 footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 [data-theme="bold"] footer{background:#1c1613;border-top-color:#2b241f}
+body:has(#brief.contact-full) footer .big{display:none}
 </style>
 </head>
 <body>
@@ -61,7 +68,7 @@ footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 <a href="/contacts/" class="active">Контакты</a>
 </nav>
 <div style="display:flex;align-items:center;gap:10px">
-<a href="/contacts/" class="btn btn-primary nav-cta">Обсудить проект</a>
+<a href="#brief" class="btn btn-primary nav-cta">Обсудить проект</a>
 <a class="lang-btn" href="/en/contacts/" aria-label="English version"><svg viewBox="0 0 24 24" width="18" height="18" style="border-radius:50%;flex:none" aria-hidden="true"><rect width="24" height="8" fill="#fff"/><rect y="8" width="24" height="8" fill="#0039a6"/><rect y="16" width="24" height="8" fill="#d52b1e"/></svg><span>RU</span></a><button class="burger" id="burger" aria-label="Меню">≡</button>
 </div>
 </div>
@@ -81,7 +88,7 @@ footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 <p class="sub"><span class="s">Пишите в любой удобный мессенджер или оставьте заявку через форму.</span><span class="s">Отвечаем в течение дня.</span></p>
 </div>
 </section>
-<section class="section" id="brief">
+<section class="section contact-full" id="brief" data-wave-top="0" data-wave-bottom="0">
 <div class="wrap">
 <div class="contact reveal">
 <div>
@@ -126,7 +133,6 @@ footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 </section>
 <footer>
 <div class="wrap">
-<div class="big">thank you<i style="color:var(--acc);font-style:normal;font-size:.42em;vertical-align:.55em;margin-left:8px">♥</i></div>
 <div class="foot-grid">
 <div class="req">kri·studio · Исполнитель: Трифонова К.А., ИНН 772370935743, плательщик НПД.<br>Работаем по договору, оплата с чеком.</div>
 <div class="foot-links">
