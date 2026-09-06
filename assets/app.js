@@ -33,6 +33,65 @@ function clicks(){document.addEventListener('click',function(e){var a=e.target&&
 function waveSrc(t){return WAVE_1[t]||WAVE_1.sun;}
 function photos(){var A={sun:'/assets/img/about-sun.webp',rose:'/assets/img/about-rose.webp',bold:'/assets/img/about-bold.webp',mint:'/assets/img/about-mint.webp'},H={sun:'/assets/img/portrait-sun.webp',rose:'/assets/img/portrait-rose.webp',bold:'/assets/img/portrait-bold.webp',mint:'/assets/img/portrait-mint.webp'};function u(){try{var t=document.documentElement.getAttribute('data-theme')||'sun';document.querySelectorAll('.circle-photo img').forEach(function(im){if(A[t])im.src=A[t];});var hi=document.querySelector('.v5-portrait img');if(hi&&H[t])hi.src=H[t];var cw=document.querySelector('.contact-wave');if(cw)cw.src=waveSrc(t);}catch(e){}}try{new MutationObserver(u).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}u();}
 function contactWave(){if(!document.body)return;var brief=document.getElementById('brief');if(!brief)return;brief.classList.add('contact-full');if(document.querySelector('.contact-wave'))return;var img=document.createElement('img');img.className='contact-wave';var t=document.documentElement.getAttribute('data-theme')||'sun';img.src=waveSrc(t);img.alt='';img.setAttribute('aria-hidden','true');brief.parentNode.insertBefore(img,brief);}
-function init(){style();decorate();nav();lang();contacts();menu();document.querySelectorAll('.mood-panel button').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-theme-set');setTheme(t);goal('theme_change',{theme:t||''});});});setTheme(document.documentElement.getAttribute('data-theme')||'sun');related();contactWave();reveal();forms();clicks();photos();}
+function currency(){
+  if((document.documentElement.getAttribute('lang')||'').toLowerCase().indexOf('en')!==0)return;
+  var R=90;
+  function fmt(usd){if(usd>=1000){return '$'+(Math.round(usd/10)*10).toLocaleString('en-US');}return '$'+Math.round(usd/5)*5;}
+  function conv(str){
+    if(!str)return str;
+    var changed=false,out=str;
+    if(out.indexOf('₽')>-1){
+      out=out.replace(/(\d[\d\s\u00A0\u202F,\.]*)\s*₽/g,function(m,num){
+        var clean=num.replace(/[\s\u00A0\u202F,\.]/g,'');
+        var n=parseInt(clean,10);
+        if(isNaN(n)||n<100)return m;
+        changed=true;return fmt(n/R);
+      });
+    }
+    if(out.indexOf('RUB')>-1){
+      out=out.replace(/(\d[\d\s\u00A0\u202F,\.]*)\s*RUB/g,function(m,num){
+        var clean=num.replace(/[\s\u00A0\u202F,\.]/g,'');
+        var n=parseInt(clean,10);
+        if(isNaN(n)||n<100)return m;
+        changed=true;return fmt(n/R);
+      });
+    }
+    var repls=[
+      [/Prices match our Russian price list and are quoted in roubles\. International clients can pay by invoice\./g,'Prices converted from our RUB list at approx. 90 ₽ = $1. International clients can pay by invoice.'],
+      [/Same prices as our Russian price list, quoted in roubles\. Invoicing available for international clients\./g,'Converted from our RUB price list at approx. 90 ₽ = $1. Invoicing available for international clients.'],
+      [/The same prices as our Russian price list, quoted in roubles\. Invoicing available for international clients\./g,'Converted from our RUB price list at approx. 90 ₽ = $1. Invoicing available for international clients.'],
+      [/Same prices as our Russian price list, quoted in roubles\. A range of products is always cheaper per item\./g,'Converted from our RUB price list at approx. 90 ₽ = $1. A range of products is always cheaper per item.'],
+      [/Prices are the same as in our Russian pricing — quoted in roubles\. International clients can pay by invoice\./g,'Prices converted from our RUB pricing at approx. 90 ₽ = $1. International clients can pay by invoice.'],
+      [/Prices match our Russian price list and are quoted in roubles\./g,'Converted from our RUB price list at approx. 90 ₽ = $1.'],
+      [/quoted in roubles/g,'converted from RUB at ~90 ₽ = $1'],
+      [/Why are prices in roubles\?/g,'Why are prices shown in USD?'],
+      [/We are based in Moscow and quote in roubles for every client\. For international clients we can invoice and accept payment in another currency at the exchange rate on the invoice date\./g,'We are based in Moscow and price everything in RUB. The USD figures you see here are converted at approx. 90 ₽ = $1 for reference — we invoice in RUB or, for international clients, in your local currency at the exchange rate on the invoice date.']
+    ];
+    for(var i=0;i<repls.length;i++){if(repls[i][0].test(out)){out=out.replace(repls[i][0],repls[i][1]);changed=true;}}
+    return changed?out:str;
+  }
+  function walk(n){
+    if(!n)return;
+    if(n.nodeType===3){var v=n.nodeValue,w=conv(v);if(w!==v)n.nodeValue=w;return;}
+    if(n.nodeType!==1)return;
+    var t=n.tagName;
+    if(t==='SCRIPT'||t==='STYLE'||t==='NOSCRIPT')return;
+    if(t==='OPTION'){var v=n.textContent,w=conv(v);if(w!==v)n.textContent=w;return;}
+    var k=n.childNodes;for(var i=0;i<k.length;i++)walk(k[i]);
+  }
+  try{walk(document.body);}catch(e){}
+  if(document.title){var nt=conv(document.title);if(nt!==document.title)document.title=nt;}
+  try{
+    var mo=new MutationObserver(function(muts){
+      for(var i=0;i<muts.length;i++){
+        var m=muts[i];
+        if(m.type==='characterData'){var v=m.target.nodeValue,w=conv(v);if(w!==v)m.target.nodeValue=w;}
+        else if(m.addedNodes){for(var j=0;j<m.addedNodes.length;j++)walk(m.addedNodes[j]);}
+      }
+    });
+    mo.observe(document.body,{childList:true,subtree:true,characterData:true});
+  }catch(e){}
+}
+function init(){style();decorate();nav();lang();contacts();menu();document.querySelectorAll('.mood-panel button').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-theme-set');setTheme(t);goal('theme_change',{theme:t||''});});});setTheme(document.documentElement.getAttribute('data-theme')||'sun');related();contactWave();reveal();forms();clicks();photos();currency();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
