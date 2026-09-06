@@ -37,13 +37,27 @@
 <style>
 #brief.contact-full{background:transparent;padding:44px 0}
 #brief.contact-full .c-head{max-width:900px;margin:0 auto 22px;text-align:center}
-#brief.contact-full .c-head h2{margin:0 0 10px}
+#brief.contact-full .c-head h2{margin:0 0 10px;color:var(--ink,#221812)}
 #brief.contact-full .c-head .c-sub{margin:0;color:var(--muted,#6b5c50)}
-#brief.contact-full .contact{background:var(--tint,#fff6ec);border:1px solid var(--line,#f2dfce);border-radius:26px;padding:32px 34px;align-items:start;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
-[data-theme="bold"] #brief.contact-full .contact{background:#2a2320;border-color:#3d332e}
+#brief.contact-full .contact{max-width:1040px;margin:0 auto;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:26px;padding:32px 34px;align-items:start;box-shadow:0 12px 34px rgba(0,0,0,.08)}
+[data-theme="rose"] #brief.contact-full .contact{background:#fff;border-color:#f9c2d4}
+[data-theme="bold"] #brief.contact-full .contact{background:#2a2320;border-color:#3d332e;box-shadow:0 12px 34px rgba(0,0,0,.35)}
 #brief.contact-full .contact .form{background:transparent;border:none;padding:0;box-shadow:none}
-#brief.contact-full .contact .form input,#brief.contact-full .contact .form textarea,#brief.contact-full .contact .form select{background:var(--card,#fff);border:1px solid var(--line,#f2dfce)}
+#brief.contact-full .contact .form input,#brief.contact-full .contact .form textarea,#brief.contact-full .contact .form select{background:#fff;border:1px solid rgba(0,0,0,.12);color:#221812}
+[data-theme="rose"] #brief.contact-full .contact .form input,[data-theme="rose"] #brief.contact-full .contact .form textarea,[data-theme="rose"] #brief.contact-full .contact .form select{background:#fff;border-color:#f9c2d4;color:#221812}
 [data-theme="bold"] #brief.contact-full .contact .form input,[data-theme="bold"] #brief.contact-full .contact .form textarea,[data-theme="bold"] #brief.contact-full .contact .form select{background:#1c1613;border-color:#3d332e;color:#fff}
+#brief.contact-full .contact-list a{background:#fff;color:#221812;border:1px solid rgba(0,0,0,.08)}
+[data-theme="rose"] #brief.contact-full .contact-list a{background:#fff;border-color:#f9c2d4;color:#221812}
+[data-theme="rose"] #brief.contact-full .contact-list a .ci{color:#e91e63}
+[data-theme="bold"] #brief.contact-full .contact-list a{background:#1c1613;color:#fff;border-color:#3d332e}
+#brief.contact-full .form label{color:var(--ink,#221812)}
+[data-theme="bold"] #brief.contact-full .form label{color:#fff}
+#brief.contact-full .form .pd{color:var(--ink,#221812)}
+[data-theme="bold"] #brief.contact-full .form .pd{color:#fff}
+#brief.contact-full .form .fine{color:var(--muted,#6b5c50)}
+[data-theme="bold"] #brief.contact-full .form .fine{color:#c9b8a8}
+#brief.contact-full .form .btn-primary,#brief.contact-full .form button[type="submit"].btn-primary{color:#fff!important;background:var(--acc)!important;border-color:var(--acc)!important}
+#brief.contact-full .form .btn-primary:hover,#brief.contact-full .form button[type="submit"].btn-primary:hover{color:#fff!important;background:var(--accD,#e04a12)!important;border-color:var(--accD,#e04a12)!important}
 .budget-note{margin-top:22px;background:var(--card,#fff);border:1px solid var(--line,#f2dfce);border-radius:18px;padding:18px 20px;color:#221812;box-shadow:var(--shadow-sm,0 2px 10px rgba(0,0,0,.04))}
 .budget-note .bn-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
 .budget-note .bn-badge{flex:none;width:38px;height:38px;border-radius:12px;background:var(--acc,#ff5a1f);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
