@@ -225,3 +225,6 @@ html[data-theme="bold"] .hero-v5 .v5-portrait img{transform:translateY(-20px)}
 html[data-theme="bold"] .hero-v5 .v5-portrait img{transform:translateY(-23px)}
 .hero-v5 .v5-orbit{display:none}
 }
+
+/* ==== v32: calc-cta — свечение берёт цвет текущей темы вместо жёсткого оранжевого ==== */
+.calc-cta:before{background:radial-gradient(closest-side,color-mix(in srgb,var(--acc) 18%,transparent),transparent)!important}
