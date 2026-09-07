@@ -217,3 +217,11 @@ html[data-theme="bold"] .hero-v5 .v5-portrait img{transform:translateY(-20px)}
 .section .case-card .cap span{line-height:1.5}
 .section .rev .quote{line-height:1.68}
 @media(max-width:760px){.section .section-head{padding-top:10px}}
+
+/* ==== v31: мобильная — портрет крупнее и приподнят, пунктирный овал скрыт ==== */
+@media(max-width:760px){
+.hero-v5 .v5-portrait{width:min(380px,84vw)}
+.hero-v5 .v5-portrait img{transform:translateY(-10px)}
+html[data-theme="bold"] .hero-v5 .v5-portrait img{transform:translateY(-23px)}
+.hero-v5 .v5-orbit{display:none}
+}
