@@ -9,7 +9,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="canonical" href="https://kri-studio.art/projects/">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -28,16 +30,8 @@
 <meta name="twitter:description" content="Кейсы дизайн-студии kri·studio: айдентика, упаковка, оформление соцсетей, карточки WB и Ozon, полиграфия и 3D — от локальных брендов до Московского метрополитена.">
 <meta name="twitter:image" content="https://kri-studio.art/assets/favicon-512.png">
 <!-- V17-CLEAN-URLS -->
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();
-for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=110943761', 'ym');
-
-ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
+<!-- Yandex.Metrika counter (deferred) -->
+<script type="text/javascript">(function(m,e,t,r,i){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();function load(){for(var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r)return;}var k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a);}var fired=false;function go(){if(fired)return;fired=true;load();}if(e.readyState==='complete'){setTimeout(go,1500);}else{m.addEventListener('load',function(){setTimeout(go,1500);});}['click','touchstart','keydown','scroll'].forEach(function(ev){m.addEventListener(ev,go,{once:true,passive:true});});})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=110943761','ym');ym(110943761,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- V20-NOSCRIPT --><noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-v5 .v5-hero-left>*,.hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
@@ -153,8 +147,8 @@ document.querySelectorAll('.pf-tabs button').forEach(function(b){b.addEventListe
 <input type="text" name="contact" placeholder="+7… или @ник" required>
 <label>О задаче</label>
 <textarea name="task" placeholder="Коротко о проекте, сроки, ссылки на референсы"></textarea>
-<label>Бюджет</label>
-<select name="budget">
+<label for="pj-budget">Бюджет</label>
+<select id="pj-budget" name="budget" aria-label="Бюджет">
 <option>пока не знаю</option>
 <option>до 30 000 ₽</option>
 <option>30–80 000 ₽</option>
