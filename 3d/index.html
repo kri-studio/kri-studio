@@ -8,7 +8,9 @@
 <script>try{var t=localStorage.getItem('kri-theme');if(['sun','rose','bold','mint'].indexOf(t)<0)t='sun';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="canonical" href="https://kri-studio.art/3d/">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -27,17 +29,16 @@
 <meta name="twitter:description" content="Разработка 3D-маскота для кофейни Coffee &amp; Good Mood: от скетчей и character sheet до финальных рендеров для соцсетей, упаковки стаканов и оформления точки. Персонаж, который делает бренд узнаваемым.">
 <meta name="twitter:image" content="https://kri-studio.art/assets/favicon-512.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://kri-studio.art/"},{"@type":"ListItem","position":2,"name":"Работы","item":"https://kri-studio.art/projects/"},{"@type":"ListItem","position":3,"name":"3D-маскот для кофейни — гепард-бариста","item":"https://kri-studio.art/3d/"}]}</script>
+<style>
+.case-3d-bottom{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end}
+.case-3d-bottom figure{margin:0;display:flex;flex-direction:column;justify-content:flex-end}
+.case-3d-bottom figure img{width:100%!important;height:auto!important;max-height:none!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important;background:transparent!important}
+@media(max-width:900px){.case-3d-bottom{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.case-3d-bottom{grid-template-columns:repeat(2,1fr);gap:10px}}
+</style>
 <!-- V17-CLEAN-URLS -->
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();
-for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=110943761', 'ym');
-
-ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
+<!-- Yandex.Metrika counter (deferred) -->
+<script type="text/javascript">(function(m,e,t,r,i){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();function load(){for(var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r)return;}var k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a);}var fired=false;function go(){if(fired)return;fired=true;load();}if(e.readyState==='complete'){setTimeout(go,1500);}else{m.addEventListener('load',function(){setTimeout(go,1500);});}['click','touchstart','keydown','scroll'].forEach(function(ev){m.addEventListener(ev,go,{once:true,passive:true});});})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=110943761','ym');ym(110943761,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- V20-NOSCRIPT --><noscript><style>.reveal{opacity:1!important;transform:none!important}.hero-v5 .v5-hero-left>*,.hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
@@ -134,7 +135,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </footer>
 <script src="/assets/app.js"></script>
-<script>/* V20-FAILSAFE-JS: гарантируем видимость контента */
+<script>/* V20-FAILSAFE-JS */
 (function(){function s(){var e=document.querySelectorAll(".reveal"),i;for(i=0;i<e.length;i++){e[i].classList.add("in");}document.documentElement.classList.add("anim-done");}if(!("IntersectionObserver" in window)){s();return;}if(document.readyState==="complete"){setTimeout(s,1400);}else{window.addEventListener("load",function(){setTimeout(s,1400);});}setTimeout(s,2600);})();</script>
 </body>
 </html>
