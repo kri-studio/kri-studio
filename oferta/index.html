@@ -49,8 +49,28 @@
 .privacy .meta{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:14px;color:var(--muted);margin-bottom:8px}
 .privacy-back{margin-top:48px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding-top:32px;border-top:1px solid var(--line,#f2dfce)}
 [data-theme="bold"] .privacy-back{border-top-color:#2b241f}
+.pdf-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin:0 0 28px}
+.pdf-row .pdf-hint{font-size:14px;color:var(--muted);line-height:1.5}
+.pdf-row .btn{cursor:pointer;font:inherit}
 footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 [data-theme="bold"] footer{background:#1c1613;border-top-color:#2b241f}
+@media print{
+@page{size:A4;margin:18mm 16mm}
+header.topnav,.mood-panel,#cur,footer,.privacy-back,.pdf-row,.cookie-plate,.burger,.nav-cta{display:none!important}
+html,body{background:#fff!important}
+.wrap{max-width:none!important;padding:0!important}
+.section,.case-hero{padding:0!important;margin:0!important;background:#fff!important}
+.case-hero .eyebrow{font-size:9pt!important;color:#000!important}
+.case-hero .title,.case-hero .title .it{font-size:22pt!important;color:#000!important}
+.case-hero .sub,.case-hero .sub .s{font-size:9.5pt!important;color:#333!important;display:block}
+.privacy .meta{font-size:9pt!important;color:#333!important;margin-bottom:10px}
+.privacy .note{background:#f7f3ed!important;border:1px solid #ddd!important;border-left:3px solid #999!important;border-radius:0!important;font-size:10pt!important;padding:10px 14px!important;margin:12px 0 16px!important}
+.privacy h2,[data-theme="bold"] .privacy h2{font-size:13pt!important;color:#000!important;margin:16px 0 7px!important;page-break-after:avoid}
+.privacy p,.privacy li,[data-theme="bold"] .privacy p,[data-theme="bold"] .privacy li{font-size:10.5pt!important;line-height:1.45!important;color:#000!important;margin-bottom:7px!important;text-align:justify}
+.privacy a{color:#000!important;text-decoration:none!important;font-weight:400!important}
+.privacy .req{background:#fbf9f6!important;border:1px solid #ddd!important;border-radius:0!important;padding:12px 16px!important}
+.privacy .req div,[data-theme="bold"] .privacy .req div{font-size:10pt!important;color:#000!important}
+}
 </style>
 </head>
 <body>
@@ -93,7 +113,12 @@ footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 <div class="wrap">
 <div class="privacy">
 <div class="meta"><span>Исполнитель: Трифонова Кристина Александровна</span><span>ИНН 772370935743</span><span>Плательщик НПД</span></div>
-<div class="note">Если коротко: оплачивая счёт, вы принимаете условия этой оферты — отдельный бумажный договор подписывать не нужно. Если вашей бухгалтерии нужен договор файлом, напишите на <a href="mailto:design@kri-studio.art">design@kri-studio.art</a>, пришлю PDF.</div>
+<div class="note">Если коротко: оплачивая счёт, вы принимаете условия этой оферты — отдельный бумажный договор подписывать не нужно. Если вашей бухгалтерии нужен договор файлом, нажмите «Скачать PDF» ниже или напишите на <a href="mailto:design@kri-studio.art">design@kri-studio.art</a>, пришлю файл.</div>
+
+<div class="pdf-row">
+<button type="button" class="btn btn-primary" id="ofertaPdf">↓ Скачать PDF</button>
+<span class="pdf-hint">Откроется окно печати — выберите «Сохранить как PDF». Файл всегда совпадает с актуальной редакцией на сайте.</span>
+</div>
 
 <h2>1. Общие положения</h2>
 <p>1.1. Настоящий документ — публичная оферта (ст. 435, 437 ГК РФ) самозанятого исполнителя Трифоновой Кристины Александровны, ИНН 772370935743, плательщик налога на профессиональный доход, бренд kri·studio, сайт kri-studio.art (далее — Исполнитель), заключить договор возмездного оказания услуг в сфере дизайна.</p>
@@ -200,6 +225,7 @@ footer{background:var(--tint,#fff6ec);border-top:1px solid var(--line,#f2dfce)}
 </div>
 </div>
 </footer>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('ofertaPdf');if(!b)return;b.addEventListener('click',function(){try{if(typeof ym==='function')ym(110943761,'reachGoal','oferta_pdf');}catch(e){}window.print();});});</script>
 <script src="/assets/app.js"></script>
 </body>
 </html>
