@@ -31,13 +31,13 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://kri-studio.art/"},{"@type":"ListItem","position":2,"name":"Работы","item":"https://kri-studio.art/projects/"},{"@type":"ListItem","position":3,"name":"3D-маскот для кофейни — гепард-бариста","item":"https://kri-studio.art/3d/"}]}</script>
 <style>
 .case-3d-final{display:block}
-.case-3d-top,.case-3d-bottom{display:grid;gap:14px;align-items:end;margin:0 0 14px}
-.case-3d-top{grid-template-columns:repeat(4,1fr)}
-.case-3d-bottom{grid-template-columns:repeat(5,1fr)}
-.case-3d-top figure,.case-3d-bottom figure{margin:0;padding:0;display:block;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
-.case-3d-top figure img,.case-3d-bottom figure img{display:block;width:100%!important;max-width:100%!important;height:auto!important;max-height:none!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important;background:transparent!important;border:0!important;box-shadow:none!important}
+.case-3d-top,.case-3d-bottom{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:14px;margin:0 0 18px}
+.case-3d-top figure,.case-3d-bottom figure{margin:0;padding:0;flex:0 0 auto;text-align:center;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+.case-3d-top figure img,.case-3d-bottom figure img{display:block;width:auto!important;max-width:100%!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important;background:transparent!important;border:0!important;box-shadow:none!important;margin:0 auto}
+.case-3d-top figure img{height:clamp(110px,20vw,240px)!important;max-height:none!important}
+.case-3d-bottom figure img{height:clamp(120px,16vw,260px)!important;max-height:none!important}
 .case-3d-top figcaption,.case-3d-bottom figcaption{margin-top:6px}
-@media(max-width:560px){.case-3d-top,.case-3d-bottom{gap:8px}}
+@media(max-width:700px){.case-3d-top,.case-3d-bottom{gap:10px}.case-3d-top figure img{height:clamp(100px,26vw,170px)!important}.case-3d-bottom figure img{height:clamp(110px,24vw,180px)!important}}
 </style>
 <!-- V17-CLEAN-URLS -->
 <!-- Yandex.Metrika counter (deferred) -->
