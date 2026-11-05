@@ -627,3 +627,34 @@ body.menu-open{overflow:hidden}
 /* V20-FAILSAFE-CSS: контент виден, даже если анимация/скрипт не сработали */
 html.anim-done .reveal{opacity:1!important;transform:none!important}
 html.anim-done .hero-v5 .v5-hero-left>*,html.anim-done .hero-v5 .v5-hero-visual{opacity:1!important;transform:none!important;animation:none!important}
+
+
+.q-package-choice{border:1.5px solid var(--line);border-radius:16px;padding:16px;grid-column:1/-1}.q-package-choice h3{font-size:17px;margin:0 0 12px}.q-package-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.q-package-buttons .q-opt{display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:12px;min-width:0}.q-package-buttons .q-opt b{font-size:14px}.q-package-buttons .q-opt em,.q-package-buttons .q-opt small{font-size:12px;opacity:1}
+
+/* Related service variants share one card; all options remain readable without JS. */
+.pack-grid.package-columns-2,.fmt-grid.package-columns-2{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.pack-grid.package-columns-3{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.package-card{min-width:0;display:flex;flex-direction:column}
+.package-card h3{font-size:22px;line-height:1.3;margin:0 0 8px}
+.package-intro{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 20px}
+.package-tabs:not([hidden]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;background:var(--tint);border:1px solid var(--line);padding:5px;border-radius:14px;margin:0 0 22px}
+.package-tabs[hidden]{display:none}
+.package-tabs button{min-height:44px;min-width:0;border:0;border-radius:10px;padding:10px 8px;background:transparent;color:var(--ink2);font:600 13px/1.3 var(--txt);cursor:pointer;transition:background .18s,color .18s,box-shadow .18s}
+.package-tabs button[aria-selected="true"]{background:var(--acc);color:#201720;box-shadow:0 3px 8px var(--glow)}
+.package-tabs button:hover:not([aria-selected="true"]){background:var(--soft)}
+.package-tabs button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.package-panels{flex:1;display:flex;flex-direction:column}
+.package-panel{flex:1;display:flex;flex-direction:column}
+.package-panel[hidden]{display:none!important}
+.package-fallback-title{margin:12px 0 6px;font-size:16px}
+.package-switch-ready .package-fallback-title{display:none}
+.package-price{font:700 clamp(28px,3vw,36px)/1.25 var(--dis);letter-spacing:-.04em;white-space:nowrap;margin:0 0 12px}
+.package-price small{font:500 14px/1.3 var(--txt);letter-spacing:0;color:var(--muted)}
+.package-term{align-self:flex-start;border-radius:30px;background:var(--tint);color:var(--accD);padding:8px 12px;font-size:12px;font-weight:600;margin-bottom:14px}
+.package-description{font-size:14px;line-height:1.55;color:var(--ink2);margin:0}
+.package-card ul{margin:16px 0 26px;flex:1}
+.package-card li{font-size:14px;line-height:1.5}
+.package-card .package-panel>.btn{margin-top:auto;width:100%;justify-content:center}
+@media(max-width:1000px){.pack-grid.package-columns-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.pack-grid.package-columns-2,.fmt-grid.package-columns-2,.pack-grid.package-columns-3{grid-template-columns:minmax(0,1fr)}.package-tabs button{font-size:12px}.package-card h3{font-size:21px}.package-price{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.package-tabs button{transition:none}}

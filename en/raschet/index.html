@@ -29,7 +29,7 @@
 <meta name="twitter:title" content="Design project estimate — kri·studio">
 <meta name="twitter:description" content="Price range and timeline in three questions.">
 <meta name="twitter:image" content="https://kri-studio.art/assets/img/w/pres_01.webp">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=packages-20261105">
 <link rel="stylesheet" href="/assets/wide.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kri-studio.art/en/"},{"@type":"ListItem","position":2,"name":"Estimate","item":"https://kri-studio.art/en/raschet/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate is this estimate?","acceptedAnswer":{"@type":"Answer","text":"It is a realistic range based on our actual projects, not a teaser price. The final number is fixed in the contract after a short brief, and it normally lands inside the range shown here."}},{"@type":"Question","name":"Why are prices in roubles?","acceptedAnswer":{"@type":"Answer","text":"We are based in Moscow and quote in roubles for every client. For international clients we can invoice and accept payment in another currency at the exchange rate on the invoice date."}},{"@type":"Question","name":"What is included in the price?","acceptedAnswer":{"@type":"Answer","text":"Research and concepts, design work, two revision rounds, final files in all required formats and editable sources. Rights transfer to you after full payment."}},{"@type":"Question","name":"How do payments work?","acceptedAnswer":{"@type":"Answer","text":"We work under a contract with 50% prepayment and the balance after approval. Payment comes with an official receipt."}}]}</script>
@@ -123,10 +123,10 @@
 <button class="q-opt" data-need="logo"><b>Logo</b><small>mark, versions, source files</small></button>
 <button class="q-opt" data-need="ident"><b>Brand identity</b><small>logo, colours, typography, carriers</small></button>
 <button class="q-opt" data-need="brand"><b>Full brand</b><small>strategy, identity, brandbook</small></button>
-<button type="button" class="q-opt" data-need="landing_design"><b>Landing page — design</b><small>from 60 000 ₽</small></button>
-<button type="button" class="q-opt" data-need="landing_ready"><b>Landing page — ready to launch</b><small>from 120 000 ₽</small></button>
-<button type="button" class="q-opt" data-need="multi_design"><b>Multi-page website — design</b><small>from 100 000 ₽</small></button>
-<button type="button" class="q-opt" data-need="multi_ready"><b>Multi-page website — ready to launch</b><small>from 180 000 ₽</small></button>
+<div class="q-package-choice" role="group" aria-label="Landing page"><h3>Landing page</h3><div class="q-package-buttons"><button type="button" class="q-opt" data-need="landing_ready"><b>Ready website</b><small>from 120 000 ₽</small></button><button type="button" class="q-opt" data-need="landing_design"><b>Figma design</b><small>from 60 000 ₽</small></button></div></div>
+
+<div class="q-package-choice" role="group" aria-label="Multi-page website"><h3>Multi-page website</h3><div class="q-package-buttons"><button type="button" class="q-opt" data-need="multi_ready"><b>Ready website</b><small>from 180 000 ₽</small></button><button type="button" class="q-opt" data-need="multi_design"><b>Figma design</b><small>from 100 000 ₽</small></button></div></div>
+
 <button type="button" class="q-opt" data-need="tilda"><b>Basic Tilda website</b><small>from 80 000 ₽</small></button>
 <button class="q-opt" data-need="pack"><b>Packaging</b><small>label, box, product line</small></button>
 <button class="q-opt" data-need="cover"><b>One cover</b><small>2 500 ₽</small></button>
@@ -212,11 +212,11 @@
 <div class="section-head"><h2 class="title">Service details</h2></div>
 <div class="next-links">
 <a href="/en/uslugi/logotip/"><b>Logo</b><span>from 25,000 ₽, 7–10 days</span></a>
-<a href="/en/uslugi/firmennyy-stil/"><b>Brand identity</b><span>from 45,000 ₽, 3–4 weeks</span></a>
+<a href="/en/uslugi/firmennyy-stil/"><b>Brand identity</b><span>from 90,000 ₽, 3–4 weeks</span></a>
 <a href="/en/uslugi/dizayn-sayta/"><b>Website</b><span>design from 60 000 ₽; landing page with build from 120 000 ₽</span></a>
 <a href="/en/uslugi/kartochki-wb-ozon/"><b>Marketplace cards</b><span>5 slides from 8 500 ₽, 3–5 days</span></a>
 <a href="/en/uslugi/upakovka/"><b>Packaging</b><span>from 60,000 ₽, 2–3 weeks</span></a>
-<a href="/en/uslugi/brendbuk/"><b>Brandbook</b><span>from 60,000 ₽, 5–7 weeks</span></a>
+<a href="/en/uslugi/brendbuk/"><b>Brand with brandbook</b><span>from 220,000 ₽, 5–7 weeks</span></a>
 <a href="/en/uslugi/prezentacii/"><b>Presentations</b><span>from 30,000 ₽, 1–2 weeks</span></a>
 <a href="/en/services/"><b>All services</b><span>full price list</span></a>
 </div>
@@ -272,7 +272,7 @@ q.querySelectorAll('.q-bar i').forEach(function(el){el.classList.toggle('on',Num
 }
 function result(){
 var d=NEEDS[s.need],k=BASE[s.base].k*URG[s.urg].k;
-document.getElementById('qPrice').textContent=d.priceMode ? (d.priceMode==='from'?'from ':'')+String(d.lo).replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')+' ₽' : fmt(d.lo*k)+'–'+fmt(d.hi*k)+' ₽';
+document.getElementById('qPrice').textContent=d.priceMode ? (d.priceMode==='from'?'from ':'')+String(d.lo).replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')+' ₽' : fmt(Math.max(d.lo,d.lo*k))+'–'+fmt(Math.max(d.lo,d.hi*k))+' ₽';
 document.getElementById('qMeta').textContent=d.t+' · '+d.term+' · '+BASE[s.base].l+' · '+URG[s.urg].l;
 var inc=document.getElementById('qInc');inc.innerHTML='';
 var items=d.priceMode ? d.inc.concat(['Additional scope and urgency are agreed in the quote.']) : d.inc;
@@ -292,6 +292,6 @@ if(b.hasAttribute('data-back')){show(Number(b.getAttribute('data-back')));return
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110943761,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110943761" style="position:absolute;left:-9999px" alt=""></div></noscript>
-<script src="/assets/app.js"></script>
+<script src="/assets/app.js?v=packages-20261105"></script>
 </body>
 </html>
