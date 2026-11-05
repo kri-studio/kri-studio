@@ -115,7 +115,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <nav class="crumbs" style="margin:0 0 4px;font-size:.9rem" aria-label="Хлебные крошки"><a href="/">Главная</a> · <a href="/services/">Услуги и цены</a> · <span>Расчёт стоимости</span></nav>
 <div class="eyebrow">Калькулятор</div>
 <h1 class="title">Сколько будет стоить <span class="it">ваш проект</span></h1>
-<p class="sub"><span class="s">Три вопроса — и вы увидите вилку цены и срок.</span><span class="s">Без звонков и обязательств.</span></p>
+<p class="sub"><span class="s">Три вопроса — и вы увидите предварительную стоимость и срок.</span><span class="s">Без звонков и обязательств.</span></p>
 </div>
 </section>
 
@@ -133,7 +133,9 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <button type="button" class="q-opt" data-k="need" data-v="ident"><b>Логотип и фирменный стиль</b><em>от 90 000 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="brand"><b>Бренд под ключ с брендбуком</b><em>от 220 000 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="pack"><b>Дизайн упаковки</b><em>от 60 000 ₽</em></button>
-<button type="button" class="q-opt" data-k="need" data-v="cards"><b>Карточки для WB и Ozon</b><em>от 20 000 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="cover"><b>Одна обложка</b><em>2 500 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="cards"><b>Один товар — 5 слайдов</b><em>от 8 500 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="rich"><b>Рич-контент</b><em>от 20 000 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="site"><b>Дизайн сайта</b><em>от 80 000 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="pres"><b>Презентация</b><em>от 30 000 ₽</em></button>
 </div>
@@ -156,7 +158,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <div class="q-opts">
 <button type="button" class="q-opt" data-k="urg" data-v="calm"><b>Спокойно</b><em>в обычные сроки</em></button>
 <button type="button" class="q-opt" data-k="urg" data-v="month"><b>В течение месяца</b><em>есть дедлайн</em></button>
-<button type="button" class="q-opt" data-k="urg" data-v="fast"><b>Срочно</b><em>быстрее обычного, +30%</em></button>
+<button type="button" class="q-opt" data-k="urg" data-v="fast"><b>Срочно</b><em>срок и доплату согласуем</em></button>
 </div>
 <button type="button" class="q-back">Назад</button>
 </div>
@@ -232,7 +234,9 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
     ident:{t:'Логотип и фирменный стиль',min:90000,max:140000,d:'3–4 недели',inc:'Что входит: логотип, палитра, шрифты, графика и паттерны, визитка и основные носители, гайдлайн на 10–20 страниц.'},
     brand:{t:'Бренд под ключ с брендбуком',min:220000,max:320000,d:'5–7 недель',inc:'Что входит: анализ и позиционирование, логотип, полный фирменный стиль, носители, упаковка или соцсети по задаче, брендбук с правилами.'},
     pack:{t:'Дизайн упаковки',min:60000,max:110000,d:'2–3 недели',inc:'Что входит: концепция, дизайн упаковки, тексты на упаковке по вашим данным, подготовка макетов в типографию, 3D-визуализация для карточек.'},
-    cards:{t:'Карточки для WB и Ozon',min:20000,max:45000,d:'5–8 дней',inc:'Что входит: главное фото, инфографика, обложки для отзывов и рич-контент, всё по требованиям маркетплейсов.'},
+    cover:{"t":"Одна обложка","min":2500,"max":2500,"d":"3–5 дней","priceMode":"fixed","inc":"Что входит: 1 обложка для одного товара; Акцент на преимуществах; Файлы под требования WB и Ozon."},
+    cards:{"t":"Один товар — 5 слайдов","min":8500,"max":8500,"d":"3–5 дней","priceMode":"from","inc":"Что входит: 1 обложка + 4 информационных слайда; Структура и инфографика преимуществ; Файлы под требования WB и Ozon; Рич-контент заказывается отдельно."},
+    rich:{"t":"Рич-контент","min":20000,"max":20000,"d":"1–2 недели","priceMode":"from","inc":"Что входит: Структура и дизайн блоков; Единый визуальный стиль; Объём и площадку фиксируем в смете."},
     site:{t:'Дизайн сайта',min:80000,max:150000,d:'3–5 недель',inc:'Что входит: структура и прототип, дизайн страниц для компьютера и телефона, готовые макеты и файлы для вёрстки.'},
     pres:{t:'Презентация',min:30000,max:60000,d:'1–2 недели',inc:'Что входит: структура и смысловые блоки, дизайн слайдов, шаблон, в котором вы дальше собираете новые презентации сами.'}
   };
@@ -241,7 +245,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
   var quiz=document.getElementById('quiz');
   if(!quiz)return;
   var steps=quiz.querySelectorAll('.q-step'),bar=document.getElementById('qbar');
-  var state={need:'',base:'',urg:''},cur=1,started=false;
+  var state={need:'',base:'',urg:''},cur=1,started=false,generatedTask='';
   function goal(n){try{if(typeof ym==='function')ym(110943761,'reachGoal',n);}catch(e){}}
   function show(n){
     cur=n;
@@ -253,18 +257,18 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
   function result(){
     var nd=NEEDS[state.need];if(!nd)return;
     var k=BASE[state.base].k*URG[state.urg].k;
-    var lo=fmt(nd.min*k),hi=fmt(nd.max*k);
+    var price=nd.priceMode ? (nd.priceMode==='from'?'от ':'')+String(nd.min).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' ₽' : fmt(nd.min*k)+' — '+fmt(nd.max*k)+' ₽';
     var d=nd.d+(state.urg==='fast'?' (ускоряем по договорённости)':'');
     document.getElementById('qResTitle').textContent=nd.t;
-    document.getElementById('qPrice').innerHTML='<span>'+lo+' — '+hi+' ₽</span>';
+    document.getElementById('qPrice').innerHTML='<span>'+price+'</span>';
     document.getElementById('qMeta').innerHTML='<i>срок '+d+'</i><i>'+BASE[state.base].t+'</i><i>'+URG[state.urg].t+'</i>';
-    document.getElementById('qInc').textContent=nd.inc;
+    document.getElementById('qInc').textContent=nd.inc+(nd.priceMode ? ' Дополнительный объём и срочность согласуем в смете.' : '');
     var f=quiz.querySelector('form.form');
     if(f){
       var b=f.querySelector('[name="budget"]');
-      if(b)b.value=lo+'—'+hi+' ₽ (расчёт на сайте)';
+      if(b)b.value=price+' (расчёт на сайте)';
       var ta=f.querySelector('[name="task"]');
-      if(ta&&!ta.value)ta.value='Задача: '+nd.t+'. Старт: '+BASE[state.base].t+'. Срочность: '+URG[state.urg].t+'. Расчёт на сайте: '+lo+'—'+hi+' ₽, срок '+nd.d+'.';
+      if(ta&&(!ta.value||ta.value===generatedTask)){generatedTask='Задача: '+nd.t+'. Старт: '+BASE[state.base].t+'. Срочность: '+URG[state.urg].t+'. Расчёт на сайте: '+price+', срок '+nd.d+'.';ta.value=generatedTask;}
     }
     goal('quiz_done');
   }
