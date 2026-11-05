@@ -112,7 +112,7 @@
 <nav class="crumbs" aria-label="Breadcrumbs"><a href="/en/">Home</a><span>/</span>Estimate</nav>
 <div class="eyebrow">Estimate</div>
 <h1 class="pj-title">Three questions — and you know the budget</h1>
-<p class="pj-desc">No forms before the number. Choose what you need, tell us where you are starting from and how urgent it is — you will see a realistic price range and a timeline straight away, with the same rates we quote in Russian.</p>
+<p class="pj-desc">No forms before the number. Choose what you need, tell us where you are starting from and how urgent it is — you will see an initial price and a timeline straight away, with the same rates we quote in Russian.</p>
 <div class="calc-grid">
 <div class="quiz" id="quiz">
 <div class="q-bar"><i class="on" data-bar="1"></i><i data-bar="2"></i><i data-bar="3"></i><i data-bar="4"></i></div>
@@ -125,7 +125,9 @@
 <button class="q-opt" data-need="brand"><b>Full brand</b><small>strategy, identity, brandbook</small></button>
 <button class="q-opt" data-need="site"><b>Website</b><small>landing or multi-page</small></button>
 <button class="q-opt" data-need="pack"><b>Packaging</b><small>label, box, product line</small></button>
-<button class="q-opt" data-need="cards"><b>Marketplace cards</b><small>WB and Ozon infographics</small></button>
+<button class="q-opt" data-need="cover"><b>One cover</b><small>2 500 ₽</small></button>
+<button class="q-opt" data-need="cards"><b>One product — 5 slides</b><small>from 8 500 ₽</small></button>
+<button class="q-opt" data-need="rich"><b>Rich content</b><small>from 20 000 ₽</small></button>
 <button class="q-opt" data-need="pres"><b>Presentation</b><small>investor or sales deck</small></button>
 </div>
 </div>
@@ -158,7 +160,7 @@
 <a class="btn btn-primary" href="mailto:design@kri-studio.art?subject=Project%20estimate">Send the brief by email</a>
 <a class="btn btn-ghost" href="https://t.me/kri_studio" target="_blank" rel="noopener">Ask in Telegram</a>
 </div>
-<p class="q-note">The range covers realistic scope for this kind of project. The exact figure is fixed in the contract after a short brief — and it normally lands inside this range.</p>
+<p class="q-note">The estimate reflects the selected scope. Additional work and urgency are agreed in the quote; the final scope and price are fixed in the contract after a short brief.</p>
 <button class="q-back" data-back="1">Start again</button>
 </div>
 </div>
@@ -208,7 +210,7 @@
 <a href="/en/uslugi/logotip/"><b>Logo</b><span>from 25,000 ₽, 7–10 days</span></a>
 <a href="/en/uslugi/firmennyy-stil/"><b>Brand identity</b><span>from 45,000 ₽, 3–4 weeks</span></a>
 <a href="/en/uslugi/dizayn-sayta/"><b>Website</b><span>from 80,000 ₽, 3–5 weeks</span></a>
-<a href="/en/uslugi/kartochki-wb-ozon/"><b>Marketplace cards</b><span>from 20,000 ₽, 5–8 days</span></a>
+<a href="/en/uslugi/kartochki-wb-ozon/"><b>Marketplace cards</b><span>5 slides from 8 500 ₽, 3–5 days</span></a>
 <a href="/en/uslugi/upakovka/"><b>Packaging</b><span>from 60,000 ₽, 2–3 weeks</span></a>
 <a href="/en/uslugi/brendbuk/"><b>Brandbook</b><span>from 60,000 ₽, 5–7 weeks</span></a>
 <a href="/en/uslugi/prezentacii/"><b>Presentations</b><span>from 30,000 ₽, 1–2 weeks</span></a>
@@ -244,7 +246,9 @@ logo:{t:'Logo',lo:25000,hi:45000,term:'7–10 days',inc:['2–3 concepts','all f
 ident:{t:'Brand identity',lo:90000,hi:140000,term:'3–4 weeks',inc:['logo and versions','colours and typography','brand carriers','style guide']},
 brand:{t:'Full brand',lo:220000,hi:320000,term:'5–7 weeks',inc:['positioning','full identity','brandbook','templates']},
 pack:{t:'Packaging',lo:60000,hi:110000,term:'2–3 weeks',inc:['2–3 concepts','dieline layout','print-ready files','3D visuals']},
-cards:{t:'Marketplace cards',lo:20000,hi:45000,term:'5–8 days',inc:['main image','infographic slides','rich content','WB and Ozon files']},
+    cover:{"t":"One cover","lo":2500,"hi":2500,"term":"3–5 days","priceMode":"fixed","inc":["1 cover for one product","Focus on product benefits","Files meeting WB and Ozon requirements"]},
+    cards:{"t":"One product — 5 slides","lo":8500,"hi":8500,"term":"3–5 days","priceMode":"from","inc":["1 cover + 4 information slides","Structure and benefit infographics","Files meeting WB and Ozon requirements","Rich content is ordered separately"]},
+    rich:{"t":"Rich content","lo":20000,"hi":20000,"term":"1–2 weeks","priceMode":"from","inc":["Block structure and design","A consistent visual style","Block count and platform agreed in the quote"]},
 site:{t:'Website',lo:80000,hi:150000,term:'3–5 weeks',inc:['structure and copy anchors','unique design','responsive build','SEO basics']},
 pres:{t:'Presentation',lo:30000,hi:60000,term:'1–2 weeks',inc:['structure','infographics','PDF and PPTX','editable template']}
 };
@@ -260,10 +264,11 @@ q.querySelectorAll('.q-bar i').forEach(function(el){el.classList.toggle('on',Num
 }
 function result(){
 var d=NEEDS[s.need],k=BASE[s.base].k*URG[s.urg].k;
-document.getElementById('qPrice').textContent=fmt(d.lo*k)+'–'+fmt(d.hi*k)+' ₽';
+document.getElementById('qPrice').textContent=d.priceMode ? (d.priceMode==='from'?'from ':'')+String(d.lo).replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')+' ₽' : fmt(d.lo*k)+'–'+fmt(d.hi*k)+' ₽';
 document.getElementById('qMeta').textContent=d.t+' · '+d.term+' · '+BASE[s.base].l+' · '+URG[s.urg].l;
 var inc=document.getElementById('qInc');inc.innerHTML='';
-d.inc.forEach(function(x){var el=document.createElement('span');el.textContent=x;inc.appendChild(el)});
+var items=d.priceMode ? d.inc.concat(['Additional scope and urgency are agreed in the quote.']) : d.inc;
+items.forEach(function(x){var el=document.createElement('span');el.textContent=x;inc.appendChild(el)});
 show(4);goal('quiz_done');
 }
 q.addEventListener('click',function(e){
