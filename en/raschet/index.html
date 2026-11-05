@@ -123,7 +123,11 @@
 <button class="q-opt" data-need="logo"><b>Logo</b><small>mark, versions, source files</small></button>
 <button class="q-opt" data-need="ident"><b>Brand identity</b><small>logo, colours, typography, carriers</small></button>
 <button class="q-opt" data-need="brand"><b>Full brand</b><small>strategy, identity, brandbook</small></button>
-<button class="q-opt" data-need="site"><b>Website</b><small>landing or multi-page</small></button>
+<button type="button" class="q-opt" data-need="landing_design"><b>Landing page — design</b><small>from 60 000 ₽</small></button>
+<button type="button" class="q-opt" data-need="landing_ready"><b>Landing page — ready to launch</b><small>from 120 000 ₽</small></button>
+<button type="button" class="q-opt" data-need="multi_design"><b>Multi-page website — design</b><small>from 100 000 ₽</small></button>
+<button type="button" class="q-opt" data-need="multi_ready"><b>Multi-page website — ready to launch</b><small>from 180 000 ₽</small></button>
+<button type="button" class="q-opt" data-need="tilda"><b>Basic Tilda website</b><small>from 80 000 ₽</small></button>
 <button class="q-opt" data-need="pack"><b>Packaging</b><small>label, box, product line</small></button>
 <button class="q-opt" data-need="cover"><b>One cover</b><small>2 500 ₽</small></button>
 <button class="q-opt" data-need="cards"><b>One product — 5 slides</b><small>from 8 500 ₽</small></button>
@@ -209,7 +213,7 @@
 <div class="next-links">
 <a href="/en/uslugi/logotip/"><b>Logo</b><span>from 25,000 ₽, 7–10 days</span></a>
 <a href="/en/uslugi/firmennyy-stil/"><b>Brand identity</b><span>from 45,000 ₽, 3–4 weeks</span></a>
-<a href="/en/uslugi/dizayn-sayta/"><b>Website</b><span>from 80,000 ₽, 3–5 weeks</span></a>
+<a href="/en/uslugi/dizayn-sayta/"><b>Website</b><span>design from 60 000 ₽; landing page with build from 120 000 ₽</span></a>
 <a href="/en/uslugi/kartochki-wb-ozon/"><b>Marketplace cards</b><span>5 slides from 8 500 ₽, 3–5 days</span></a>
 <a href="/en/uslugi/upakovka/"><b>Packaging</b><span>from 60,000 ₽, 2–3 weeks</span></a>
 <a href="/en/uslugi/brendbuk/"><b>Brandbook</b><span>from 60,000 ₽, 5–7 weeks</span></a>
@@ -249,7 +253,11 @@ pack:{t:'Packaging',lo:60000,hi:110000,term:'2–3 weeks',inc:['2–3 concepts',
     cover:{"t":"One cover","lo":2500,"hi":2500,"term":"3–5 days","priceMode":"fixed","inc":["1 cover for one product","Focus on product benefits","Files meeting WB and Ozon requirements"]},
     cards:{"t":"One product — 5 slides","lo":8500,"hi":8500,"term":"3–5 days","priceMode":"from","inc":["1 cover + 4 information slides","Structure and benefit infographics","Files meeting WB and Ozon requirements","Rich content is ordered separately"]},
     rich:{"t":"Rich content","lo":20000,"hi":20000,"term":"1–2 weeks","priceMode":"from","inc":["Block structure and design","A consistent visual style","Block count and platform agreed in the quote"]},
-site:{t:'Website',lo:80000,hi:150000,term:'3–5 weeks',inc:['structure and copy anchors','unique design','responsive build','SEO basics']},
+landing_design:{"t": "Landing page — design", "priceMode": "from", "lo": 60000, "hi": 60000, "term": "2–3 weeks", "inc": ["1 page, up to 10 sections", "Structure and wireframe", "Desktop and mobile design in Figma", "Source files; website build is separate"]},
+landing_ready:{"t": "Landing page — ready to launch", "priceMode": "from", "lo": 120000, "hi": 120000, "term": "3–5 weeks", "inc": ["1 page, up to 10 sections", "Wireframe, design and responsive build", "Forms, basic SEO and analytics", "Domain connection, testing and launch"]},
+multi_design:{"t": "Multi-page website — design", "priceMode": "from", "lo": 100000, "hi": 100000, "term": "3–4 weeks", "inc": ["3–6 pages", "Structure, navigation and UI kit", "Desktop and mobile design in Figma", "Source files; website build is separate"]},
+multi_ready:{"t": "Multi-page website — ready to launch", "priceMode": "from", "lo": 180000, "hi": 180000, "term": "5–7 weeks", "inc": ["3–6 pages", "Wireframe, design and responsive build", "Forms, basic SEO and analytics", "Domain connection, testing and launch"]},
+tilda:{"t": "Basic Tilda website", "priceMode": "from", "lo": 80000, "hi": 80000, "term": "2–3 weeks", "inc": ["1 page, up to 8 standard blocks", "You supply structure, copy and brand style", "Responsive setup, forms and Tilda build", "Domain connection and launch"]},
 pres:{t:'Presentation',lo:30000,hi:60000,term:'1–2 weeks',inc:['structure','infographics','PDF and PPTX','editable template']}
 };
 var BASE={new:{k:1,l:'new project'},has:{k:.9,l:'existing style'},redesign:{k:.95,l:'redesign'}};

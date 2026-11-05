@@ -136,7 +136,11 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <button type="button" class="q-opt" data-k="need" data-v="cover"><b>Одна обложка</b><em>2 500 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="cards"><b>Один товар — 5 слайдов</b><em>от 8 500 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="rich"><b>Рич-контент</b><em>от 20 000 ₽</em></button>
-<button type="button" class="q-opt" data-k="need" data-v="site"><b>Дизайн сайта</b><em>от 80 000 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="landing_design"><b>Лендинг — дизайн</b><em>от 60 000 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="landing_ready"><b>Лендинг — готовый сайт</b><em>от 120 000 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="multi_design"><b>Многостраничный — дизайн</b><em>от 100 000 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="multi_ready"><b>Многостраничный — готовый сайт</b><em>от 180 000 ₽</em></button>
+<button type="button" class="q-opt" data-k="need" data-v="tilda"><b>Базовый сайт на Tilda</b><em>от 80 000 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="pres"><b>Презентация</b><em>от 30 000 ₽</em></button>
 </div>
 </div>
@@ -237,7 +241,11 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
     cover:{"t":"Одна обложка","min":2500,"max":2500,"d":"3–5 дней","priceMode":"fixed","inc":"Что входит: 1 обложка для одного товара; Акцент на преимуществах; Файлы под требования WB и Ozon."},
     cards:{"t":"Один товар — 5 слайдов","min":8500,"max":8500,"d":"3–5 дней","priceMode":"from","inc":"Что входит: 1 обложка + 4 информационных слайда; Структура и инфографика преимуществ; Файлы под требования WB и Ozon; Рич-контент заказывается отдельно."},
     rich:{"t":"Рич-контент","min":20000,"max":20000,"d":"1–2 недели","priceMode":"from","inc":"Что входит: Структура и дизайн блоков; Единый визуальный стиль; Объём и площадку фиксируем в смете."},
-    site:{t:'Дизайн сайта',min:80000,max:150000,d:'3–5 недель',inc:'Что входит: структура и прототип, дизайн страниц для компьютера и телефона, готовые макеты и файлы для вёрстки.'},
+    landing_design:{"t": "Лендинг — дизайн", "priceMode": "from", "min": 60000, "max": 60000, "d": "2–3 недели", "inc": "Что входит: 1 страница, до 10 блоков. Структура и прототип. Дизайн в Figma: компьютер и телефон. Исходники; сборка сайта не входит."},
+landing_ready:{"t": "Лендинг — готовый сайт", "priceMode": "from", "min": 120000, "max": 120000, "d": "3–5 недель", "inc": "Что входит: 1 страница, до 10 блоков. Прототип, дизайн и адаптивная сборка. Формы, базовое SEO и аналитика. Подключение домена, проверка и запуск."},
+multi_design:{"t": "Многостраничный — дизайн", "priceMode": "from", "min": 100000, "max": 100000, "d": "3–4 недели", "inc": "Что входит: 3–6 страниц. Структура, навигация и UI-kit. Дизайн в Figma: компьютер и телефон. Исходники; сборка сайта не входит."},
+multi_ready:{"t": "Многостраничный — готовый сайт", "priceMode": "from", "min": 180000, "max": 180000, "d": "5–7 недель", "inc": "Что входит: 3–6 страниц. Прототип, дизайн и адаптивная сборка. Формы, базовое SEO и аналитика. Подключение домена, проверка и запуск."},
+tilda:{"t": "Базовый сайт на Tilda", "priceMode": "from", "min": 80000, "max": 80000, "d": "2–3 недели", "inc": "Что входит: 1 страница, до 8 стандартных блоков. Готовые структура, тексты и стиль от вас. Адаптация, формы и сборка на Tilda. Подключение домена и запуск."},
     pres:{t:'Презентация',min:30000,max:60000,d:'1–2 недели',inc:'Что входит: структура и смысловые блоки, дизайн слайдов, шаблон, в котором вы дальше собираете новые презентации сами.'}
   };
   var BASE={new:{k:1,t:'с нуля'},has:{k:.9,t:'есть логотип и стиль'},redesign:{k:.95,t:'редизайн'}};
