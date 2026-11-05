@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=packages-20261105">
 <link rel="canonical" href="https://kri-studio.art/raschet/">
 <link rel="alternate" hreflang="ru" href="https://kri-studio.art/raschet/">
 <link rel="alternate" hreflang="en" href="https://kri-studio.art/en/raschet/">
@@ -136,10 +136,10 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 <button type="button" class="q-opt" data-k="need" data-v="cover"><b>Одна обложка</b><em>2 500 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="cards"><b>Один товар — 5 слайдов</b><em>от 8 500 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="rich"><b>Рич-контент</b><em>от 20 000 ₽</em></button>
-<button type="button" class="q-opt" data-k="need" data-v="landing_design"><b>Лендинг — дизайн</b><em>от 60 000 ₽</em></button>
-<button type="button" class="q-opt" data-k="need" data-v="landing_ready"><b>Лендинг — готовый сайт</b><em>от 120 000 ₽</em></button>
-<button type="button" class="q-opt" data-k="need" data-v="multi_design"><b>Многостраничный — дизайн</b><em>от 100 000 ₽</em></button>
-<button type="button" class="q-opt" data-k="need" data-v="multi_ready"><b>Многостраничный — готовый сайт</b><em>от 180 000 ₽</em></button>
+<div class="q-package-choice" role="group" aria-label="Лендинг"><h3>Лендинг</h3><div class="q-package-buttons"><button type="button" class="q-opt" data-k="need" data-v="landing_ready"><b>Готовый сайт</b><em>от 120 000 ₽</em></button><button type="button" class="q-opt" data-k="need" data-v="landing_design"><b>Дизайн в Figma</b><em>от 60 000 ₽</em></button></div></div>
+
+<div class="q-package-choice" role="group" aria-label="Многостраничный сайт"><h3>Многостраничный сайт</h3><div class="q-package-buttons"><button type="button" class="q-opt" data-k="need" data-v="multi_ready"><b>Готовый сайт</b><em>от 180 000 ₽</em></button><button type="button" class="q-opt" data-k="need" data-v="multi_design"><b>Дизайн в Figma</b><em>от 100 000 ₽</em></button></div></div>
+
 <button type="button" class="q-opt" data-k="need" data-v="tilda"><b>Базовый сайт на Tilda</b><em>от 80 000 ₽</em></button>
 <button type="button" class="q-opt" data-k="need" data-v="pres"><b>Презентация</b><em>от 30 000 ₽</em></button>
 </div>
@@ -229,7 +229,7 @@ ym(110943761, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
 </div>
 </div>
 </footer>
-<script src="/assets/app.js"></script>
+<script src="/assets/app.js?v=packages-20261105"></script>
 <script>
 (function(){
   'use strict';
@@ -265,7 +265,7 @@ tilda:{"t": "Базовый сайт на Tilda", "priceMode": "from", "min": 80
   function result(){
     var nd=NEEDS[state.need];if(!nd)return;
     var k=BASE[state.base].k*URG[state.urg].k;
-    var price=nd.priceMode ? (nd.priceMode==='from'?'от ':'')+String(nd.min).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' ₽' : fmt(nd.min*k)+' — '+fmt(nd.max*k)+' ₽';
+    var price=nd.priceMode ? (nd.priceMode==='from'?'от ':'')+String(nd.min).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' ₽' : fmt(Math.max(nd.min,nd.min*k))+' — '+fmt(Math.max(nd.min,nd.max*k))+' ₽';
     var d=nd.d+(state.urg==='fast'?' (ускоряем по договорённости)':'');
     document.getElementById('qResTitle').textContent=nd.t;
     document.getElementById('qPrice').innerHTML='<span>'+price+'</span>';
